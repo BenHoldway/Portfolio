@@ -95,13 +95,18 @@ p
 }
 /*#endregion*/
 
+#Content
+{
+  padding-top:25px;
+}
+
 /*#region Containers */
 .Section
 {
   align-self: center;
   align-content: center;
   text-align: center;
-  width: auto;
+  width: 100%;
   height: auto;
   padding: 50px;
   margin: 10px 0;
@@ -115,6 +120,25 @@ p
 .Section.Two
 {
   background-color:#191919;
+}
+
+.Container
+{
+  width: 1480px;
+  margin: 0 auto;
+}
+
+.ContainerContent
+{
+  margin: auto;
+  text-align: left;
+  float: none;
+  vertical-align: middle;
+}
+
+.ContainerContent.Double
+{
+  width: 50%;
 }
 
 .ProjectContainer
