@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en-UK">
+    <head>
+        <title>Portfolio - Personal Projects</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="styles.css">
+        <script type = "text/javascript" src="main.js"></script>
+    </head>
+    <body onload="ChangeProjectVisibility(localStorage.getItem('projectSelected'))">
+        <div class="HeaderContainer">
+            <header id="Header" style="top: 0px;">
+                <div class="Header">
+                    <table style="margin:auto; width:100%;">
+                        <tr>
+                            <th style="width:30%;"><h1>Portfolio</h1></th>
+        
+                            <th><ul class="Navigation">
+                                <li class="NavigationText"><a href="index.html">Home</a></li>
+                                <li class="NavigationText Selected"><a href="personalprojects.html">Personal Projects</a></li>
+                            </ul></th>
+        
+                            <th style="width:30%;">
+                                <a href="https://benholdway.artstation.com" target="_blank" rel="noopener noreferrer"><img src="Resources/Artstation Logo.png" class="LogoLinks"></a>
+                                <a href="https://www.linkedin.com/in/ben-holdway-708883214/" target="_blank" rel="noopener noreferrer"><img src="Resources/LinkedIn Logo.png" class="LogoLinks"></a>
+                                <a href="https://github.com/BenHoldway" target="_blank" rel="noopener noreferrer"><img src="Resources/github-mark.png" class="LogoLinks"></a>
+                                <a href="mailto:benholdway03@gmail.com" target="_blank" rel="noopener noreferrer"><img src="Resources/Email Icon.png" class="LogoLinks"></a>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+            </header>
+
+            <div class="HeaderSpace" style="display:block; height:97px; margin: 15px 0"></div>
+        </div>
+
+        <div class="Section One">
+
+            <div class="Header">
+                <table style="margin:auto; width:90%; ">
+                    <tr>
+                        <th><ul class="Navigation">
+                            <li class="NavigationText CustomButton" id="GameButton" onclick="ChangeProjectVisibility('Games')" style="margin-right:50px">Games</button></li>
+                            
+                            <li class="NavigationText CustomButton" id="OtherButton" onclick="ChangeProjectVisibility('undefined')">Tools and Other</button></li>
+                        </ul></th>
+
+                    </tr>
+                </table>
+            </div>
+            
+            <div id="Games" style="opacity: 1;">
+                <div class="ProjectContainer">
+                    <a href="Project Sites/Games/Battle Of Talokov.html"><img src="Resources/BattleOfTalokov/Battle Of Talokov Icon.png" class="ProjectImage">
+                    <div class="HiddenProjectContainer">
+                        <h1 style="margin:auto;">Battle Of Talokov</h1>
+                        <br class="EngineText">
+                        <h2 class="EngineText">Unreal Engine 5</h2>
+                        <br class="EngineText">
+                        <hr class="EngineText" style="border-color:gray; width: 90%">
+                        <br class="EngineText">
+                        <h3 class="EngineText" style="color:gray;">University Project</h3>
+                    </div></a>
+                </div>
+
+                <div class="ProjectContainer">
+                    <a href="Project Sites/Games/Closing Up.html"><img src="Resources/Closing Up/Closing Up Icon.png" class="ProjectImage">
+                    <div class="HiddenProjectContainer">
+                        <h1 style="margin:auto;">Closing Up</h1>
+                        <br class="EngineText">
+                        <h2 class="EngineText">Unity</h2>
+                        <br class="EngineText">
+                        <hr class="EngineText" style="border-color:gray; width: 90%">
+                        <br class="EngineText">
+                        <h3 class="EngineText" style="color:gray;">University Project</h3>
+                    </div></a>
+                </div>
+            </div>
+
+            <div id="Other" style="display: none;">
+                <div class="ProjectContainer">
+                    <a href="Project Sites/Other/Orbital System Simulation.html"><img src="Resources/Planetary System/Orbital System Simulation Icon.png" class="ProjectImage">
+                    <div class="HiddenProjectContainer">
+                        <h1 style="margin:auto;">Orbital System Simulation</h1>
+                        <br class="EngineText">
+                        <h2 class="EngineText">DirectX v1.0</h2>
+                        <br class="EngineText">
+                        <hr class="EngineText" style="border-color:gray; width: 90%">
+                        <br class="EngineText">
+                        <h3 class="EngineText" style="color:gray;">University Project</h3>
+                    </div></a>
+                </div>
+
+                <div class="ProjectContainer">
+                    <a href="Project Sites/Other/Dialogue Node Graph.html"><img src="Resources/DialogueNodeGraph/Dialogue Node Graph Icon.png" class="ProjectImage">
+                    <div class="HiddenProjectContainer">
+                        <h1 style="margin:auto;">Dialogue Node Graph</h1>
+                        <br class="EngineText">
+                        <h2 class="EngineText">Unity</h2>
+                        <br class="EngineText">
+                        <hr class="EngineText" style="border-color:gray; width: 90%">
+                        <br class="EngineText">
+                        <h3 class="EngineText" style="color:gray;">Personal Project</h3>
+                    </div></a>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
