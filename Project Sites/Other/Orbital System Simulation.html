@@ -8,99 +8,130 @@
         <link rel="stylesheet" href="../../styles.css">
         <script type = "text/javascript" src="../../main.js"></script>
     </head>
-    <body>
-        <div class="Header">
-            <table style="margin:auto; width:90%; ">
-                <tr>
-                    <th style="width:30%"><h1>Portfolio</h1></th>
-
-                    <th><ul class="Navigation">
-                        <li class="NavigationText"><a href="../../index.html">Home</a></li>
-                        <li class="NavigationText"><a href="../../personalprojects.html">Personal Projects</a></li>
-                    </ul></th>
-
-                    <th style="width:30%">
-                      <a href="https://benholdway.artstation.com" target="_blank" rel="noopener noreferrer"><img src="../../Resources/Artstation Logo.png" class="LogoLinks"></a>
-                      <a href="https://www.linkedin.com/in/ben-holdway-708883214/" target="_blank" rel="noopener noreferrer"><img src="../../Resources/LinkedIn Logo.png" class="LogoLinks"></a>
-                      <a href="https://github.com/BenHoldway" target="_blank" rel="noopener noreferrer"><img src="../../Resources/github-mark.png" class="LogoLinks"></a>
-                      <a href="mailto:benholdway03@gmail.com" target="_blank" rel="noopener noreferrer"><img src="../../Resources/Email Icon.png" class="LogoLinks"></a>
-                    </th>
-                </tr>
-            </table>
-        </div>
-
-        <div class="Container One">
-            <div style="width: 60%; height: 90%; margin: auto; text-align: left;">
-                <p class="Heading Title">DirectX Planetary System Simulation</p>
-                <p>At the end of my first year, we had a module called Graphics Programming. This module
-                    was focused around teaching how to create objects in a world space, from the use of
-                    many components like vertices, colours and light.
-                </p>
-                <p>From 8 weeks of learning about DirectX, and using C++ knowledge, I was able to create a
-                    planetary orbiting system that included a central star and many planets. Each object had a 
-                    movement speed, rotation, orbit radius, emitting light and textures added to them to create
-                    this simulation.
-                </p>
-                <p>While there wasn't much interactivity in this, and code had to be modified to change anything
-                    in the simulation, this is the building blocks for what could become more complex and 
-                    customisable from the user's point of view.
-                </p>
-                
-                <h1 class="Heading Sub">Programs Used: </h1>
-                <pre>   - Visual Studio 2022</pre>
-                <pre>   - DirectX v1.0</pre>
+    <body onload="CurrentSlide(1)">
+      <div class="HeaderContainer">
+        <header id="Header" style="top: 0px;">
+            <div class="Header">
+                <table style="margin:auto; width:100%;">
+                    <tr>
+                        <th style="width:30%;"><h1>Portfolio</h1></th>
+    
+                        <th><ul class="Navigation">
+                            <li class="NavigationText"><a href="../../index.html">Home</a></li>
+                            <li class="NavigationText"><a href="../../personalprojects.html">Personal Projects</a></li>
+                        </ul></th>
+    
+                        <th style="width:30%;">
+                            <a href="https://benholdway.artstation.com" target="_blank" rel="noopener noreferrer"><img src="../../Resources/Artstation Logo.png" class="LogoLinks"></a>
+                            <a href="https://www.linkedin.com/in/ben-holdway-708883214/" target="_blank" rel="noopener noreferrer"><img src="../../Resources/LinkedIn Logo.png" class="LogoLinks"></a>
+                            <a href="https://github.com/BenHoldway" target="_blank" rel="noopener noreferrer"><img src="../../Resources/github-mark.png" class="LogoLinks"></a>
+                            <a href="mailto:benholdway03@gmail.com" target="_blank" rel="noopener noreferrer"><img src="../../Resources/Email Icon.png" class="LogoLinks"></a>
+                        </th>
+                    </tr>
+                </table>
             </div>
-        </div>
+        </header>
 
-        <div class="Container Two">
-            <div class="slideshowcontainer">
+        <div class="HeaderSpace" style="display:block; height:97px; margin: 15px 0"></div>
+      </div>
 
-                <!-- Full-width images with number text -->
-                <div class="mySlides">
-                  <div class="numbertext">1 / 4</div>
-                  <video width="100%" controls><source src="../../Resources/Planetary System/Video.mp4"></video>
-                </div>
-              
-                <div class="mySlides">
-                  <div class="numbertext">2 / 4</div>
-                    <img src="../../Resources/Planetary System/SS1_cropped.png" style="width:100%">
-                </div>
-              
-                <div class="mySlides">
-                  <div class="numbertext">3 / 4</div>
-                    <img src="../../Resources/Planetary System/SS3_cropped.png" style="width:100%">
-                </div>
-              
-                <div class="mySlides">
-                  <div class="numbertext">4 / 4</div>
-                    <img src="../../Resources/Planetary System/SS4_cropped.png" style="width:100%">
-                </div>
-              
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-              
-                <!-- Image text -->
-                <div class="caption-container">
-                  <p id="caption"></p>
-                </div>
-              
-                <!-- Thumbnail images -->
-                <div class="row" style="margin:auto">
-                  <div class="column" style="margin:auto">
-                    <img class="demo cursor" src="../../Resources/Closing Up/Checklist Sketch.png" style="width:100%" onclick="currentSlide(1)">
-                  </div>
-                  <div class="column">
-                    <img class="demo cursor" src="../../Resources/Planetary System/SS1_cropped.png" style="width:100%" onclick="currentSlide(2)" alt="Zoomed Out View">
-                  </div>
-                  <div class="column">
-                    <img class="demo cursor" src="../../Resources/Planetary System/SS3_cropped.png" style="width:100%" onclick="currentSlide(3)" alt="Object Selection">
-                  </div>
-                  <div class="column">
-                    <img class="demo cursor" src="../../Resources/Planetary System/SS4_cropped.png" style="width:100%" onclick="currentSlide(4)" alt="Viewing a Planet">
-                  </div>
-                </div>
+      <div id="Content">
+        <div class="Section One">
+          <div class="Container">
+            <!-- Project Text -->
+            <div class="ContainerContent Double" style="width: 45%; text-align: left; display:inline-block; padding-right:50px;">
+              <p class="Heading Title">DirectX Orbital System Simulation</p>
+              <p>This is an orbital simulation of a group of astronomical bodies, using DirectX v1.0 and C++. A number of 
+                properties is simulated, from different orbital speeds and radii, body sizes and rotation speeds as well.
+              </p>
+              <p>The user is able to spectate each body using a navigation UI element, or switch between each using keys. While
+                spectating, the user is able to zoom in and out to get a better view of the body, or viewing it from a wider shot.
+              </p>
+
+
+              <h1 class="Heading Sub">Programs Used: </h1>
+              <pre>   - Visual Studio 2022</pre>
+              <pre>   - DirectX v1.0</pre>
+
             </div>
+
+            <!-- Project YT Video -->
+            <div class="ContainerContent Double" style="display:inline-block; width: 45%; margin:auto">
+              <iframe style="width: 100%; height: 400px; border-color: transparent; margin: auto" src="https://www.youtube.com/embed/KFYtSjY_9cA?si=Tqdm2YGhEbPuLoKM"></iframe>
+            </div>
+          </div>
         </div>
+
+        <div class="Section Two">
+          <div class="Container">
+            <div class="SlideshowContainer ContainerContent Double">
+
+              <!-- Full-width images with number text -->
+              <div class="Slide">
+                <div class="NumberText">1 / 3</div>
+                  <img src="../../Resources/Planetary System/SS1_cropped.png" style="width: 100%">
+              </div>
+            
+              <div class="Slide">
+                <div class="NumberText">2 / 3</div>
+                  <img src="../../Resources/Planetary System/SS3_cropped.png" style="width: 100%">
+              </div>
+            
+              <div class="Slide">
+                <div class="NumberText">3 / 3</div>
+                  <img src="../../Resources/Planetary System/SS4_cropped.png" style="width:100%">
+              </div>
+            
+              <!-- Next and previous buttons -->
+              <a class="Prev" onclick="PlusSlides(-1)">&#10094;</a>
+              <a class="Next" onclick="PlusSlides(1)">&#10095;</a>
+            
+              <!-- Image text -->
+              <!-- <div class="CaptionContainer">
+                <p id="Caption"></p>
+              </div> -->
+            
+              <!-- Thumbnail images -->
+              <div class="Row">
+                <div class="Column">
+                  <img class="Demo Cursor" src="../../Resources/Planetary System/SS1_cropped.png" onclick="CurrentSlide(1)" alt="The City">
+                </div>
+                <div class="Column">
+                  <img class="Demo Cursor" src="../../Resources/Planetary System/SS3_cropped.png" onclick="CurrentSlide(2)" alt="The Tunnels">
+                </div>
+                <div class="Column">
+                  <img class="Demo Cursor" src="../../Resources/Planetary System/SS4_cropped.png" onclick="CurrentSlide(3)" alt="The Base Corridor">
+                </div>
+              </div>
+            </div>
+
+            <div class="ContainerContent Double" style="display:inline-block; width: 40%; padding-left: 50px;">
+              <p>At the end of my first year, we had a module called Graphics Programming. This module
+                was focused around teaching how to create objects in a world space, from the use of
+                many components like vertices, colours and light.
+            </p>
+            <p>From the given 9 weeks of learning about DirectX, and using C++ knowledge, I was able to create a
+                planetary orbiting system that included a central star and many planets. Each object had a 
+                movement speed, rotation, orbit radius, emitting light and textures added to them to create
+                this simulation.
+            </p>
+            <p>While there is not much interactivity in this, and code had to be modified to change anything
+                in the simulation, this is the building blocks for what could become more complex and 
+                customisable from the user's point of view.
+            </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <hr style="border-color:gray"> 
+      <br>
+
+      <div class="Section FooterContainer">
+          <footer id="FooterContainer" style="bottom: 0px;">
+              <p>Developed by me, using HTML5 code and CSS Stylesheets!</p>
+          </footer>
+      </div>
     </body>
 </html>
