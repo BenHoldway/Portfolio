@@ -2,6 +2,29 @@ var projectSelected = 'Games';
 localStorage.setItem('projectSelected', projectSelected);
 
 
+function ChangeHeader()
+{
+  if(window.innerWidth <= 980)
+  {
+    document.getElementById("HeaderFull").classList.add("HeaderHidden")
+    document.getElementById("HeaderCompressed").classList.remove("HeaderHidden");
+  }
+  else
+  {
+    document.getElementById("HeaderFull").classList.remove("HeaderHidden");
+    document.getElementById("HeaderCompressed").classList.add("HeaderHidden");
+  }
+}
+
+function MobileNavSelect() {
+  var x = document.getElementById("NavLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
 function ChangeProjectVisibility(projectType) {
   var games = document.getElementById("Games");
   var other = document.getElementById("Other");

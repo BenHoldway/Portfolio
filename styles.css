@@ -5,8 +5,6 @@
 }
 body {
     background-color: #000023;
-    margin:10px;
-    padding:10px;
 }
 a
 {
@@ -18,34 +16,32 @@ p
 }
 #Header 
 {
-  background-color: rgba(0,0, 35, 0.70);
-  padding: 10px 0 0;
+  background-color: rgba(0, 0, 12, 0.7);
   width: 100%;
   z-index: 9999;
 
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
 }
 .CustomButton
 {
     cursor: pointer;
 }
 
-/*#region Navigation Header*/
+/* #region Navigation Header */
 .Header
 {
-  align-self: center;
-  align-content: center;
-  text-align: center;
   background-color:transparent;
-  width: 100%;
+  margin: 10px auto;
+}
 
-  overflow: hidden;
-  margin-bottom: 10px;
-  padding: 10px 0;
-  display: inline;
+.HeaderHidden 
+{
+  display: none;
+}
+
+.HeaderFull tbody
+{
+  width: 90%;
 }
 
 .Navigation
@@ -54,34 +50,34 @@ p
     overflow: hidden;
 }
 
-    /* #region Navigation Text */
-    .NavigationText
-    {
-        margin:10px;
-        font-weight: 700;
-        font-size: 24px;
-        list-style-type: none;  
-        display:inline-block;
-    }
+/* #region Navigation Text */
+.NavigationText
+{
+    margin:10px;
+    font-weight: 700;
+    font-size: 24px;
+    list-style-type: none;  
+    display:inline-block;
+}
 
-    .NavigationText.Selected
-    {
-      background-color:#929292;
-    }
+.NavigationText.Selected
+{
+  background-color:#929292;
+}
 
-    .Navigation a
-    {
-        display: block;
-        text-align: center;
-        padding: 16px;
-        text-decoration: none;
-    }
+.Navigation a
+{
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
 
-    .Navigation a:hover
-    {
-        background-color:#353535;
-    }
-    /* #endregion */
+.Navigation a:hover
+{
+    background-color:#353535;
+}
+/* #endregion */
 
 .LogoLinks
 {
@@ -92,6 +88,27 @@ p
 
     display:inline-block;
 }
+
+/* Mobile */
+#NavLinks
+{
+  display: none;
+  margin: 75px 10px 0 0;
+  width: 300px;
+  right: 0px;
+  background-color: #000018;
+  position: fixed;
+  text-align: left;
+}
+
+.DropdownNavText
+{
+  font-weight: 700;
+  font-size: 24px;
+  list-style-type: none; 
+  padding: 16px;
+}
+
 /*#endregion*/
 
 #Content
@@ -99,7 +116,7 @@ p
   padding-top:25px;
 }
 
-/*#region Containers */
+/* #region Containers */
 .Section
 {
   align-self: center;
@@ -107,7 +124,7 @@ p
   text-align: center;
   width: 100%;
   height: auto;
-  padding: 50px;
+  /*padding: 50px;*/
   margin: 10px 0;
 }
 
@@ -123,11 +140,12 @@ p
 
 .Container
 {
-  width: 1480px;
+  width: 90%;
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 1200px) {
+/* #region Container Sizes */
+/*@media only screen and (max-width: 1200px) {
   .Container { width: 960px; }
 }
 
@@ -137,7 +155,8 @@ p
 
 @media only screen and (max-width: 767px) {
   .Container { width: 300px; }
-}
+}*/
+/* #endregion */
 
 .FooterContainer
 {
@@ -147,16 +166,35 @@ p
 
 .ContainerContent
 {
-  margin: auto;
+  margin: 50px auto;
+  width: 75%;
   text-align: left;
   float: none;
   vertical-align: middle;
+  position: relative;
 }
 
 .ContainerContent.Double
 {
   width: 45%;
   display:inline-block;
+}
+
+.ContainerContent.Double.Left
+{
+  margin-right: 25px;
+}
+
+.ContainerContent.Double.Right
+{
+  margin-left: 25px;
+}
+
+@media only screen and (max-width: 1140px) {
+  .ContainerContent { width: 90%; }
+  .ContainerContent.Double { width: 90%; margin: 10px auto; }
+  .ContainerContent.Double.Left { margin-right: 0px; }
+  .ContainerContent.Double.Right { margin-left: 0px; }
 }
 
 .ProjectContainer
@@ -189,6 +227,12 @@ p
   left:0px;
 
   transition: height .2s;
+}
+
+@media only screen and (max-width: 490px) 
+{
+  .ProjectContainer { width: 90%; height: 100%; }
+  .HiddenProjectContainer { width: 100%; height: 100%; }
 }
 
 .ProjectImage

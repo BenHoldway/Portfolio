@@ -9,12 +9,12 @@
         <link rel="stylesheet" href="styles.css">
         <script type = "text/javascript" src="main.js"></script>
     </head>
-    <body class="Home">
-        <div class="HeaderContainer">
+    <body class="Home" onload="ChangeHeader()" onresize="ChangeHeader()">
+        <div class="HeaderContainer"><!-- Class empty -->
             <header id="Header" style="top: 0px;">
                 <div class="Header">
-                    <table style="margin:auto; width:100%;">
-                        <tr>
+                    <table id="HeaderFull" style="width: 100%;">
+                        <tr style="width: 100%;">
                             <th style="width:30%;"><h1><a href="index.html">Ben Holdway</a></h1></th>
         
                             <th><ul class="Navigation">
@@ -30,15 +30,33 @@
                             </th>
                         </tr>
                     </table>
+
+                    <div id="HeaderCompressed" style="width: 100%; margin: 0 30px 0;">
+                        <div class="ContainerContent Double Left" style="width: 60%; margin: 0 auto;">
+                            <h1><a href="index.html">Ben Holdway</a></h1>
+                        </div>
+                        <div class="ContainerContent Double Right" style="width: 30%; margin: 0 auto;">
+                            <a href="javascript:void(0);" class="icon" onclick="MobileNavSelect()">
+                                <img src="Resources/CompressedNavIcon.png" style="width: 75px; float: right; padding-right: 20px;">
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </header>
 
+            <div id="NavLinks">
+                <a href="index.html"><li class="DropdownNavText">Home</li></a>
+                <a href="personalprojects.html"><li class="DropdownNavText">Personal Projects</li></a>
+
+            </div>
+
             <div class="HeaderSpace" style="display:block; height:97px; margin: 15px 0"></div>
+
         </div>
 
         <div class="Section One">
             <div class="Container">
-                <div class="ContainerContent" style="width: 60%; height: 90%; margin: auto; text-align: left;">
+                <div class="ContainerContent" style="text-align: left;">
                     <p class="Heading Title">Ben Holdway</p>
                     <p class="Title">Games Developer Student</p>
                     <p>English Game Developer Student, aspiring to specialise in Mechanics Programming</p>
@@ -49,7 +67,7 @@
 
         <div class="Section Two">
             <div class="Container">
-                <div class="ContainerContent" style="width: 60%; height: 90%; margin: auto; text-align: left;">
+                <div class="ContainerContent" style="text-align: left;">
 
                     <div style="margin-bottom: 50px;">
                         <h1 class="Heading Title Grey" style="margin-bottom: 10px;">About Me</h1>
@@ -66,19 +84,19 @@
 
                     <h1 class="Heading Sub">Experience</h1>
 
-                    <div class="ContainerContent Double" style="float: left; margin-top:15px; margin-right: 75px;">
+                    <div class="ContainerContent Double Left">
                         <p style="line-height: 15px;"><b>Programs:</b></p>
-                        <pre>   - Unity: About 4 years of experience</pre>
-                        <pre>   - Unreal Engine 5: Some experience of 2 years</pre>
-                        <pre>   - Godot: Less than a year of experience</pre>
-                        <pre>   - GameMaker: Less than a year of experience</pre>
-                        <pre>   - Blender: Some experience of 2 years</pre>
+                        <pre style="overflow-wrap: break-word;">   - Unity: About 4 years of experience</pre>
+                        <pre style="overflow-wrap: break-word;">   - Unreal Engine 5: Some experience of 2 years</pre>
+                        <pre style="overflow-wrap: break-word;">   - Godot: Less than a year of experience</pre>
+                        <pre style="overflow-wrap: break-word;">   - GameMaker: Less than a year of experience</pre>
+                        <pre style="overflow-wrap: break-word;">   - Blender: Some experience of 2 years</pre>
                     </div>
-                    <div class="ContainerContent Double" style="margin-top:15px;">
+                    <div class="ContainerContent Double Right" >
                         <p style="line-height: 15px; margin-top: 30px;"><b>Programming Languages:</b></p>
-                        <pre>   - C#: About 4 years of experience</pre>
-                        <pre>   - C++: Started learning over the last 2 years</pre>
-                        <pre>   - Python: 2 years of basic knowledge</pre>
+                        <pre style="overflow-wrap: break-word;">   - C#: About 4 years of experience</pre>
+                        <pre style="overflow-wrap: break-word;">   - C++: Started learning over the last 2 years</pre>
+                        <pre style="overflow-wrap: break-word;">   - Python: 2 years of basic knowledge</pre>
                     </div>
                 </div>
             </div>
