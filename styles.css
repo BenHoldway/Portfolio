@@ -14,9 +14,13 @@ p
 {
     line-height: 30px;
 }
+li
+{
+  list-style-type: none;  
+}
 #Header 
 {
-  background-color: rgba(0, 0, 12, 0.7);
+  background-color: rgb(0, 0, 26);
   width: 100%;
   z-index: 9999;
 
@@ -30,8 +34,12 @@ p
 /* #region Navigation Header */
 .Header
 {
+  max-width: 1200px;
   background-color:transparent;
-  margin: 10px auto;
+  margin: 5px auto;
+  padding: 10px 25px;
+  justify-content: space-between;
+  display: flex;
 }
 
 .HeaderHidden 
@@ -53,16 +61,46 @@ p
 /* #region Navigation Text */
 .NavigationText
 {
-    margin:10px;
     font-weight: 700;
     font-size: 24px;
-    list-style-type: none;  
     display:inline-block;
 }
 
 .NavigationText.Selected
 {
   background-color:#929292;
+}
+
+.NavigationText.ProjectButton
+{
+  color: #6d6d6d;
+  padding: 0 15px;
+}
+
+.NavigationText.ProjectButton.CategoryActive
+{
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 430px)
+{
+  .NavigationText.ProjectButton { margin: 0 auto; line-height: 20px; }
+}
+
+.FullHeader
+{
+  display: inline-flex; 
+}
+
+.CompressedHeader
+{
+  display: none;
+}
+
+@media only screen and (max-width: 980px)
+{
+  .FullHeader { display: none; }
+  .CompressedHeader { display: inline-flex; }
 }
 
 .Navigation a
@@ -96,9 +134,10 @@ p
   margin: 75px 10px 0 0;
   width: 300px;
   right: 0px;
-  background-color: #000018;
+  background-color: rgb(0, 0, 26);
   position: fixed;
   text-align: left;
+  z-index: 9999;
 }
 
 .DropdownNavText
@@ -190,11 +229,24 @@ p
   margin-left: 25px;
 }
 
+.ContainerContent.Double.Right.Text
+{
+  padding-left: 75px;
+}
+
 @media only screen and (max-width: 1140px) {
   .ContainerContent { width: 90%; }
   .ContainerContent.Double { width: 90%; margin: 10px auto; }
-  .ContainerContent.Double.Left { margin-right: 0px; }
-  .ContainerContent.Double.Right { margin-left: 0px; }
+  .ContainerContent.Double.Left.Larger { margin-right: 0px; }
+  .ContainerContent.Double.Right.Larger { margin-left: 0px; }
+  .ContainerContent.Double.Right.Text { margin-left: 0px; padding-left: 0px; }
+}
+
+#ProjectCategories
+{
+  width: 100%;
+  margin: 10px auto;
+  display: inline-flex;
 }
 
 .ProjectContainer
@@ -202,7 +254,7 @@ p
   width: 300px;
   height: 400px;
 
-  margin:20px;
+  margin:20px 20px;
 
   display:inline-block;
   position: relative;
@@ -219,7 +271,6 @@ p
   width:300px;
   height:100px;
   position: absolute;
-  align-self: center;
   align-content: center;
   text-align: center;
       
