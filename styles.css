@@ -1,3 +1,7 @@
+html
+{
+  scroll-behavior: smooth;
+}
 * 
 {
     color:white;
@@ -82,9 +86,9 @@ li
   color: #ffffff;
 }
 
-@media only screen and (max-width: 430px)
+@media only screen and (max-width: 570px)
 {
-  .NavigationText.ProjectButton { margin: 0 auto; line-height: 20px; }
+  .NavigationText.ProjectButton { margin: 0 auto; line-height: 20px; display: block; text-align: center; padding: 5px 0px;}
 }
 
 .FullHeader
@@ -125,6 +129,12 @@ li
     padding:10px;
 
     display:inline-block;
+}
+
+.LogoLinks.ContactSection
+{
+  width: 75px;
+  height: 75px;
 }
 
 /* Mobile */
@@ -177,30 +187,22 @@ li
   background-color:#191919;
 }
 
+.Section.Footer
+{
+  background-color: #000018;
+}
+
+.Section.Contact
+{
+  background-color: rgb(28, 28, 31);
+}
+
+/* Containers */
+
 .Container
 {
   width: 90%;
   margin: 0 auto;
-}
-
-/* #region Container Sizes */
-/*@media only screen and (max-width: 1200px) {
-  .Container { width: 960px; }
-}
-
-@media only screen and (max-width: 959px) {
-  .Container { width: 748px; }
-}
-
-@media only screen and (max-width: 767px) {
-  .Container { width: 300px; }
-}*/
-/* #endregion */
-
-.FooterContainer
-{
-  background-color: #000018;
-  padding: 0px;
 }
 
 .ContainerContent
@@ -235,11 +237,37 @@ li
 }
 
 @media only screen and (max-width: 1140px) {
-  .ContainerContent { width: 90%; }
+  .Container { margin: 50px auto; }
+  .ContainerContent { width: 90%;}
   .ContainerContent.Double { width: 90%; margin: 10px auto; }
-  .ContainerContent.Double.Left.Larger { margin-right: 0px; }
-  .ContainerContent.Double.Right.Larger { margin-left: 0px; }
+  .ContainerContent.Double.Left { margin-right: 0px; }
+  .ContainerContent.Double.Right { margin-left: 0px; }
   .ContainerContent.Double.Right.Text { margin-left: 0px; padding-left: 0px; }
+}
+
+/* Projects */
+
+#Projects
+{
+  height: auto;
+
+  display: flex;
+  justify-content: normal;
+  flex-wrap: wrap;
+  margin: 0 -50px;
+}
+
+#Projects::before, .Container::before
+{
+  display: table;
+  content: " ";
+}
+
+#Projects::after, .Container::after
+{
+  clear: both;
+  display: table;
+  content: " ";
 }
 
 #ProjectCategories
@@ -251,40 +279,40 @@ li
 
 .ProjectContainer
 {
-  width: 300px;
-  height: 400px;
+  width: 25%;
+  float: left;
 
-  margin:20px 20px;
+  padding: 0 15px;
 
-  display:inline-block;
   position: relative;
   overflow: hidden;
+}
 
+@media only screen and (max-width: 1650px) 
+{
+  .ProjectContainer { width: 33.3333%; }
+}
+
+@media only screen and (max-width: 1200px) 
+{
+  .ProjectContainer { width: 50%; }
+}
+
+@media only screen and (max-width: 725px) 
+{
+  .ProjectContainer { width: 100%; }
+}
+
+.ProjectItem
+{
+  max-width: 300px;
+  height: 400px;
   transition: opacity .1s;
+  overflow: hidden;
+  position: relative;
+
+  margin: 50px auto;
 }
-
-.HiddenProjectContainer
-{
-  background-color: black;
-  opacity: 85%;
-
-  width:300px;
-  height:100px;
-  position: absolute;
-  align-content: center;
-  text-align: center;
-      
-  bottom:0px;
-  left:0px;
-
-  transition: height .2s;
-}
-
-/*@media only screen and (max-width: 490px) 
-{
-  .ProjectContainer { width: 90%; height: 100%; }
-  .HiddenProjectContainer { width: 100%; height: 100%; }
-}*/
 
 .ProjectImage
 {
@@ -292,25 +320,44 @@ li
 
     position: absolute;
 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 
     top:-25%;
     left:-25%;
+    bottom:125%;
+    right: 125%;
 }
 
-.ProjectContainer:hover
+.HiddenProjectContainer
+{
+  background-color: black;
+  opacity: 85%;
+
+  height:100px;
+  width: 100%;
+  position: absolute;
+  align-content: center;
+  text-align: center;
+      
+  bottom:0px;
+  left:0px;
+
+  margin: 0 auto;
+
+  transition: height .2s;
+}
+
+.ProjectItem:hover
 {
   border-color: #000041;
 }
 
-.ProjectContainer:hover .ProjectImage
+.ProjectItem:hover .ProjectImage
 {
   transform: scale(1.25);
 }
 
-.ProjectContainer:hover .HiddenProjectContainer
+.ProjectItem:hover .HiddenProjectContainer
 {
     height: 400px;
 }
