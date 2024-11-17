@@ -2,31 +2,170 @@
 
 <html lang="en-UK">
     <head>
-        <title>Portfolio - Personal Projects</title>
+        <title>Ben's Portfolio - Closing Up</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="../../styles.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
         <script type = "text/javascript" src="../../main.js"></script>
     </head>
-    <body>
-        <div class="Header">
-            <table style="margin:auto; width:90%; ">
-                <tr>
-                    <th style="width:30%"><h1>Portfolio</h1></th>
+    <body onload="CurrentSlide(1)">
+      <div class="HeaderContainer"><!-- Class empty -->
+        <header id="Header" style="top: 0px;">
+            <div class="Header">
+                <h1><a href="../../index.html">Ben Holdway</a></h1>
 
-                    <th><ul class="Navigation">
-                        <li class="NavigationText"><a href="../../index.html">Home</a></li>
-                        <li class="NavigationText"><a href="../../personalprojects.html">Personal Projects</a></li>
-                    </ul></th>
+                <ul class="Navigation FullHeader">
+                    <li class="NavigationText"><a href="../../index.html">Home</a></li>
+                    <li class="NavigationText"><a href="../../personalprojects.html">Personal Projects</a></li>
+                </ul>
 
-                    <th style="width:30%">
-                      <a href="https://benholdway.artstation.com" target="_blank" rel="noopener noreferrer"><img src="../../Resources/Artstation Logo.png" class="LogoLinks"></a>
-                      <a href="https://www.linkedin.com/in/ben-holdway-708883214/" target="_blank" rel="noopener noreferrer"><img src="../../Resources/LinkedIn Logo.png" class="LogoLinks"></a>
-                      <a href="https://github.com/BenHoldway" target="_blank" rel="noopener noreferrer"><img src="../../Resources/github-mark.png" class="LogoLinks"></a>
-                      <a href="mailto:benholdway03@gmail.com" target="_blank" rel="noopener noreferrer"><img src="../../Resources/Email Icon.png" class="LogoLinks"></a>
-                    </th>
-                </tr>
-            </table>
+                <ul class="FullHeader" style="padding-left: 0px;">
+                    <!-- <a href="https://benholdway.artstation.com" target="_blank" rel="noopener noreferrer"><img src="../../Resources/Artstation Logo.png" class="LogoLinks"></a> -->
+                    <a href="https://www.linkedin.com/in/ben-holdway-708883214/" target="_blank" rel="noopener noreferrer"><img src="../../Resources/LinkedIn Logo.png" class="LogoLinks"></a>
+                    <a href="https://github.com/BenHoldway" target="_blank" rel="noopener noreferrer"><img src="../../Resources/github-mark.png" class="LogoLinks"></a>
+                    <a href="mailto:benholdway03@gmail.com" target="_blank" rel="noopener noreferrer"><img src="../../Resources/Email Icon.png" class="LogoLinks"></a>
+                </ul>
+
+                <ul class="CompressedHeader">
+                    <li><a href="javascript:void(0);" id="CompressedIconToggle">
+                        <img src="../../Resources/CompressedNavIcon.png" style="width: 75px; float: right; padding-right: 20px;">
+                    </a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div id="NavLinks" class="CompressedHeader">
+            <a href="../../index.html"><li class="DropdownNavText">Home</li></a>
+            <a href="../../personalprojects.html"><li class="DropdownNavText">Personal Projects</li></a>
+            <a href="#Contact"><li class="DropdownNavText">Contact</li></a>
         </div>
+
+        <div class="HeaderSpace" style="display:block; height:97px; margin: 15px 0"></div>
+
+    </div>
+
+      <div id="Content">
+        <div class="Section One">
+          <div class="Container">
+            <!-- Project Text -->
+            <div class="ContainerContent Double Left" style="text-align: left; display:inline-block;">
+                <p class="Heading Title" style="margin-top: 10px;">Closing Up</p>
+                <p>
+                  Closing Up is a top down pixelated game which simulates a mundane job in a game environment. 
+                </p>
+                <p>
+                  You play as an employee of an office space, tasked with making sure everything is cleaned, off and locked up
+                  at the end of a shift day. The more tasks completed, the more money you make. However, leave any tasks uncompleted,
+                  you will be penalised. 
+                </p>
+                <p>
+                    Use each shift payments to keep your family healthy, from hunger to warmth, otherwise they will get ill and die
+                    after some time. Each family member will require medicine each at some points in the game.
+                </p>
+
+            </div>
+
+            <!-- Project YT Video -->
+            <div class="ContainerContent Double Right" style="display:inline-block;">
+              <iframe style="width: 100%; height: 400px; border-color: transparent; margin: auto" src="https://www.youtube.com/embed/TIWx5aGDR6Y?si=WXO_6VCIDoBTLXJD"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="Section Two">
+          <div class="Container">
+            <div class="SlideshowContainer ContainerContent Double Left">
+
+              <!-- Full-width images with number text -->
+              <div class="Slide">
+                  <img src="../../Resources/Chasm/Chasm1.png" style="width:100%">
+              </div>
+            
+              <div class="Slide">
+                  <img src="../../Resources/Chasm/Chasm2.png" style="width:100%">
+              </div>
+            
+              <div class="Slide">
+                  <img src="../../Resources/Chasm/Chasm3.png" style="width:100%">
+              </div>
+
+              <div class="Slide">
+                  <img src="../../Resources/Chasm/Chasm4.png" style="width:100%">
+              </div>
+            
+              <div class="Slide">
+                  <img src="../../Resources/Chasm/Chasm5.png" style="width:100%">
+              </div>
+            
+              <div class="Slide">
+                  <img src="../../Resources/Chasm/Chasm6.png" style="width:100%">
+              </div>
+            
+              <!-- Next and previous buttons -->
+              <a class="Prev" onclick="PlusSlides(-1)">&#10094;</a>
+              <a class="Next" onclick="PlusSlides(1)">&#10095;</a>
+            
+              <!-- Image text -->
+              <!--<div class="CaptionContainer">
+                <p id="Caption"></p>
+              </div>-->
+            
+              <!-- Thumbnail images -->
+              <div class="Row">
+                <div class="Column">
+                  <img class="Demo Cursor" src="../../Resources/Chasm/Chasm1.png" style="width:100%" onclick="CurrentSlide(1)" alt="The City">
+                </div>
+                <div class="Column">
+                  <img class="Demo Cursor" src="../../Resources/Chasm/Chasm2.png" style="width:100%" onclick="CurrentSlide(2)" alt="The Tunnels">
+                </div>
+                <div class="Column">
+                  <img class="Demo Cursor" src="../../Resources/Chasm/Chasm3.png" style="width:100%" onclick="CurrentSlide(3)" alt="The Base Corridor">
+                </div>
+                <div class="Column">
+                  <img class="Demo Cursor" src="../../Resources/Chasm/Chasm4.png" style="width:100%" onclick="CurrentSlide(4)" alt="The City">
+                </div>
+                <div class="Column">
+                  <img class="Demo Cursor" src="../../Resources/Chasm/Chasm5.png" style="width:100%" onclick="CurrentSlide(5)" alt="The Tunnels">
+                </div>
+                <div class="Column">
+                  <img class="Demo Cursor" src="../../Resources/Chasm/Chasm6.png" style="width:100%" onclick="CurrentSlide(6)" alt="The Base Corridor">
+                </div>
+              </div>
+            </div>
+
+            <div class="ContainerContent Double Right" style="display:inline-block;">
+              <p>
+                This somewhat larger prototype was developed in a 6 week project sprint, created in the same module as "Chasm", 
+                which we were tasked with simulating a mundane job and "gamify-ing" it.
+              </p>
+              <p>
+                I had a limited time to create this game, 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <hr style="border-color:gray"> 
+      <br>
+
+      <div id="Contact" class="Section Contact" style="margin-bottom: 20px;">
+        <p class="Heading Title" style="margin: 30px 0 0;">Contact</p>
+
+        <ul style="padding-left: 0px;">
+            <!-- <a href="https://benholdway.artstation.com" target="_blank" rel="noopener noreferrer"><img src="../../Resources/Artstation Logo.png" class="LogoLinks ContactSection"></a> -->
+            <a href="https://www.linkedin.com/in/ben-holdway-708883214/" target="_blank" rel="noopener noreferrer"><img src="../../Resources/LinkedIn Logo.png" class="LogoLinks ContactSection"></a>
+            <a href="https://github.com/BenHoldway" target="_blank" rel="noopener noreferrer"><img src="../../Resources/github-mark.png" class="LogoLinks ContactSection"></a>
+            <a href="mailto:benholdway03@gmail.com" target="_blank" rel="noopener noreferrer"><img src="../../Resources/Email Icon.png" class="LogoLinks ContactSection"></a>
+        </ul>
+    </div>
+
+      <div class="Section Footer">
+          <footer id="FooterContainer" style="bottom: 0px;">
+              <p>Developed by me, using HTML5 code and CSS Stylesheets!</p>
+          </footer>
+      </div>
     </body>
 </html>

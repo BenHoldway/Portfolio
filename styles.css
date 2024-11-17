@@ -4,11 +4,15 @@ html
 }
 * 
 {
-    color:white;
+    color:#ffffff;
     font-family: Arial, Helvetica, sans-serif;
 }
 body {
-    background-color: #000023;
+  background-image: url('Resources/Background.png');
+  background-repeat: repeat;
+  background-size: 100% auto;
+
+  margin: 0px;
 }
 a
 {
@@ -24,7 +28,7 @@ li
 }
 #Header 
 {
-  background-color: rgb(0, 0, 26);
+  background-color: #121217;
   width: 100%;
   z-index: 9999;
 
@@ -170,31 +174,31 @@ li
 {
   align-self: center;
   align-content: center;
-  text-align: center;
-  width: 100%;
+  text-align: center; 
   height: auto;
   /*padding: 50px;*/
-  margin: 10px 0;
+  margin: 30px 50px;
+  opacity: 98%;
 }
 
 .Section.One
 {
-  background-color:#171629;
+  background-color:#15161F;
 }
 
 .Section.Two
 {
-  background-color:#191919;
+  background-color:#1C1D29;
 }
 
 .Section.Footer
 {
-  background-color: #000018;
+  background-color: #121217;
 }
 
 .Section.Contact
 {
-  background-color: rgb(28, 28, 31);
+  background-color: #15161F;
 }
 
 /* Containers */
@@ -237,7 +241,7 @@ li
 }
 
 @media only screen and (max-width: 1140px) {
-  .Container { margin: 50px auto; }
+  /*.Container { margin: 50px auto; }*/
   .ContainerContent { width: 90%;}
   .ContainerContent.Double { width: 90%; margin: 10px auto; }
   .ContainerContent.Double.Left { margin-right: 0px; }
@@ -252,9 +256,8 @@ li
   height: auto;
 
   display: flex;
-  justify-content: normal;
+  justify-content: center;
   flex-wrap: wrap;
-  margin: 0 -50px;
 }
 
 #Projects::before, .Container::before
@@ -275,6 +278,8 @@ li
   width: 100%;
   margin: 10px auto;
   display: inline-flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .ProjectContainer
@@ -284,23 +289,25 @@ li
 
   padding: 0 15px;
 
+  margin: 50px 0;
+
   position: relative;
   overflow: hidden;
 }
 
 @media only screen and (max-width: 1650px) 
 {
-  .ProjectContainer { width: 33.3333%; }
+  .ProjectContainer { width: 33.3333%;  display: flex; justify-content: center; }
 }
 
 @media only screen and (max-width: 1200px) 
 {
-  .ProjectContainer { width: 50%; }
+  .ProjectContainer { width: 50%;  display: flex; justify-content: center; }
 }
 
 @media only screen and (max-width: 725px) 
 {
-  .ProjectContainer { width: 100%; }
+  .ProjectContainer { width: 100%; display: flex; justify-content: center;}
 }
 
 .ProjectItem
@@ -311,21 +318,16 @@ li
   overflow: hidden;
   position: relative;
 
-  margin: 50px auto;
+  padding: 50px auto;
 }
 
 .ProjectImage
 {
     transition: transform .2s;
 
-    position: absolute;
+    /* position: absolute; */
 
     margin: 0 auto;
-
-    top:-25%;
-    left:-25%;
-    bottom:125%;
-    right: 125%;
 }
 
 .HiddenProjectContainer
@@ -364,12 +366,12 @@ li
 
 .EngineText
 {
-  margin:auto; 
+  margin: 5px auto; 
   display: none;
   transition: opacity .2s;
 }
 
-.ProjectContainer:hover .EngineText
+.ProjectItem:hover .EngineText
 {
   display: block;
   opacity: 100%;
