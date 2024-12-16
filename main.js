@@ -7,9 +7,21 @@ $(document).ready(function(){
 
   if($(".ProjectContainer").length > 0) ChangeCategory("All");
 
-  $("#CompressedIconToggle").on("click", function(){
-    $("#NavLinks").toggle();
-  });
+  window.addEventListener('mouseup',function(event){
+    var compressedToggle = document.getElementById('CompressedIconToggle');
+    var navLinks = document.getElementById('NavLinks');
+
+    if(event.target != compressedToggle && event.target.parentNode != compressedToggle
+      && event.target != navLinks && event.target.parentNode != navLinks)
+    {
+      document.getElementById('NavLinks').style.display = 'none';
+    }
+    else
+    {
+      document.getElementById('NavLinks').style.display = 'block';
+    }
+
+  });  
 
   $(".ProjectButton").on("click", function(){
     ChangeCategory($(this).attr("id").replace("Button", ""));
@@ -30,14 +42,13 @@ function ChangeHeader()
   {
     $("#HeaderFull").removeClass("HeaderHidden");
     $("#HeaderCompressed").addClass("HeaderHidden");
-    $("#NavLinks").hide();
   }
 }
 
 function ChangeCategory(category) {
   $('.ProjectContainer').hide();
 
-  if(category === 'All') $('.ProjectContainer').show();
+  if(category == 'All') $('.ProjectContainer').show();
   else $('.' + category).show();
 
   $('.ProjectButton').addClass('CategoryActive').not('#' + category + 'Button').removeClass('CategoryActive');
@@ -65,7 +76,6 @@ function ShowSlides(n) {
   let i;
   let slides = document.getElementsByClassName("Slide");
   let demoImages = document.getElementsByClassName("Demo");
-  let captionText = document.getElementById("Caption");
 
   if (n > slides.length) 
     slideIndex = 1;
@@ -81,6 +91,5 @@ function ShowSlides(n) {
 
   slides[slideIndex-1].style.display = "block";
   demoImages[slideIndex-1].className += " Active";
-  captionText.innerHTML = demoImages[slideIndex-1].alt;
 }
 /* #endregion */

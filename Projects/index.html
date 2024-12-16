@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="en-UK">
+    <head>
+        <title>Ben's Portfolio - Personal Projects</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script type = "text/javascript" src="../main.js"></script>
+    </head>
+    <body>
+        <div class="HeaderContainer"><!-- Class empty -->
+            <header id="Header" style="top: 0px;">
+                <div class="Header">
+                    <h1><a href="../">Ben Holdway</a></h1>
+
+                    <ul class="Navigation FullHeader">
+                        <li class="NavigationText"><a href="../">Home</a></li>
+                        <li class="NavigationText Selected"><a href="./">Projects</a></li>
+                        <li class="NavigationText"><a href="../AboutMe/">About Me</a></li>
+                    </ul>
+
+                    <ul class="FullHeader" style="padding-left: 0px;">
+                        <!-- <a href="https://benholdway.artstation.com" target="_blank" rel="noopener noreferrer"><img src="Resources/Artstation Logo.png" class="LogoLinks"></a> -->
+                        <a href="https://www.linkedin.com/in/ben-holdway-708883214/" target="_blank" rel="noopener noreferrer"><img src="../Resources/LinkedIn Logo.png" class="LogoLinks"></a>
+                        <a href="https://github.com/BenHoldway" target="_blank" rel="noopener noreferrer"><img src="../Resources/github-mark.png" class="LogoLinks"></a> 
+                        <a href="mailto:benholdway03@gmail.com" target="_blank" rel="noopener noreferrer"><img src="../Resources/Email Icon.png" class="LogoLinks"></a>
+                    </ul>
+
+                    <ul class="CompressedHeader">
+                        <li><a href="javascript:void(0);" id="CompressedIconToggle">
+                            <img src="../Resources/CompressedNavIcon.png" style="width: 75px; float: right; padding-right: 20px;">
+                        </a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <div id="NavLinks" class="CompressedHeader">
+                <li class="DropdownNavText"><a href="../">Home</a></li>
+                <li class="DropdownNavText"><a href="./">Projects</a></li>
+                <li class="DropdownNavText"><a href="../AboutMe/">About Me</a></li>
+                <li class="DropdownNavText"><a href="#Contact">Contact</a></li>
+            </div>
+
+            <div class="HeaderSpace" style="display:block; height:97px; margin: 15px 0"></div>
+
+        </div>
+
+        <div class="Section One">
+            <div class="Container">
+                <div class="ContainerContent">
+                    <div id="ProjectCategories">
+
+                        <!--Create .on("load") function for making projects disappear and appear (transition)-->
+
+                        <ul style="margin: 0 auto; padding: 0px;">
+                            <li class="NavigationText ProjectButton CustomButton CategoryActive" id="AllButton">All</li>
+                            <li class="NavigationText ProjectButton CustomButton" id="GamesButton">Games</li>
+                            <li class="NavigationText ProjectButton CustomButton" id="OtherButton">Tools and Other</li>
+                        </ul>
+                        <!--<label>
+                            <input type="radio" value="Other" onclick="Yes()" class="CustomButton" style="position:absolute;clip: rect(0, 0, 0, 0);">
+                            <span>Other</span>
+                        </label>-->
+                    </div>
+                    
+                    <div class="Projects">
+
+                        <div class="ProjectContainer Games"><a href="../Project/Games/BattleOfTalokov/">
+                            <div class="ProjectImageContainer">
+                                <img src="../Resources/BattleOfTalokov/Battle Of Talokov Icon.png" class="ProjectImage">
+                                <div class="AdditionInfo"><h3>Battle Of Talokov</h3></div>
+                            </div>
+                            <div style="background-color: black; position: relative; z-index: 1; padding: 0 10px">
+                                <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1;">
+                                    <div class="ProjectType university">University</div>
+                                    <div class="ProjectType ue5">UE5</div>
+                                    <div class="ProjectType blueprints">Blueprints</div>
+                                    <div class="ProjectType solo">Solo</div>
+                                </div>
+                                <p class="ProjectDescription">A 3D tank shooter that was made in Unreal Engine 5 for a solo university project.</p>
+                            </div>
+                        </a></div>
+
+                        <div class="ProjectContainer Games"><a href="../Project/Games/Chasm/">
+                            <div class="ProjectImageContainer">
+                                <img src="../Resources/Chasm/Chasm Icon.png" class="ProjectImage">
+                                <div class="AdditionInfo"><h3>Chasm</h3></div>
+                            </div>
+                            <div style="background-color: black; position: relative; z-index: 1; padding: 0 10px">
+                                <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1;">
+                                    <div class="ProjectType university">University</div>
+                                    <div class="ProjectType unity">Unity</div>
+                                    <div class="ProjectType c-sharp">C#</div>
+                                    <div class="ProjectType solo">Solo</div>
+                                </div>
+                                <p class="ProjectDescription">A small 3 week platformer project created in Unity, following a "1 joystick and 1 input, multiple mechanics".</p>
+                            </div>
+                        </a></div>
+
+                        <div class="ProjectContainer Games"><a href="../Project/Games/ClosingUp/">
+                            <div class="ProjectImageContainer">
+                                <img src="../Resources/Closing Up/Closing Up Icon.png" class="ProjectImage">
+                                <div class="AdditionInfo"><h3>Closing Up</h3></div>
+                            </div>
+                            <div style="background-color: black; position: relative; z-index: 1; padding: 0 10px">
+                                <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1;">
+                                    <div class="ProjectType university">University</div>
+                                    <div class="ProjectType unity">Unity</div>
+                                    <div class="ProjectType c-sharp">C#</div>
+                                    <div class="ProjectType solo">Solo</div>
+                                </div>
+                                <p class="ProjectDescription">A 6 week project created in Unity, following a "Simulating the Mundane" theme. Made for a solo university project.</p>
+                            </div>
+                        </a></div>
+                        
+                        <!-- <div class="ProjectContainer Games"><a href="../Project/Games/HiddenSecrets/">
+                            <div class="ProjectImageContainer">
+                                <img src="../Resources/Chasm/Chasm Icon.png" class="ProjectImage">
+                                <div class="AdditionInfo"><h3>Hidden Secrets</h3></div>
+                            </div>
+                            <div style="background-color: black; position: relative; z-index: 1; padding: 0 10px">
+                                <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1;">
+                                    <div class="ProjectType university">University</div>
+                                    <div class="ProjectType ue5">UE5</div>
+                                    <div class="ProjectType c-plus-plus">C++</div>
+                                    <div class="ProjectType solo">Solo</div>
+                                </div>
+                                <p class="ProjectDescription">A horror related game, created in Unreal Engine 5 and using C++. Survive the night, keep systems alive and watch out for anything lurking.</p>
+                            </div>
+                        </a></div> -->
+
+                        <div class="ProjectContainer Other"><a href="../Project/ToolsAndOther/OrbitalSystemSimulation/">
+                            <div class="ProjectImageContainer">
+                                <img src="../Resources/Planetary System/Orbital System Simulation Icon.png" class="ProjectImage">
+                                <div class="AdditionInfo"><h3>Orbital System Simulation</h3></div>
+                            </div>
+                            <div style="background-color: black; position: relative; z-index: 1; padding: 0 10px">
+                                <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1;">
+                                    <div class="ProjectType university">University</div>
+                                    <div class="ProjectType c-plus-plus">C++</div>
+                                    <div class="ProjectType solo">Solo</div>
+                                </div>
+                                <p class="ProjectDescription">A planetary orbital simulation created in C++ and DirectX. Made for the Graphics Programming Module.</p>
+                            </div>
+                        </a></div>
+
+                        <div class="ProjectContainer Other"><a href="../Project/ToolsAndOther/DialogueNodeGraph/">
+                            <div class="ProjectImageContainer">
+                                <img src="../Resources/DialogueNodeGraph/Dialogue Node Graph Icon.png" class="ProjectImage">
+                                <div class="AdditionInfo"><h3>Dialogue Node Tool</h3></div>
+                            </div>
+                            <div style="background-color: black; position: relative; z-index: 1; padding: 0 10px">
+                                <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1;">
+                                    <div class="ProjectType personal">Personal</div>
+                                    <div class="ProjectType unity">Unity</div>
+                                    <div class="ProjectType c-sharp">C#</div>
+                                    <div class="ProjectType solo">Solo</div>
+                                </div>
+                                <p class="ProjectDescription">A personal project, using Unity 2023 experimental custom node system. Still in development, currently on hold due to Unity 6.</p>
+                            </div>
+                        </a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <hr style="border-color:gray"> 
+        <br>
+
+        <div class="Section Contact" style="margin-bottom: 20px;">
+            <p class="Heading Title" style="margin: 30px 0 0;">Contact</p>
+
+            <ul style="padding-left: 0px;">
+                <!-- <a href="https://benholdway.artstation.com" target="_blank" rel="noopener noreferrer"><img src="Resources/Artstation Logo.png" class="LogoLinks ContactSection"></a> -->
+                <a href="https://www.linkedin.com/in/ben-holdway-708883214/" target="_blank" rel="noopener noreferrer"><img src="../Resources/LinkedIn Logo.png" class="LogoLinks ContactSection"></a>
+                <a href="https://github.com/BenHoldway" target="_blank" rel="noopener noreferrer"><img src="../Resources/github-mark.png" class="LogoLinks ContactSection"></a>
+                <a href="mailto:benholdway03@gmail.com" target="_blank" rel="noopener noreferrer"><img src="../Resources/Email Icon.png" class="LogoLinks ContactSection"></a>
+            </ul>
+        </div>
+
+        <div class="Section Footer">
+            <footer id="FooterContainer" style="bottom: 0px;">
+                <p>Developed by me, using HTML5 code and CSS Stylesheets!</p>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather|Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab");
+
 html
 {
   scroll-behavior: smooth;
@@ -5,7 +8,7 @@ html
 * 
 {
     color:#ffffff;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 body {
   background-image: url('Resources/BackgroundGIF.gif');
@@ -20,7 +23,8 @@ a
 }
 p
 {
-    line-height: 30px;
+    line-height: 25px;
+    font-size: 15px;
 }
 li
 {
@@ -33,6 +37,9 @@ li
   z-index: 9999;
 
   position: fixed;
+  align-items: center;
+  padding: 0px 20px;
+  margin: auto;
 }
 .CustomButton
 {
@@ -46,8 +53,9 @@ li
   background-color:transparent;
   margin: 5px auto;
   padding: 10px 25px;
-  justify-content: space-between;
+
   display: flex;
+  justify-content: space-between;
 }
 
 .HeaderHidden 
@@ -72,6 +80,7 @@ li
     font-weight: 700;
     font-size: 24px;
     display:inline-block;
+    margin: 0 10px;
 }
 
 .NavigationText.Selected
@@ -82,7 +91,8 @@ li
 .NavigationText.ProjectButton
 {
   color: #6d6d6d;
-  padding: 0 15px;
+  margin: 0 20px;
+  text-align: center;
 }
 
 .NavigationText.ProjectButton.CategoryActive
@@ -97,14 +107,38 @@ li
 
 .FullHeader
 {
-  display: inline-flex; 
-  margin: 1em;
+  display: flex; 
+  justify-content: space-between;
 }
 
 .CompressedHeader
 {
   display: none;
 }
+
+/* Mobile */
+#NavLinks
+{
+  display: none;
+  margin: 75px 10px 0 0;
+  padding: 10px;
+  width: auto;
+  right: 3%;
+  background-color: #121217;
+  position: fixed;
+  text-align: left;
+  z-index: 9999;
+}
+
+.DropdownNavText
+{
+  font-weight: 700;
+  font-size: 22px;
+  list-style-type: none; 
+  padding: 16px;
+}
+
+/*#endregion*/
 
 @media only screen and (max-width: 980px)
 {
@@ -142,29 +176,6 @@ li
   height: 75px;
 }
 
-/* Mobile */
-#NavLinks
-{
-  display: none;
-  margin: 75px 10px 0 0;
-  width: 300px;
-  right: 0px;
-  background-color: rgb(0, 0, 26);
-  position: fixed;
-  text-align: left;
-  z-index: 9999;
-}
-
-.DropdownNavText
-{
-  font-weight: 700;
-  font-size: 24px;
-  list-style-type: none; 
-  padding: 16px;
-}
-
-/*#endregion*/
-
 #Content
 {
   padding-top:25px;
@@ -178,10 +189,16 @@ li
   text-align: center; 
   height: auto;
   /*padding: 50px;*/
-  margin: 30px 50px;
+  margin: 30px 100px;
   opacity: 98%;
 
-  border-radius: 5px;;
+  border-radius: 5px;
+}
+
+.Section.Project
+{
+  margin: 10px 10px;
+  text-align: left; 
 }
 
 @media only screen and (max-width: 750px) {
@@ -201,6 +218,9 @@ li
 .Section.Footer
 {
   background-color: #121217;
+  width: 100%;
+  margin: auto;
+  opacity: 100%;
 }
 
 .Section.Contact
@@ -213,7 +233,7 @@ li
 .Container
 {
   width: 90%;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .ContainerContent
@@ -228,34 +248,29 @@ li
   text-wrap: wrap;
 }
 
-.ContainerContent.Double
+.Container.Double
 {
-  width: 45%;
-  display:inline-block;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.ContainerContent.Double.Left
+.ContainerContent.Left
 {
   margin-right: 25px;
 }
 
-.ContainerContent.Double.Right
+.ContainerContent.Right
 {
   margin-left: 25px;
-}
-
-.ContainerContent.Double.Right.Text
-{
-  padding-left: 75px;
 }
 
 @media only screen and (max-width: 1140px) {
   /*.Container { margin: 50px auto; }*/
   .ContainerContent { width: 90%;}
-  .ContainerContent.Double { width: 90%; margin: 10px auto; }
+  .Container.Double { width: 90%; margin: 10px auto; }
   .ContainerContent.Double.Left { margin-right: 0px; }
   .ContainerContent.Double.Right { margin-left: 0px; }
-  .ContainerContent.Double.Right.Text { margin-left: 0px; padding-left: 0px; }
 }
 
 /* Projects */
@@ -285,107 +300,10 @@ li
 #ProjectCategories
 {
   width: 100%;
-  margin: 10px auto;
+  margin: 10px auto 40px;
   display: inline-flex;
   justify-content: center;
   text-align: center;
-}
-
-.ProjectContainer
-{
-  width: 25%;
-  float: left;
-
-  padding: 0 15px;
-
-  margin: 50px 0;
-
-  position: relative;
-  overflow: hidden;
-}
-
-@media only screen and (max-width: 1650px) 
-{
-  .ProjectContainer { width: 33.3333%; height: auto; display: flex; justify-content: center; }
-}
-
-@media only screen and (max-width: 1200px) 
-{
-  .ProjectContainer { width: 50%; height: auto; display: flex; justify-content: center; }
-}
-
-@media only screen and (max-width: 725px) 
-{
-  .ProjectContainer { width: 100%; height: auto; display: flex; justify-content: center;}
-}
-
-.ProjectItem
-{
-  max-width: 300px;
-  height: 400px;
-  transition: opacity .1s;
-  overflow: hidden;
-  position: relative;
-
-  padding: 50px auto;
-}
-
-.ProjectImage
-{
-    transition: transform .2s;
-
-    /* position: absolute; */
-
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-}
-
-.HiddenProjectContainer
-{
-  background-color: black;
-  opacity: 85%;
-
-  height:100px;
-  width: 100%;
-  position: absolute;
-  align-content: center;
-  text-align: center;
-      
-  bottom:0px;
-  left:0px;
-
-  margin: 0 auto;
-
-  transition: height .2s;
-}
-
-.ProjectItem:hover
-{
-  border-color: #000041;
-}
-
-.ProjectItem:hover .ProjectImage
-{
-  transform: scale(1.25);
-}
-
-.ProjectItem:hover .HiddenProjectContainer
-{
-    height: 400px;
-}
-
-.EngineText
-{
-  margin: 5px auto; 
-  display: none;
-  transition: opacity .2s;
-}
-
-.ProjectItem:hover .EngineText
-{
-  display: block;
-  opacity: 100%;
 }
 
 
@@ -394,6 +312,7 @@ li
 /* #region Headings */
 .Heading {
     font-weight: 700;
+    font-family: "Roboto Sans", sans-serif;
 }
 
 .Heading.Title
@@ -437,7 +356,7 @@ li
     position: relative;
     display:inline-block;
     padding: 5px;
-    background-color: #222222;
+    background-color: #0e0e0e;
   }
   
   /* Hide the images by default */
@@ -502,42 +421,21 @@ li
     padding: 1px;
     color: white;
   }
-
-  .Row
-  {
-    margin:auto;
-    padding-left: 2px;
-  }
-  
-  .Row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Six columns side by side */
-  .Column {
-    float: left;
-    width: 16.66%;
-  }
   
   /* Add a transparency effect for thumnbail images */
   .Demo {
     opacity: 0.6;
-    width:98%;
-    height: 98%;
+    width: calc(20% - 10px);
+    height: auto;
     vertical-align: middle;
-    margin-top: 5px;
+    margin: 5px 5px 0 5px;
   }
   
   .Active
   {
     border-style: solid;
     border-radius: 1px;
-    border-color: #5e5e5e;
-    margin: 0px;
-    height: 100%;
-    width: 100%;
+    border-color: #d8d8d8;
   }
 
   .Active,
@@ -553,9 +451,13 @@ li
 /* #endregion */ 
 
 
-.Test
+
+.BorderSeperator
 {
-  float: none;
+  margin: 10px auto;
+  border-style: solid;
+  border-color: #818181;
+  border-width: 1.5px;
 }
 
 
@@ -571,5 +473,146 @@ li
 
 
 
+.Projects
+{
+  display: flex; 
+  flex-wrap: wrap; 
+}
 
+.ProjectContainer
+{
+  border: none;
+  text-align: left;
+  display: inline-block;
+  background-color: black;
+  font-size: 1rem;
+  margin: 20px;
+  width: 100%;
+  line-height: 1.44;
+  
+  width: calc(33% - 40px);
 
+  overflow: hidden;
+}
+
+.ProjectImageContainer
+{
+  width: 100%; 
+  position: relative;
+  margin-top: -50%;
+  z-index: 1;
+}
+
+.ProjectImage
+{
+  transition: transform .2s;
+  width: 100%;
+  z-index: 0;
+}
+
+.ProjectContainer:hover .ProjectImage
+{
+  transform: scale(1.25);
+}
+
+.AdditionInfo
+{
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  padding: 0 20px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  bottom: 0px;
+  font-size: 1.25rem;
+  
+}
+
+.ProjectType
+{
+  display: flex-start;
+  z-index: 1;
+  margin: 2px 5px;
+  padding: 3px 6px;
+  position: relative;
+  font-size: 0.8em;
+  font-weight: 600;
+
+  border-radius: 5px;
+}
+
+.ProjectDescription
+{
+  font-size: .875rem;
+  font-weight: 200;
+  z-index: 9999;
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+@media only screen and (max-width: 1820px) 
+{
+  .Projects { margin: 0 -10px; }
+}
+@media only screen and (max-width: 1650px) 
+{
+  .ProjectContainer { width: calc(50% - 40px); }
+}
+@media only screen and (max-width: 920px) 
+{
+  .Projects { margin: 0 50px; }
+  .ProjectContainer { width: calc(100% - 40px); }
+}
+
+@media only screen and (max-width: 680px) 
+{
+  .Projects { margin: 0 0; }
+  .AdditionInfo { font-size: 1rem; }
+  .ProjectDescription { font-size: .75rem; }
+}
+
+.ue5
+{
+  background-color: #1b1a2c;
+}
+
+.unity
+{
+  background-color: #15161F;
+}
+
+.university
+{
+  background-color:rgb(61, 61, 61);
+}
+
+.personal
+{
+  background-color:rgb(99, 99, 99);
+}
+
+.c-sharp
+{
+  background-color:rgb(17, 15, 29);
+}
+
+.c-plus-plus
+{
+  background-color:rgb(34, 34, 34);
+}
+
+.blueprints
+{
+  background-color:rgb(31, 29, 39);
+}
+
+.solo
+{
+  background-color:rgb(13, 10, 24);
+}
+
+.team
+{
+  background-color:rgb(33, 30, 41);
+}
