@@ -189,7 +189,7 @@ li
   text-align: center; 
   height: auto;
   /*padding: 50px;*/
-  margin: calc(100% - (2 * 16px));
+  margin: 30px 100px;
   opacity: 98%;
 
   border-radius: 5px;
@@ -197,7 +197,7 @@ li
 
 .Section.Project
 {
-  margin: 10px 0px;
+  margin: 10px 10px;
   text-align: left; 
 }
 
