@@ -208,12 +208,32 @@ li
 
 .Section.Project
 {
-  margin: 10px 10px;
+  width: 100%;
   text-align: left; 
+  margin: -1em auto;
+}
+
+.Section.ProjectInfo
+{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Section.Left {
+  margin-right: 10px
+}
+
+.Section.Right {
+  margin-left: 10px
 }
 
 @media only screen and (max-width: 980px) {
   .Section { width: calc(100% - 5em); }
+}
+@media only screen and (max-width: 850px) {
+  .Section.ProjectInfo { display: block; }
+  .Section.Left { margin: 0 0 5px 0; }
+  .Section.Right { margin: 5px 0 0 0; }
 }
 @media only screen and (max-width: 500px) {
   .Section { width: calc(100% - 2.5em); }
@@ -387,9 +407,10 @@ li
   
   /* Position the image container (needed to position the left and right arrows) */
   .SlideshowContainer {
+    width: 80%;
     position: relative;
     display:inline-block;
-    padding: 5px;
+    margin: 20px 0;
     background-color: #0e0e0e;
   }
   
@@ -459,10 +480,10 @@ li
   /* Add a transparency effect for thumnbail images */
   .Demo {
     opacity: 0.6;
-    width: calc(20% - 10px);
+    width: calc((100% / 6) - 10px);
     height: auto;
     vertical-align: middle;
-    margin: 5px 5px 0 5px;
+    margin: 5px 5px 10px;
   }
   
   .Active
@@ -582,6 +603,29 @@ li
   padding: 0 20px;
 }
 
+.ProjectHeader
+{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ProjectLink
+{
+  background-color: rgb(50, 45, 59);
+  display: inline-flex;
+  margin: 0 20px;
+  padding: 0px 30px;
+  border-radius: 0.5em;
+}
+.ProjectLink:hover
+{
+  background-color: rgb(83, 75, 100);
+}
+
+.ProjectLinkText { font-size: 20px; }
+
 @media only screen and (max-width: 1820px) 
 {
   .Projects { margin: 0 -10px; }
@@ -597,6 +641,9 @@ li
   .Projects { margin: 0 0; }
   .AdditionInfo { font-size: 1rem; }
   .ProjectDescription { font-size: .75rem; }
+  .ProjectHeader { flex-direction: column; }
+  .ProjectLink { margin-bottom: 15px; }
+  .ProjectLinkText { font-size: 15px; }
 }
 
 .ue5
