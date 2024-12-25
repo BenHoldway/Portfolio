@@ -14,7 +14,7 @@
         <div class="HeaderContainer"><!-- Class empty -->
             <header id="Header" style="top: 0px;">
                 <div class="Header">
-                    <h1><a href="./">Ben Holdway</a></h1>
+                    <h1 class="HeaderTitle"><a href="../">Ben Holdway</a></h1>
 
                     <ul class="Navigation FullHeader">
                         <li class="NavigationText"><a href="../">Home</a></li>
@@ -30,18 +30,16 @@
                     </ul>
 
                     <ul class="CompressedHeader">
-                        <li><a href="javascript:void(0);" id="CompressedIconToggle">
-                            <img src="../Resources/CompressedNavIcon.png" style="width: 75px; float: right; padding-right: 20px;">
-                        </a></li>
+                        <img id="CompressedIconToggle" class="CustomButton" src="../Resources/CompressedNavIcon.png">
                     </ul>
                 </div>
             </header>
 
             <div id="NavLinks" class="CompressedHeader">
-                <a href="../"><li class="DropdownNavText">Home</li></a>
+                <li class="DropdownNavText"><a href="../">Home</a></li>
                 <li class="DropdownNavText"><a href="../Projects/">Projects</a></li>
                 <li class="DropdownNavText"><a href="../AboutMe/">About Me</a></li>
-                <a href="#Contact"><li class="DropdownNavText">Contact</li></a>
+                <li class="DropdownNavText"><a href="#Contact">Contact</a></li>
             </div>
 
             <div class="HeaderSpace" style="display:block; height:97px; margin: 15px 0"></div>
@@ -147,20 +145,16 @@
         <hr style="border-color:gray"> 
         <br>
 
-        <div id="Contact" class="Section Contact" style="margin-bottom: 20px;">
-            <p class="Heading Title" style="margin: 30px 0 0;">Contact</p>
-
+        <div id="Contact" class="Section Footer">
             <ul style="padding-left: 0px;">
                 <!-- <a href="https://benholdway.artstation.com" target="_blank" rel="noopener noreferrer"><img src="Resources/Artstation Logo.png" class="LogoLinks ContactSection"></a> -->
                 <a href="https://www.linkedin.com/in/ben-holdway-708883214/" target="_blank" rel="noopener noreferrer"><img src="../Resources/LinkedIn Logo.png" class="LogoLinks ContactSection"></a>
                 <a href="https://github.com/BenHoldway" target="_blank" rel="noopener noreferrer"><img src="../Resources/github-mark.png" class="LogoLinks ContactSection"></a>
                 <a href="mailto:benholdway03@gmail.com" target="_blank" rel="noopener noreferrer"><img src="../Resources/Email Icon.png" class="LogoLinks ContactSection"></a>
             </ul>
-        </div>
 
-        <div class="Section Footer">
-            <footer id="FooterContainer" style="bottom: 0px;">
-                <p>Developed by me, using HTML5 code and CSS Stylesheets!</p>
+            <footer class="FooterContainer" style="bottom: 0px;">
+                <p>Developed by me, using HTML5, CSS and JavaScript!</p>
             </footer>
         </div>
     </body>

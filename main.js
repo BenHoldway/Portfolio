@@ -8,17 +8,18 @@ $(document).ready(function(){
   if($(".ProjectContainer").length > 0) ChangeCategory("All");
 
   window.addEventListener('mouseup',function(event){
-    var compressedToggle = document.getElementById('CompressedIconToggle');
-    var navLinks = document.getElementById('NavLinks');
+    var dropdownIcon = this.document.getElementById("CompressedIconToggle");
+    var navLinks = this.document.getElementById("NavLinks");
 
-    if(event.target != compressedToggle && event.target.parentNode != compressedToggle
+    if(event.target != dropdownIcon && event.target.parentNode != dropdownIcon
       && event.target != navLinks && event.target.parentNode != navLinks)
     {
-      document.getElementById('NavLinks').style.display = 'none';
+      navLinks.style.display = 'none';
     }
     else
     {
-      document.getElementById('NavLinks').style.display = 'block';
+      if(navLinks.style.display === "block") { navLinks.style.display = 'none'; }
+      else { navLinks.style.display = 'block'; }
     }
 
   });  
@@ -35,13 +36,13 @@ function ChangeHeader()
 {
   if(window.innerWidth <= 980)
   {
-    $("#HeaderFull").addClass("HeaderHidden")
-    $("#HeaderCompressed").removeClass("HeaderHidden");
+    $(".FullHeader").addClass("HeaderHidden")
+    $(".CompressedHeader").removeClass("HeaderHidden");
   }
   else
   {
-    $("#HeaderFull").removeClass("HeaderHidden");
-    $("#HeaderCompressed").addClass("HeaderHidden");
+    $(".FullHeader").removeClass("HeaderHidden");
+    $(".CompressedHeader").addClass("HeaderHidden");
   }
 }
 
@@ -54,7 +55,6 @@ function ChangeCategory(category) {
   $('.ProjectButton').addClass('CategoryActive').not('#' + category + 'Button').removeClass('CategoryActive');
 
   sessionStorage.Category = category;
-  console.log(sessionStorage.Category);
 }
 
 
@@ -74,8 +74,8 @@ function CurrentSlide(n) {
 
 function ShowSlides(n) {
   let i;
-  let slides = document.getElementsByClassName("Slide");
-  let demoImages = document.getElementsByClassName("Demo");
+  let slides = $('.Slide');
+  let demoImages = $('.Demo');
 
   if (n > slides.length) 
     slideIndex = 1;

@@ -13,7 +13,7 @@
         <div class="HeaderContainer"><!-- Class empty -->
             <header id="Header" style="top: 0px;">
                 <div class="Header">
-                    <h1><a href="../">Ben Holdway</a></h1>
+                    <h1 class="HeaderTitle"><a href="./">Ben Holdway</a></h1>
 
                     <ul class="Navigation FullHeader">
                         <li class="NavigationText Selected"><a href="./">Home</a></li>
@@ -29,7 +29,7 @@
                     </ul>
 
                     <ul class="CompressedHeader">
-                        <img id="CompressedIconToggle" src="Resources/CompressedNavIcon.png" style="width: 75px; float: right; padding-right: 20px;">
+                        <img id="CompressedIconToggle" class="CustomButton" src="Resources/CompressedNavIcon.png">
                     </ul>
                 </div>
             </header>
@@ -71,9 +71,9 @@
                         <div class="ProjectContainer"><a href="Project/Games/BattleOfTalokov/">
                             <div class="ProjectImageContainer">
                                 <img src="Resources/BattleOfTalokov/Battle Of Talokov Icon.png" class="ProjectImage">
-                                <div class="AdditionInfo"><h3>Battle Of Talokov</h3></div>
                             </div>
-                            <div style="background-color: black; position: relative; z-index: 1; padding: 0 10px">
+                            <div style="background-color: black; position: relative; z-index: 1;">
+                                <div class="AdditionInfo"><h3>Battle Of Talokov</h3></div>
                                 <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1;">
                                     <div class="ProjectType university">University</div>
                                     <div class="ProjectType ue5">UE5</div>
@@ -87,9 +87,9 @@
                         <div class="ProjectContainer"><a href="Project/ToolsAndOther/OrbitalSystemSimulation/">
                             <div class="ProjectImageContainer">
                                 <img src="Resources/Planetary System/Orbital System Simulation Icon.png" class="ProjectImage">
-                                <div class="AdditionInfo"><h3>Orbital System Simulation</h3></div>
                             </div>
-                            <div style="background-color: black; position: relative; z-index: 1; padding: 0 10px">
+                            <div style="background-color: black; position: relative; z-index: 1;">
+                                <div class="AdditionInfo"><h3>Orbital System Simulation</h3></div>
                                 <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1;">
                                     <div class="ProjectType university">University</div>
                                     <div class="ProjectType c-plus-plus">C++</div>
@@ -102,9 +102,9 @@
                         <div class="ProjectContainer"><a href="Project/Games/ClosingUp/">
                             <div class="ProjectImageContainer">
                                 <img src="Resources/Closing Up/Closing Up Icon.png" class="ProjectImage">
-                                <div class="AdditionInfo"><h3>Closing Up</h3></div>
                             </div>
-                            <div style="background-color: black; position: relative; z-index: 1; padding: 0 10px">
+                            <div style="background-color: black; position: relative; z-index: 1;">
+                                <div class="AdditionInfo"><h3>Closing Up</h3></div>
                                 <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1;">
                                     <div class="ProjectType university">University</div>
                                     <div class="ProjectType unity">Unity</div>
@@ -118,9 +118,9 @@
                         <!-- <div class="ProjectContainer"><a href="Project/Games/HiddenSecrets/">
                             <div class="ProjectImageContainer">
                                 <img src="Resources/Chasm/Chasm Icon.png" class="ProjectImage">
-                                <div class="AdditionInfo"><h3>Hidden Secrets</h3></div>
                             </div>
                             <div style="background-color: black; position: relative; z-index: 1; padding: 0 10px">
+                                <div class="AdditionInfo"><h3>Hidden Secrets</h3></div>
                                 <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1;">
                                     <div class="ProjectType university">University</div>
                                     <div class="ProjectType ue5">UE5</div>
@@ -142,20 +142,16 @@
         <hr style="border-color:gray"> 
         <br>
 
-        <div id="Contact" class="Section Contact" style="margin-bottom: 20px;">
-            <p class="Heading Title" style="margin: 30px 0 0;">Contact</p>
-
+        <div id="Contact" class="Section Footer">
             <ul style="padding-left: 0px;">
                 <!-- <a href="https://benholdway.artstation.com" target="_blank" rel="noopener noreferrer"><img src="Resources/Artstation Logo.png" class="LogoLinks ContactSection"></a> -->
                 <a href="https://www.linkedin.com/in/ben-holdway-708883214/" target="_blank" rel="noopener noreferrer"><img src="Resources/LinkedIn Logo.png" class="LogoLinks ContactSection"></a>
                 <a href="https://github.com/BenHoldway" target="_blank" rel="noopener noreferrer"><img src="Resources/github-mark.png" class="LogoLinks ContactSection"></a>
                 <a href="mailto:benholdway03@gmail.com" target="_blank" rel="noopener noreferrer"><img src="Resources/Email Icon.png" class="LogoLinks ContactSection"></a>
             </ul>
-        </div>
-
-        <div class="Section Footer">
-            <footer id="FooterContainer" style="bottom: 0px;">
-                <p>Developed by me, using HTML5 code and CSS Stylesheets!</p>
+            
+            <footer class="FooterContainer" style="bottom: 0px;">
+                <p>Developed by me, using HTML5, CSS and JavaScript!</p>
             </footer>
         </div>
     </body>
