@@ -30,6 +30,29 @@ li
 {
   list-style-type: none;  
 }
+/* height */
+::-webkit-scrollbar {
+  height: 10px;
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #111015;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #403f60;
+  border-radius: 0.5em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #302f3d;
+}
+
+
 #Header 
 {
   background-color: #121217;
@@ -79,10 +102,11 @@ li
 /* #region Navigation Text */
 .NavigationText
 {
-    font-weight: 700;
-    font-size: 24px;
-    display:inline-block;
-    margin: 0 10px;
+  font-family: "Roboto Sans", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  display:inline-block;
+  margin: 0 10px;
 }
 
 .NavigationText.Selected
@@ -97,6 +121,15 @@ li
   text-align: center;
 }
 
+.ProjectCategories 
+{
+  display:flex;
+  margin: 0 auto;
+  padding: 20px 0 0;
+}
+
+.ProjectButton:hover { color: #919191; }
+
 .NavigationText.ProjectButton.CategoryActive
 {
   color: #ffffff;
@@ -104,7 +137,11 @@ li
 
 @media only screen and (max-width: 570px)
 {
-  .NavigationText.ProjectButton { margin: 0 auto; line-height: 20px; display: block; text-align: center; padding: 5px 0px;}
+  .ProjectCategories { display: block; }
+  .NavigationText.ProjectButton { 
+    line-height: 25px; 
+    padding: 10px 0px;
+  }
 }
 
 .FullHeader
@@ -349,6 +386,7 @@ li
 .Heading {
     font-weight: 700;
     font-family: "Roboto Sans", sans-serif;
+    margin-bottom: 20px;
 }
 
 .Heading.Title
@@ -397,6 +435,27 @@ li
   .HeaderTitle { font-size: 25px; }
 }
 
+.ListGroup
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.List 
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.List.Left { margin: 0 40px 0 0; }
+.List.Right { margin: 0 0 0 40px; }
+
+@media only screen and (max-width: 650px) {
+  .ListGroup { display: block; }
+  .List.Left, .List.Right { margin: 0; }
+}
+
 /* #endregion */
 
 /* #region Slideshow */
@@ -410,7 +469,7 @@ li
     width: 80%;
     position: relative;
     display:inline-block;
-    margin: 20px 0;
+    margin: 20px 0 40px;
     background-color: #0e0e0e;
   }
   
@@ -478,9 +537,16 @@ li
   }
   
   /* Add a transparency effect for thumnbail images */
+  .DemoHolder
+  {
+    display: flex;
+    overflow: auto;
+    white-space: nowrap;
+  }
+  
   .Demo {
     opacity: 0.6;
-    width: calc((100% / 6) - 10px);
+    width: 150px;
     height: auto;
     vertical-align: middle;
     margin: 5px 5px 10px;
@@ -572,12 +638,10 @@ li
 .AdditionInfo
 {
   z-index: 1;
+  position: relative;
   width: 100%;
   padding: 0 20px;
-  background-color: rgba(0, 0, 0, 1);
-  bottom: 0px;
-  font-size: 1.25rem;
-  
+  background-color: rgba(0, 0, 0, 1); 
 }
 
 .ProjectType
@@ -600,7 +664,7 @@ li
   z-index: 9999;
   position: relative;
   z-index: 1;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 .ProjectHeader
