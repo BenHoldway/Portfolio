@@ -268,9 +268,9 @@ li
   .Section { width: calc(100% - 5em); }
 }
 @media only screen and (max-width: 850px) {
-  .Section.ProjectInfo { display: block; }
-  .Section.Left { margin: 0 0 5px 0; }
-  .Section.Right { margin: 5px 0 0 0; }
+  .Section.ProjectInfo { flex-direction: column; }
+  .Section.Left { margin: 0 0 5px 0; width: 100%; }
+  .Section.Right { margin: 5px 0 0 0; width: 100%; }
 }
 @media only screen and (max-width: 500px) {
   .Section { width: calc(100% - 2.5em); }
