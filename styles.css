@@ -67,8 +67,56 @@ li
 }
 .CustomButton
 {
-    cursor: pointer;
+  cursor: pointer;
 }
+
+.CustomButton.WithBackground
+{
+  display: inline-flex;
+  border-radius: 0.5em;
+    
+  margin: 0 20px;
+  padding: 0px 30px;
+
+  box-shadow: 0 0 20px black;
+  background-color: rgb(34, 31, 39);
+  border: 1.5px solid rgb(19, 18, 22);
+}
+.CustomButton.WithBackground:hover
+{
+  background-color: rgb(99, 90, 119);
+}
+
+.CustomButton.WithBackground.Darker
+{
+  background-color: rgb(29, 26, 32);
+}
+.CustomButton.WithBackground:hover
+{
+  background-color: rgb(36, 33, 43);
+}
+
+.TopProjectShowcaseScrollSection 
+{ 
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1400px) 
+{
+  .TopProjectShowcaseScrollSection { scale: 0.8; }
+}
+@media only screen and (min-width: 0px) 
+{
+  .TopProjectShowcaseScrollSection 
+  { 
+    transform: scale .2s; 
+  }
+}
+
 
 /* #region Navigation Header */
 .Header
@@ -125,14 +173,13 @@ li
 {
   display:flex;
   margin: 0 auto;
-  padding: 20px 0 0;
 }
 
 .ProjectButton:hover { color: #919191; }
 
-.NavigationText.ProjectButton.CategoryActive
+.NavigationText.ProjectButton.CategoryInactive
 {
-  color: #ffffff;
+  color: #6d6d6d;
 }
 
 @media only screen and (max-width: 570px)
@@ -227,6 +274,16 @@ li
   padding-top:25px;
 }
 
+.TopProjectShowcaseVideo
+{
+  display: flex;
+  width: 100%;
+  min-width:1000px;
+  margin-top: -20%;
+
+  mask-image: linear-gradient(to bottom, rgb(255, 255, 255) 95%, transparent 100%);
+}
+
 /* #region Containers */
 .Section
 {
@@ -305,6 +362,7 @@ li
 
 .Container
 {
+  position: relative;
   width: 90%;
   margin: 20px auto;
 }
@@ -373,7 +431,7 @@ li
 #ProjectCategories
 {
   width: 100%;
-  margin: 10px auto 40px;
+  margin: 10px 0;
   display: inline-flex;
   justify-content: center;
   text-align: center;
@@ -675,17 +733,21 @@ li
   align-items: center;
 }
 
-.ProjectLink
+.CustomButton.ProjectCategoryLink
 {
-  background-color: rgb(50, 45, 59);
-  display: inline-flex;
-  margin: 0 20px;
-  padding: 0px 30px;
-  border-radius: 0.5em;
+  background-color: rgb(80, 77, 88);
+  margin: 10px 15px;
+  padding: 5px 25px;
+  align-items: center;
 }
-.ProjectLink:hover
+.ProjectCategoryLink:hover, .ProjectCategoryLink.CategoryInactive:hover
 {
-  background-color: rgb(83, 75, 100);
+  background-color: rgb(70, 67, 77);
+}
+
+.ProjectCategoryLink.CategoryInactive
+{
+  background-color: rgb(21, 18, 24);
 }
 
 .ProjectLinkText { font-size: 20px; }

@@ -53,24 +53,55 @@
 
                     <div class="BorderSeperator"></div>
 
+                    <div style="display: flex; justify-content: center; margin: 20px 0 -20px;">
+                        <p style="font-size: larger;"><strong>Project Categories</strong></p>
+                    </div>
                     <div id="ProjectCategories">
-
+                        
                         <!--Create .on("load") function for making projects disappear and appear (transition)-->
 
                         <div class="ProjectCategories">
-                            <div class="NavigationText ProjectButton CustomButton CategoryActive" id="AllButton">All</div>
-                            <div class="NavigationText ProjectButton CustomButton" id="GamesButton">Games</div>
-                            <div class="NavigationText ProjectButton CustomButton" id="OtherButton">Tools and Other</div>
+                            <div class="CustomButton WithBackground ProjectCategoryLink" id="AllButton">
+                                All
+                            </div>
+                            <div class="CustomButton WithBackground ProjectCategoryLink CategoryInactive" id="GamesButton">
+                                Games
+                            </div>
+                            <div class="CustomButton WithBackground ProjectCategoryLink CategoryInactive" id="OtherButton">
+                                Tools and Other
+                            </div>
                         </div>
-                        <!--<label>
-                            <input type="radio" value="Other" onclick="Yes()" class="CustomButton" style="position:absolute;clip: rect(0, 0, 0, 0);">
-                            <span>Other</span>
-                        </label>-->
+                    </div>
+
+                    <div style="display: flex; justify-content: center; margin-bottom: -20px;">
+                        <p style="font-size: larger;"><strong>Category Specification</strong></p>
+                    </div>
+                    <div id="ProjectCategories">
+                        
+                        <!--Create .on("load") function for making projects disappear and appear (transition)-->
+
+                        <div class="ProjectCategories">
+                            <div class="CustomButton WithBackground ProjectCategoryLink Spec Games CategoryInactive" id="UnityButton">
+                                Unity
+                            </div>
+                            <div class="CustomButton WithBackground ProjectCategoryLink Spec Games CategoryInactive" id="UE5Button">
+                                Unreal Engine 5
+                            </div>
+                            <div class="CustomButton WithBackground ProjectCategoryLink Spec Other CategoryInactive" id="CSharpButton">
+                                C#
+                            </div>
+                            <div class="CustomButton WithBackground ProjectCategoryLink Spec Other CategoryInactive" id="CPlusPlusButton">
+                                C++
+                            </div>
+                            <div class="CustomButton WithBackground ProjectCategoryLink Spec Other CategoryInactive" id="MiscButton">
+                                Misc
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="Projects">
 
-                        <div class="ProjectContainer Games"><a href="../Project/Games/BattleOfTalokov/">
+                        <div class="ProjectContainer UE5 Games"><a href="../Project/Games/BattleOfTalokov/">
                             <div class="ProjectImageContainer">
                                 <img src="../Resources/BattleOfTalokov/Battle Of Talokov Icon.png" class="ProjectImage">
                             </div>
@@ -86,7 +117,7 @@
                             </div>
                         </a></div>
 
-                        <div class="ProjectContainer Games"><a href="../Project/Games/Chasm/">
+                        <div class="ProjectContainer Games Unity"><a href="../Project/Games/Chasm/">
                             <div class="ProjectImageContainer">
                                 <img src="../Resources/Chasm/Chasm Icon.png" class="ProjectImage">
                             </div>
@@ -102,7 +133,7 @@
                             </div>
                         </a></div>
 
-                        <div class="ProjectContainer Games"><a href="../Project/Games/ClosingUp/">
+                        <div class="ProjectContainer Games Unity"><a href="../Project/Games/ClosingUp/">
                             <div class="ProjectImageContainer">
                                 <img src="../Resources/Closing Up/Closing Up Icon.png" class="ProjectImage">
                             </div>
@@ -118,7 +149,7 @@
                             </div>
                         </a></div>
                         
-                        <div class="ProjectContainer Games"><a href="../Project/Games/HiddenSecrets/">
+                        <div class="ProjectContainer Games UE5"><a href="../Project/Games/HiddenSecrets/">
                             <div class="ProjectImageContainer">
                                 <img src="../Resources/HiddenSecrets/HiddenSecretsIcon.png" class="ProjectImage">
                             </div>
@@ -134,7 +165,7 @@
                             </div>
                         </a></div>
 
-                        <div class="ProjectContainer Other"><a href="../Project/ToolsAndOther/OrbitalSystemSimulation/">
+                        <div class="ProjectContainer Other CPlusPlus Misc"><a href="../Project/ToolsAndOther/OrbitalSystemSimulation/">
                             <div class="ProjectImageContainer">
                                 <img src="../Resources/Planetary System/Orbital System Simulation Icon.png" class="ProjectImage">
                             </div>
@@ -149,7 +180,7 @@
                             </div>
                         </a></div>
 
-                        <div class="ProjectContainer Other"><a href="../Project/ToolsAndOther/DialogueNodeGraph/">
+                        <div class="ProjectContainer Other CSharp Misc"><a href="../Project/ToolsAndOther/DialogueNodeGraph/">
                             <div class="ProjectImageContainer">
                                 <img src="../Resources/DialogueNodeGraph/Dialogue Node Graph Icon.png" class="ProjectImage">
                             </div>

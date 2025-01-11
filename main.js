@@ -24,7 +24,7 @@ $(document).ready(function(){
 
   });  
 
-  $(".ProjectButton").on("click", function(){
+  $(".ProjectCategoryLink").on("click", function(){
     ChangeCategory($(this).attr("id").replace("Button", ""));
   })
 });
@@ -49,10 +49,20 @@ function ChangeHeader()
 function ChangeCategory(category) {
   $('.ProjectContainer').hide();
 
-  if(category == 'All') $('.ProjectContainer').show();
-  else $('.' + category).show();
+  if(category == "All" || category == "Games" || category == "Other") { $('.Spec').hide(); }
 
-  $('.ProjectButton').addClass('CategoryActive').not('#' + category + 'Button').removeClass('CategoryActive');
+  if(category == "All")
+  {
+    $('.ProjectContainer').show();
+    $('.Spec').show();
+  } 
+  else 
+  {
+    $('.' + category).show();
+  }
+
+
+  $('.ProjectCategoryLink').removeClass('CategoryInactive').not('#' + category + 'Button').addClass('CategoryInactive');
 
   sessionStorage.Category = category;
 }
