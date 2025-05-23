@@ -1,0 +1,29 @@
+@keyframes LoadDownArrow
+{
+  from { bottom: 5%; opacity: 0%; }
+  to { bottom: 15%; opacity: 100%; }
+}
+
+@keyframes LoadHeader
+{
+  from { bottom: 65%; opacity: 0%; }
+  to { bottom: 70%; opacity: 100%; }
+}
+
+@keyframes LoadHeaderSub
+{
+  from { bottom: 60%; opacity: 0%; }
+  to { bottom: 65%; opacity: 100%; }
+}
+
+@keyframes LoadHeaderSeparator
+{
+  from { bottom: 55%; opacity: 0%; }
+  to { bottom: 60%; opacity: 100%; }
+}
+
+@keyframes LoadHeaderButtons
+{
+  from { bottom: 40%; opacity: 0%; }
+  to { bottom: 45%; opacity: 100%; }
+}

@@ -49,30 +49,80 @@
             <video autoplay="true" loop="" muted="" class="TopProjectShowcaseVideo">
                 <source src="Resources/PortfolioVideoShowcase.mp4" type="video/mp4">
             </video>
-            <div class="TopProjectShowcaseScrollSection">    
-                <div class="CustomButton WithBackground Darker">
+            <div class="TopLoadPageSection Header" style="margin-bottom: 0px;">
+                <p style="font-weight: 600; font-family: Roboto Sans, sans-serif; font-size: 48px; margin-bottom: 10px;">Ben Holdway</p>
+            </div>
+            <div class="TopLoadPageSection HeaderSub" style="margin-bottom: 0px;">
+                <p style="font-weight: 400; font-size: 24px; margin-bottom: 10px;">Current Second Year Games Programming Student!</p>
+            </div>
+            <div class="BorderSeperator TopLoadPageSection Separator" style="width: 50%;"></div>
+            <!-- <div class="TopLoadPageSection Buttons" style="flex-direction: row; justify-content: center;">
+                <div class="CustomButton WithBackground LightShadow" style="margin: 0 10px;">
                     <a href="#Home">
-                    <p class="ProjectLinkText">Scroll Down</p>
+                    <p>PROJECTS</p>
                     </a>
                 </div>
+                <div class="CustomButton WithBackground LightShadow" style="margin: 0 10px;">
+                    <a href="#Home">
+                    <p>ABOUT ME</p>
+                    </a>
+                </div>
+            </div> -->
+            
+            <div class="TopLoadPageSection ScrollArrow">
+                <a href="#Home">
+                <img src="Resources/Down Arrow.png" class="CustomButton HeaderButton" style="width: 100px; height: 100px; padding: 20px">
+                </a>
             </div>
 
             <div id="Home" style="position: absolute; bottom: 150px;"></div>
         </div>
+        
+        <div class="Section Two SectionInfo">
+            <div class="Section Left Home">
+                <div class="Container">
+                    <div class="ContainerContent" style="text-align: left;">
+                        <p class="Title">Games Design and Programming Student</p>
 
-        <div class="Section One">
-            <div class="Container">
-                <div class="ContainerContent" style="text-align: left;">
-                    <h1 class="Heading Title">Ben Holdway</h1>
+                        <p>Hey, I'm Ben Holdway. Welcome to my portfolio page!</p>
+                        <p>I've been interested in games and coding for as long as I can remember, and these passions have come together
+                            to make me want to create efficient and clean code for games.
+                        </p>
+                        <p>Current Second Year Student, studying at the <b>University of Staffordshire</b></p>
+                    </div>
+                </div>
+            </div>
 
-                    <div class="BorderSeperator"></div>
+            <div class="Section One Right Home" style="margin-right: 25px;">
+                <div class="Container" style="text-align: left; justify-content: space-between;">
 
-                    <p class="Title">Games Design and Programming Student</p>
-                    <p>Hey, I'm Ben Holdway. Welcome to my portfolio page!</p>
-                    <p>I've been interested in games and coding for as long as I can remember, and these passions have come together
-                        to make me want to create efficient and clean code for games.
-                    </p>
-                    <p>Current Second Year Student, studying at the <b>University of Staffordshire</b></p>
+                    <h1 class="Heading Sub" style="margin-top: -10px;">Skills</h1>
+                    <div class="BorderSeperator" style="margin-bottom: 40px;"></div>
+
+                    <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1; height: auto;">
+                    <div class="ProjectType Larger" style="align-self: center; background-color: #31303f;">Unity</div>
+                    <div class="ProjectType Larger" style="align-self: center; background-color: #31303f;">Unreal Engine 5</div>
+                    <div class="ProjectType Larger" style="align-self: center; background-color: #31303f;">Godot</div>
+                    <div class="ProjectType Larger" style="align-self: center; background-color: #31303f;">GameMaker</div>
+                    <div class="ProjectType Larger" style="align-self: center; background-color: #31303f;">Blender</div>
+
+                    <div class="ProjectType Larger" style="align-self: center; background-color: #232327;">Visual Studio</div>
+                    <div class="ProjectType Larger" style="align-self: center; background-color: #232327;">VS Code</div>
+                    <div class="ProjectType Larger" style="align-self: center; background-color: #232327;">Rider</div>
+
+                    <div class="ProjectType Larger" style="align-self: center; background-color: #5e5e5e;">C#</div>
+                    <div class="ProjectType Larger" style="align-self: center; background-color: #5e5e5e;">C++</div>
+                    <div class="ProjectType Larger" style="align-self: center; background-color: #5e5e5e;">UE Blueprinting</div>
+                    <div class="ProjectType Larger" style="align-self: center; background-color: #5e5e5e;">Python</div>
+                    <div class="ProjectType Larger" style="align-self: center; background-color: #5e5e5e;">HTML</div>
+                    <div class="ProjectType Larger" style="align-self: center; background-color: #5e5e5e;">CSS</div>
+                    <div class="ProjectType Larger" style="align-self: center; background-color: #5e5e5e;">JavaScript</div>
+
+                    <!--
+                    <div class="ProjectType Larger" style="align-self: center; background-color: #000000;">Designing</div>
+                    <div class="ProjectType Larger" style="align-self: center; background-color: #000000;">Project Management</div>
+                    -->    
+                    </div>
                 </div>
             </div>
         </div>
@@ -83,11 +133,11 @@
 
                     <div class="ProjectHeader">
 
-                        <h1 class="Heading Title Grey">Favourite Projects</h1>
+                        <h1 class="Heading Title Grey">Recent Projects</h1>
                 
-                        <div class="CustomButton WithBackground Darker">
+                        <div class="CustomButton WithBackground Darker" style="margin-top: -40px;">
                             <a href="Projects/">
-                            <p class="ProjectLinkText">Project Showcase</p>
+                            <p class="ProjectLinkText">Project Showcase →</p>
                             </a>
                         </div>
                     </div>
@@ -98,7 +148,7 @@
                     
                     <div class="Projects">
 
-                        <div class="ProjectContainer"><a href="Project/Games/HiddenSecrets/">
+                        <div class="ProjectContainer Home"><a href="Project/Games/HiddenSecrets/">
                             <div class="ProjectImageContainer">
                                 <img src="Resources/HiddenSecrets/HiddenSecretsIcon.png" class="ProjectImage">
                             </div>
@@ -114,7 +164,7 @@
                             </div>
                         </a></div>
 
-                        <div class="ProjectContainer"><a href="Project/Games/ClosingUp/">
+                        <div class="ProjectContainer Home"><a href="Project/Games/ClosingUp/">
                             <div class="ProjectImageContainer">
                                 <img src="Resources/Closing Up/Closing Up Icon.png" class="ProjectImage">
                             </div>
@@ -130,7 +180,7 @@
                             </div>
                         </a></div>
 
-                        <div class="ProjectContainer"><a href="Project/Games/BattleOfTalokov/">
+                        <div class="ProjectContainer Home"><a href="Project/Games/BattleOfTalokov/">
                             <div class="ProjectImageContainer">
                                 <img src="Resources/BattleOfTalokov/Battle Of Talokov Icon.png" class="ProjectImage">
                             </div>
@@ -146,7 +196,7 @@
                             </div>
                         </a></div>
 
-                        <div class="ProjectContainer"><a href="Project/ToolsAndOther/OrbitalSystemSimulation/">
+                        <div class="ProjectContainer Home"><a href="Project/ToolsAndOther/OrbitalSystemSimulation/">
                             <div class="ProjectImageContainer">
                                 <img src="Resources/Planetary System/Orbital System Simulation Icon.png" class="ProjectImage">
                             </div>

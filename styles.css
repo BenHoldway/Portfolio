@@ -1,3 +1,4 @@
+@import url("Styles/animations.css");
 @import url("https://fonts.googleapis.com/css?family=Merriweather|Open+Sans");
 @import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab");
 
@@ -52,10 +53,17 @@ li
   background: #302f3d;
 }
 
+.HeaderContainer
+{
+  box-shadow: 0 0 50px inset black;
+}
 
 #Header 
 {
-  background-color: #121217;
+  /*background: linear-gradient(to bottom, #141416 90%, transparent);*/
+  background-color: #141416;
+  opacity: 80%;
+
   width: 100%;
   z-index: 9999;
 
@@ -75,11 +83,10 @@ li
   display: inline-flex;
   border-radius: 0.5em;
     
-  margin: 0 20px;
   padding: 0px 30px;
 
-  box-shadow: 0 0 20px black;
-  background-color: rgb(34, 31, 39);
+  box-shadow: 0 0 10px black;
+  background-color: rgb(34, 31, 39, 0.65);
   border: 1.5px solid rgb(19, 18, 22);
 }
 .CustomButton.WithBackground:hover
@@ -87,31 +94,47 @@ li
   background-color: rgb(99, 90, 119);
 }
 
+.CustomButton.WithBackground.LightShadow
+{
+  box-shadow: 0 0 10px rgb(105, 105, 105);
+  border: 1.5px solid rgb(42, 40, 48);
+}
+
 .CustomButton.WithBackground.Darker
 {
-  background-color: rgb(29, 26, 32);
+  background-color: rgba(29, 26, 32, 0.65);
 }
 .CustomButton.WithBackground:hover
 {
-  background-color: rgb(36, 33, 43);
+  background-color: rgb(36, 33, 43, 0.95);
 }
 
-.TopProjectShowcaseScrollSection 
+.TopLoadPageSection 
 { 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
-  bottom: 10%;
   width: 100%;
+  opacity: 0%;
 }
+
+.TopLoadPageSection.Header { animation: LoadHeader 0.5s ease-in-out 0.2s forwards; }
+.TopLoadPageSection.HeaderSub { animation: LoadHeaderSub 0.5s ease-in-out 0.35s forwards; }
+.TopLoadPageSection.Separator { animation: LoadHeaderSeparator 0.5s ease-in-out 0.5s forwards; }
+.TopLoadPageSection.Buttons { animation: LoadHeaderButtons 0.5s ease-in-out 0.5s forwards; }
+.TopLoadPageSection.ScrollArrow { animation: LoadDownArrow 0.5s ease-in-out 0.65s forwards;}
+
+.HeaderButton { transition: transform 0.2s; }
+.HeaderButton:hover { transform: translate(0, 10px) }
 
 @media only screen and (max-width: 1400px) 
 {
-  .TopProjectShowcaseScrollSection { scale: 0.8; }
+  .TopLoadPageSection { scale: 0.8; }
 }
 @media only screen and (min-width: 0px) 
 {
-  .TopProjectShowcaseScrollSection 
+  .TopLoadPageSection 
   { 
     transform: scale .2s; 
   }
@@ -279,7 +302,10 @@ li
   display: flex;
   width: 100%;
   min-width:1000px;
-  margin-top: -20%;
+  margin-top: -15%;
+
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
 
   mask-image: linear-gradient(to bottom, rgb(255, 255, 255) 95%, transparent 100%);
 }
@@ -292,10 +318,10 @@ li
   text-align: center;
 
   width: calc(100% - 10em);
-  max-width: 1200px;
+  max-width: 1600px;
 
   margin: 2em auto;
-  opacity: 98%;
+  opacity: 95%;
 
   border-radius: 5px;
 }
@@ -307,17 +333,19 @@ li
   margin: -1em auto;
 }
 
-.Section.ProjectInfo
+.Section.SectionInfo
 {
   display: flex;
-  justify-content: space-evenly;
+  align-items: center;
 }
 
 .Section.Left {
+  align-self: stretch; 
   margin-right: 10px
 }
 
 .Section.Right {
+  align-self: stretch; 
   margin-left: 10px
 }
 
@@ -325,9 +353,10 @@ li
   .Section { width: calc(100% - 5em); }
 }
 @media only screen and (max-width: 850px) {
-  .Section.ProjectInfo { flex-direction: column; }
+  .Section.SectionInfo { flex-direction: column; }
   .Section.Left { margin: 0 0 5px 0; width: 100%; }
   .Section.Right { margin: 5px 0 0 0; width: 100%; }
+  .Left.Home, .Right.Home { margin: 0 25px 25px; width: auto; }
 }
 @media only screen and (max-width: 500px) {
   .Section { width: calc(100% - 2.5em); }
@@ -335,12 +364,12 @@ li
 
 .Section.One
 {
-  background-color:#15161F;
+  background-color:#0d0d13;
 }
 
 .Section.Two
 {
-  background-color:#1C1D29;
+  background-color:#13141f;
 }
 
 .Section.Footer
@@ -474,6 +503,7 @@ li
     font-size:24px;
     font-weight: 700;
     color:#b4b4b4;
+    font-family: "Roboto Sans", sans-serif;
 }
 
 .HeaderTitle
@@ -633,10 +663,9 @@ li
 
 .BorderSeperator
 {
-  margin: 10px auto;
-  border-style: solid;
-  border-color: #818181;
-  border-width: 1.5px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #818181 10%, #818181 90%, transparent);
+  margin: 1em 0;
 }
 
 
@@ -656,6 +685,7 @@ li
 {
   display: flex; 
   flex-wrap: wrap; 
+  justify-content: center;
 }
 
 .ProjectContainer
@@ -668,9 +698,15 @@ li
   margin: 20px;
   line-height: 1.44;
   
-  width: calc(50% - 40px);
+  width: calc(50% - 20px);
+  max-width: 300px;
 
   overflow: hidden;
+}
+
+.ProjectContainer.Home
+{
+  max-width: 400px;
 }
 
 .ProjectImageContainer
@@ -687,10 +723,14 @@ li
   width: 100%;
   z-index: 0;
 }
+.ProjectImageContainer:hover
+{
+  box-shadow: 0 0 50px rgb(143, 143, 143) inset;
+}
 
 .ProjectContainer:hover .ProjectImage
 {
-  transform: scale(1.25);
+  transform: scale(1.15);
 }
 
 .AdditionInfo
@@ -713,6 +753,17 @@ li
   font-weight: 600;
 
   border-radius: 5px;
+}
+.ProjectType.Larger
+{
+  font-size: 1em;
+  margin: 8px 10px;
+  padding: 5px 8px;
+  border: 1.5px solid rgb(36, 36, 36);
+}
+@media only screen and (max-width: 1200px) 
+{
+  .ProjectType.Larger { font-size: 0.9em; margin: 6px 8px; }
 }
 
 .ProjectDescription
@@ -750,7 +801,7 @@ li
   background-color: rgb(21, 18, 24);
 }
 
-.ProjectLinkText { font-size: 20px; }
+.ProjectLinkText { font-size: 20px; font-weight: 500; }
 
 @media only screen and (max-width: 1820px) 
 {
