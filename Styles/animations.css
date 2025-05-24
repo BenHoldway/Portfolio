@@ -1,7 +1,7 @@
 @keyframes LoadDownArrow
 {
   from { bottom: 5%; opacity: 0%; }
-  to { bottom: 15%; opacity: 100%; }
+  to { bottom: 10%; opacity: 100%; }
 }
 
 @keyframes LoadHeader
@@ -26,4 +26,10 @@
 {
   from { bottom: 40%; opacity: 0%; }
   to { bottom: 45%; opacity: 100%; }
+}
+
+@keyframes LoadHeaderInfo
+{
+  from { top: 1em; opacity: 0%; }
+  to { top: 0em; opacity: 100%; }
 }
