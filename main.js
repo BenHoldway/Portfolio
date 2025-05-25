@@ -47,13 +47,13 @@ function ChangeHeader()
 }
 
 function ChangeCategory(category) {
-  $('.ProjectContainer').hide();
+  $('.projectCard').hide();
 
   if(category == "All" || category == "Games" || category == "Other") { $('.Spec').hide(); }
 
   if(category == "All")
   {
-    $('.ProjectContainer').show();
+    $('.projectCard').show();
     $('.Spec').show();
   } 
   else 

@@ -1,4 +1,5 @@
 @import url("Styles/animations.css");
+@import url("Styles/project.css");
 @import url("https://fonts.googleapis.com/css?family=Merriweather|Open+Sans");
 @import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab");
 
@@ -60,8 +61,7 @@ li
 #Header 
 {
   /*background: linear-gradient(to bottom, #141416 90%, transparent);*/
-  background-color: #141416;
-  opacity: 80%;
+  background-color: rgba(0, 0, 0, 0.8);
 
   width: 100%;
   z-index: 9999;
@@ -114,11 +114,11 @@ li
 
   width: 100%;
   min-width: 210vh;
-  height: auto;
+  height: auto / 2;
   left: min(0px, calc((100vw - 210vh) / 2));
 
-  filter: blur(4px);
-  -webkit-filter: blur(4px);
+  filter: blur(4px) brightness(20%);
+  -webkit-filter: blur(4px) brightness(20%);
 
   mask-image: linear-gradient(to bottom, rgb(255, 255, 255) 95%, transparent 100%);
 }
@@ -135,10 +135,11 @@ li
   margin: 0 auto;
 }
 
+.TopLoadPageSection.Warning { position: relative; animation: LoadHeaderInfo 0.5s ease-in-out 0.05s forwards; }
 .TopLoadPageSection.Header { position: relative; animation: LoadHeaderInfo 0.5s ease-in-out 0.2s forwards; }
 .TopLoadPageSection.HeaderSub { position: relative;  animation: LoadHeaderInfo 0.5s ease-in-out 0.35s forwards; }
 .TopLoadPageSection.Separator { position: relative; display: flex; justify-self: center; width: 80%; animation: LoadHeaderInfo 0.5s ease-in-out 0.5s forwards; }
-.TopLoadPageSection.Buttons { animation: LoadHeaderButtons 0.5s ease-in-out 0.5s forwards; }
+.TopLoadPageSection.Buttons { position: relative;  animation: LoadHeaderInfo 0.65s ease-in-out 0.5s forwards; }
 .TopLoadPageSection.ScrollArrow { animation: LoadDownArrow 0.5s ease-in-out 0.65s forwards;}
 
 .HeaderButton { transition: transform 0.2s; }
@@ -156,7 +157,7 @@ li
   max-width: 1200px;
   background-color:transparent;
   width: 100%;
-  padding: 10px 25px;
+  padding: 0px 25px;
 
   display: flex;
   justify-content: space-between;
@@ -176,6 +177,7 @@ li
 .Navigation
 {
     padding-left: 0px;
+    margin: 5px 0;
     overflow: hidden;
 }
 
@@ -184,7 +186,7 @@ li
 {
   font-family: "Roboto Sans", sans-serif;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 18px;
   display:inline-block;
   margin: 0 10px;
 }
@@ -227,6 +229,9 @@ li
 {
   display: flex; 
   justify-content: space-between;
+
+  padding-left: 0px;
+  margin: 10px 0;
 }
 
 #CompressedIconToggle
@@ -313,11 +318,10 @@ li
   align-content: center;
   text-align: center;
 
-  width: calc(100% - 10em);
-  max-width: 1600px;
+  width: calc(100% - 5em);
+  max-width: 1700px;
 
   margin: 2em auto;
-  opacity: 95%;
 
   border-radius: 5px;
 }
@@ -360,12 +364,12 @@ li
 
 .Section.One
 {
-  background-color:#0d0d13;
+  background-color:rgb(13, 13, 19, .95);
 }
 
 .Section.Two
 {
-  background-color:#13141f;
+  background-color:rgb(19, 20, 31, .95);
 }
 
 .Section.Footer
@@ -394,7 +398,7 @@ li
 
 .ContainerContent
 {
-  margin: 50px auto;
+  margin: 30px auto;
   width: 75%;
   text-align: left;
   float: none;
@@ -504,7 +508,8 @@ li
 
 .HeaderTitle
 {
-  font-size:36px;
+  font-size: 32px;
+  margin: 0;
 }
 
 @media only screen and (max-width: 600px) {
@@ -660,8 +665,8 @@ li
 .BorderSeperator
 {
   height: 1px;
-  background: linear-gradient(to right, transparent, #818181 10%, #818181 90%, transparent);
-  margin: 1em 0;
+  background: linear-gradient(to right, transparent, #818181 5%, #818181 95%, transparent);
+  margin: 1em -50px;
   align-self: center;
 }
 
@@ -678,33 +683,6 @@ li
 
 
 
-.Projects
-{
-  display: flex; 
-  flex-wrap: wrap; 
-  justify-content: center;
-}
-
-.ProjectContainer
-{
-  border: none;
-  text-align: left;
-  display: inline-block;
-  background-color: black;
-  font-size: 1rem;
-  margin: 20px;
-  line-height: 1.44;
-  
-  width: calc(50% - 20px);
-  max-width: 300px;
-
-  overflow: hidden;
-}
-
-.ProjectContainer.Home
-{
-  max-width: 400px;
-}
 
 .ProjectImageContainer
 {
@@ -741,7 +719,6 @@ li
 
 .ProjectType
 {
-  display: flex-start;
   z-index: 1;
   margin: 2px 5px;
   padding: 3px 6px;
@@ -751,6 +728,7 @@ li
 
   border-radius: 5px;
 }
+.ProjectType.left { margin-left: 0; }
 .ProjectType.Larger
 {
   font-size: 1em;
