@@ -333,6 +333,12 @@ li
   text-align: left; 
   margin: -1em auto;
 }
+.Section.isFlex
+{
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
 
 .SectionInfo
 {
@@ -358,6 +364,7 @@ li
   .Section.Left { margin: 0 0 5px 0; width: 100%; }
   .Section.Right { margin: 5px 0 0 0; width: 100%; }
   .Left.Home, .Right.Home { margin: 0 25px 25px; width: auto; }
+  .Section.isFlex { flex-direction: column-reverse; }
 }
 @media only screen and (max-width: 500px) {
   .Section { width: calc(100% - 2.5em); }

@@ -1,8 +1,11 @@
 $(document).ready(function(){
 
+  match(true);
+
   ChangeHeader();
   $(window).on('resize', function () {
     ChangeHeader();
+    match(false);
   });
 
   if($(".ProjectContainer").length > 0) ChangeCategory("All");
@@ -126,7 +129,3 @@ function match(override)
     $('#ProjectAbout').addClass('isFullSectionTop');
   }
 }
-
-
-addEventListener("resize", match);
-match(true);
