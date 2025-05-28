@@ -13,28 +13,28 @@
   <body class="Home" onload="CurrentSlide(1)">
     <div class="HeaderContainer"><!-- Class empty -->
       <header id="Header" style="top: 0px;">
-            <div class="Header">
-              <h1><a href="../../../index.html">Ben Holdway</a></h1>
+        <div class="Header">
+          <h1><a href="../../../index.html">Ben Holdway</a></h1>
 
-              <ul class="Navigation FullHeader">
-                <li class="NavigationText"><a href="../../../">Home</a></li>
-                <li class="NavigationText"><a href="../../../Projects/">Projects</a></li>
-                <li class="NavigationText"><a href="../../../AboutMe/">About Me</a></li>
-              </ul>
+          <ul class="Navigation FullHeader">
+            <li class="NavigationText"><a href="../../../">Home</a></li>
+            <li class="NavigationText"><a href="../../../Projects/">Projects</a></li>
+            <li class="NavigationText"><a href="../../../AboutMe/">About Me</a></li>
+          </ul>
 
-              <ul class="FullHeader" style="padding-left: 0px;">
-                  <!-- <a href="https://benholdway.artstation.com" target="_blank" rel="noopener noreferrer"><img src="../../Resources/Artstation Logo.png" class="LogoLinks"></a> -->
-                  <a href="https://www.linkedin.com/in/ben-holdway-708883214/" target="_blank" rel="noopener noreferrer"><img src="../../../Resources/LinkedIn Logo.png" class="LogoLinks"></a>
-                  <a href="https://github.com/BenHoldway" target="_blank" rel="noopener noreferrer"><img src="../../../Resources/github-mark.png" class="LogoLinks"></a>
-                  <a href="mailto:benholdway03@gmail.com" target="_blank" rel="noopener noreferrer"><img src="../../../Resources/Email Icon.png" class="LogoLinks"></a>
-              </ul>
+          <ul class="FullHeader" style="padding-left: 0px;">
+              <!-- <a href="https://benholdway.artstation.com" target="_blank" rel="noopener noreferrer"><img src="../../Resources/Artstation Logo.png" class="LogoLinks"></a> -->
+              <a href="https://www.linkedin.com/in/ben-holdway-708883214/" target="_blank" rel="noopener noreferrer"><img src="../../../Resources/LinkedIn Logo.png" class="LogoLinks"></a>
+              <a href="https://github.com/BenHoldway" target="_blank" rel="noopener noreferrer"><img src="../../../Resources/github-mark.png" class="LogoLinks"></a>
+              <a href="mailto:benholdway03@gmail.com" target="_blank" rel="noopener noreferrer"><img src="../../../Resources/Email Icon.png" class="LogoLinks"></a>
+          </ul>
 
-              <ul class="CompressedHeader">
-                  <li><a href="javascript:void(0);" id="CompressedIconToggle">
-                      <img src="../../../Resources/CompressedNavIcon.png" style="width: 75px; float: right; padding-right: 20px;">
-                  </a></li>
-              </ul>
-          </div>
+          <ul class="CompressedHeader">
+              <li><a href="javascript:void(0);" id="CompressedIconToggle">
+                  <img src="../../../Resources/CompressedNavIcon.png" style="width: 75px; float: right; padding-right: 20px;">
+              </a></li>
+          </ul>
+        </div>
       </header>
 
       <div id="NavLinks" class="CompressedHeader">
@@ -48,21 +48,53 @@
 
     </div>
 
-    <div class="Section One">
-      <div class="Container">
-        <div class="ProjectHeader">
+    <div id="TopVideoShowcase" style="position: relative; ">
+      <div style="display: flex; z-index: 1; justify-content: center; margin: 0 auto; flex-direction: column; text-align: center; position: absolute; width: 100%; top: 65%;">
+        <div class="TopLoadPageSection Header" style="margin-bottom: 0px; text-align: center;">
+          <p style="font-weight: 600; font-family: Roboto Sans, sans-serif; font-size: 48px; margin-bottom: 20px; ">DirectX Orbital System Simulation</p>
+        </div>
+        <div class="TopLoadPageSection Header"><p style="margin: -20px 0 30px;">(May 2024)</p></div>
+        <div class="TopLoadPageSection Buttons" style="flex-direction: row; justify-content: center;">
+          <a href="https://github.com/BenHoldway/IntroToGraphicsProgramming" target="_blank" rel="noopener noreferrer">
+            <div class="CustomButton WithBackground LightShadow" style="margin: 0 10px;">
+              <p>Project Files</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div style="width: 100%; overflow: hidden; display: flex; position: relative; margin-top: -40em;">
+        <video autoplay="true" loop="" muted="" class="TopProjectShowcaseVideo">
+          <source src="../../../Resources/PortfolioVideoShowcase.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
 
-          <h1 class="Heading Title" style="text-align: left;">DirectX Orbital System Simulation (May, 2024)</h1>
+    <div id="ProjectInfo" class="Section SectionInfo">
+      <div id="ProjectAbout" class="Section One Right">
+        <div id="ProjectAboutContainer" class="Container">
+          <div id="ProjectAboutContainerContent" class="ContainerContent">
+            <h1 class="Heading Sub">About</h1>
+            <div class="BorderSeperator"></div>
 
-          <div class="CustomButton WithBackground Darker">
-            <a href="https://github.com/BenHoldway/IntroToGraphicsProgramming.git" target="_blank" rel="noopener noreferrer">
-              <p class="ProjectLinkText">Project Files</p>
-            </a>
+            <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1; margin-bottom: 30px;">
+                <div class="ProjectType left university larger" style="align-self: center;">University</div>
+                <div class="ProjectType university larger" style="align-self: center;">9 Weeks</div>
+                <div class="ProjectType university larger" style="align-self: center;">1st Year</div>
+                <div class="ProjectType c-plus-plus" style="align-self: center;">C++</div>
+                <div class="ProjectType solo" style="align-self: center;">Solo</div>  
+            </div>
+
+            <p>This is an orbital simulation of a group of astronomical bodies, using DirectX v1.0 and C++. A number of 
+              properties is simulated, from different orbital speeds and radii, body sizes and rotation speeds as well.
+            </p>
+            <p>The user is able to spectate each body using a navigation UI element, or switch between each using keys. While
+              spectating, the user is able to zoom in and out to get a better view of the body, or viewing it from a wider shot.
+            </p>
           </div>
         </div>
+      </div>
 
-        <div class="BorderSeperator"></div>
-
+      <div id="ProjectSlides" class="Section One Left hasTextCentered">
         <div class="SlideshowContainer">
 
           <div class="Slide">
@@ -70,15 +102,15 @@
           </div>
 
           <div class="Slide">
-            <img src="../../../Resources/Planetary System/SS1_cropped.png" style="width: 100%">
+            <img src="../../../Resources/PlanetarySystem/OSS_SS1.png" style="width: 100%">
           </div>
         
           <div class="Slide">
-            <img src="../../../Resources/Planetary System/SS3_cropped.png" style="width: 100%">
+            <img src="../../../Resources/PlanetarySystem/OSS_SS2.png" style="width: 100%">
           </div>
         
           <div class="Slide">
-            <img src="../../../Resources/Planetary System/SS4_cropped.png" style="width:100%">
+            <img src="../../../Resources/PlanetarySystem/OSS_SS3.png" style="width:100%">
           </div>
         
           <!-- Next and previous buttons -->
@@ -92,48 +124,11 @@
         
           <!-- Thumbnail images -->
           <div class="DemoHolder">
-              <img class="Demo Cursor" src="../../../Resources/Planetary System/SS1_cropped.png" onclick="CurrentSlide(1)">
-              <img class="Demo Cursor" src="../../../Resources/Planetary System/SS1_cropped.png" onclick="CurrentSlide(1)">
-              <img class="Demo Cursor" src="../../../Resources/Planetary System/SS3_cropped.png" onclick="CurrentSlide(2)">
-              <img class="Demo Cursor" src="../../../Resources/Planetary System/SS4_cropped.png" onclick="CurrentSlide(3)">
+              <img class="Demo Cursor" src="../../../Resources/PlanetarySystem/OSS_SS1.png" onclick="CurrentSlide(1)">
+              <img class="Demo Cursor" src="../../../Resources/PlanetarySystem/OSS_SS1.png" onclick="CurrentSlide(1)">
+              <img class="Demo Cursor" src="../../../Resources/PlanetarySystem/OSS_SS2.png" onclick="CurrentSlide(2)">
+              <img class="Demo Cursor" src="../../../Resources/PlanetarySystem/OSS_SS3.png" onclick="CurrentSlide(3)">
           </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="Section ProjectInfo">
-      <div class="Section Two Project Left" style="align-self: stretch;">
-        <div class="Container" style="padding: 0 20px;">
-          <h1 class="Heading Sub">About</h1>
-          <div class="BorderSeperator"></div>
-
-          <p>This is an orbital simulation of a group of astronomical bodies, using DirectX v1.0 and C++. A number of 
-            properties is simulated, from different orbital speeds and radii, body sizes and rotation speeds as well.
-          </p>
-          <p>The user is able to spectate each body using a navigation UI element, or switch between each using keys. While
-            spectating, the user is able to zoom in and out to get a better view of the body, or viewing it from a wider shot.
-          </p>
-        </div>
-      </div>
-
-      <div class="Section Two Project Right" style="align-self: stretch;">
-        <div class="Container" style="padding: 0 20px;">
-
-          <h1 class="Heading Sub">Project Info</h1>
-          <div class="BorderSeperator"></div>
-
-          <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1; height: auto;">
-            <div class="ProjectType university" style="align-self: center;">University</div>
-            <div class="ProjectType c-plus-plus" style="align-self: center;">C++</div>
-            <div class="ProjectType solo" style="align-self: center;">Solo</div>
-          </div>
-
-          <ul style="line-height: 30px;">
-            <li style="list-style-type: disc;"><b>Module: </b> Introduction to Graphics Programming - Year 1</li>
-            <li style="list-style-type: disc;"><b>Team Size: </b> Solo</li>
-            <li style="list-style-type: disc;"><b>Duration: </b> 9 Weeks</li>
-            <li style="list-style-type: disc;"><b>Language: </b> DirectX (C++)</li>
-          </ul>
         </div>
       </div>
     </div>

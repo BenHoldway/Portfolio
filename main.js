@@ -103,3 +103,30 @@ function ShowSlides(n) {
   demoImages[slideIndex-1].className += " Active";
 }
 /* #endregion */
+
+var sizeIndex = 0;
+function match(override) 
+{
+  if(window.matchMedia("(min-width: 1500px)").matches && (sizeIndex != 0 || override))
+  {
+    sizeIndex = 0;
+    $('#ProjectInfo').addClass('SectionInfo');
+    $('#ProjectSlides').addClass('Left');
+    $('#ProjectAbout').addClass('Right');
+    $('#ProjectSlides').removeClass('isFullSectionBottom');
+    $('#ProjectAbout').removeClass('isFullSectionTop');
+  }
+  else if(window.matchMedia("(max-width: 1500px)").matches && (sizeIndex != 1 || override))
+  { 
+    sizeIndex = 1;
+    $('#ProjectInfo').removeClass('SectionInfo');
+    $('#ProjectSlides').removeClass('Left'); 
+    $('#ProjectAbout').removeClass('Right'); 
+    $('#ProjectSlides').addClass('isFullSectionBottom');
+    $('#ProjectAbout').addClass('isFullSectionTop');
+  }
+}
+
+
+addEventListener("resize", match);
+match(true);

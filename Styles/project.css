@@ -20,6 +20,8 @@
 {
     text-align: center;
 }
+.Section.isFullSectionTop { margin: 0 0 2em; width: 100%; }
+.Section.isFullSectionBottom { margin: 0; width: 100%; }
 
 .projectCard
 {
