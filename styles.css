@@ -57,7 +57,7 @@ li
 }
 /* height */
 ::-webkit-scrollbar {
-  height: 50px;
+  height: 5px;
   width: 8px;
 }
 
@@ -177,7 +177,7 @@ li
   align-items: center;
   
   background-color: #101010;
-  width: 100vw; width: 100svw;
+  width: 100%;
   margin: 0 auto;
   padding: 10px; 
 }
