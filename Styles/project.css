@@ -32,23 +32,23 @@
     line-height: 1.44;
     width: 25%;
 }
-.projectCard.home { width: 30%; }
+.projectCard.home { width: 25%; }
 .projectCard:hover { transform:scale(1); }
 .projectCard:hover .card { box-shadow: 0 0 10px rgb(48, 48, 48); }
 
-@media only screen and (max-width: 1700px)
+@media only screen and (max-width: 1750px)
 {
     .projectCard { width: 30%; }
 } 
-@media only screen and (max-width: 1450px)
+@media only screen and (max-width: 1500px)
 {
-    .projectCard, .projectCard.home { width: 50%; }
+    .projectCard, .projectCard.home { width: 40%; }
 } 
-@media only screen and (max-width: 815px)
+@media only screen and (max-width: 920px)
 {
-    .projectCard, .projectCard.home { width: 75%; }
+    .projectCard, .projectCard.home { width: 65%; }
 } 
-@media only screen and (max-width: 550px)
+@media only screen and (max-width: 700px)
 {
     .projectCard, .projectCard.home { width: 100%; }
 } 
@@ -97,8 +97,8 @@
 
 .projectUnavailable
 {
-    filter: brightness(10%);
-    -webkit-filter: brightness(10%);
+    filter: brightness(5%);
+    -webkit-filter: brightness(5%);
     color: rgb(75, 75, 75);
     pointer-events: none;
 }
