@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en-UK">
+    <head>
+        <title>Ben's Portfolio // About Me</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="../styles.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script type = "text/javascript" src="../main.js"></script>
+    </head>
+    <body class="Home">
+        <div class="navbar">
+            <div class="container">
+                <a class="navbarItem name" href="../"><strong>Ben Holdway</strong></a>
+                <div id="navbarMenu" class="navbarMenu">
+                    <a class="navbarItem" href="../">Home</a>
+                    <a class="navbarItem" href="../Projects/">Projects</a>
+                    <a class="navbarItem" href="../AboutMe/">About Me</a>
+                    <div class="navbarItem hasDropdown CustomButton">
+                        <a id="contactNavbarItem" class="navbarItem isNotInDropdown btn">Contact<i id="contactsDropdownArrow" class="arrow"></i></a>
+                        <div id="navbarDropdown" class="dropdown">
+                            <a class="navbarItem contactText" href="https://benholdway.github.io/Portfolio/BenHoldwayCV.pdf" target="_blank" rel="noopener noreferrer">
+                                <img src="../Resources/CVIcon.png" class="linkImage">
+                                CV
+                            </a>
+                            <a class="navbarItem contactText" href="https://www.linkedin.com/in/ben-holdway-708883214/" target="_blank" rel="noopener noreferrer">
+                                <img src="../Resources/LinkedInIcon.png" class="linkImage">
+                                LinkedIn
+                            </a>
+                            <a class="navbarItem contactText" href="https://github.com/BenHoldway" target="_blank" rel="noopener noreferrer">
+                                <img src="../Resources/GithubIcon.png" class="linkImage">
+                                GitHub
+                            </a>
+                            <a class="navbarItem contactText" href="mailto:benholdway03@gmail.com" target="_blank" rel="noopener noreferrer">
+                                <img src="../Resources/EmailIcon.png" class="linkImage">
+                                Email
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbarMenuCollapsed">
+                    <img class="navbarItem navbarCompressedIcon btn" src="../Resources/CompressedNavIcon.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="sectionBox" style="margin-top: 8em;">
+            <div class="container darkerBox">
+                <h1>Curriculum Vitae</h1>
+                <div class="headerLine"></div>
+
+                <embed src="../BenHoldwayCV.pdf" type="application/pdf" width="100%;" height="600px;">
+            </div>
+        </div>
+
+        <div class="sectionBox footer">
+            <div class="container hasTextCentered">
+                Copyright <img src="../CopyrightIcon.png" class="footerImage">
+                2025 - Ben Holdway // Page created by using HTML, CSS and JS
+            </div>
+        </div>
+    </body>
+</html>

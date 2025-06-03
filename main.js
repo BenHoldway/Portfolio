@@ -1,110 +1,105 @@
 $(document).ready(function(){
 
+  var contacts = document.getElementById("navbarDropdown");
+  var contactBtn = document.getElementById("contactNavbarItem");
+  var contactArrow = document.getElementById("contactsDropdownArrow");
+  var navBar = document.getElementById("navbarMenu");
+  const userAgent = navigator.userActivation;
+
   match(true);
 
-  ChangeHeader();
   $(window).on('resize', function () {
-    ChangeHeader();
     match(false);
+
+    if(window.innerWidth >= 850 && navBar.classList.contains("dropdown")) 
+    { 
+      contacts.classList = "dropdown";
+      navBar.className = navBar.className.replace(" dropdown", "");
+      navBar.className = navBar.className.replace(" isActive", "");
+    }
   });
 
-  if($(".ProjectContainer").length > 0) ChangeCategory("All");
+  // if (/Tablet|iPad/i.test(userAgent)) {
+  //   console.log("Tablet");
+  //   contactBtn.className += " isClickable"
+  // } else {
+  //   console.log("Desktop");
+  //   contactBtn.className += " isHoverable"
+  // }
 
-  window.addEventListener('mouseup',function(event){
-    var dropdownIcon = this.document.getElementById("CompressedIconToggle");
-    var navLinks = this.document.getElementById("NavLinks");
+  // $(".isClickable").on("click", function()
+  // {
+  //   if(contacts.style.display == "block")
+  //   {
+  //     contacts.style.display = "none";
+  //     contactArrow.className.replace(" isActive", "");
+  //     contactBtn.className += " isNotInDropdown";
+  //   }
+  //   else
+  //   {
+  //     contacts.style.display = "block";
+  //     contactArrow.className += " isActive";
+  //     contactBtn.className.replace(" isNotInDropdown", "");
+  //   }
+  // });
 
-    if(event.target != dropdownIcon && event.target.parentNode != dropdownIcon
-      && event.target != navLinks && event.target.parentNode != navLinks)
+  $(".navbarMenuCollapsed").on("click", function(){
+
+    if(navBar.classList.contains("dropdown"))
     {
-      navLinks.style.display = 'none';
+      navBar.className = navBar.className.replace(" dropdown", "");
+      navBar.className = navBar.className.replace(" isActive", "");
+      contacts.classList = "dropdown";
     }
     else
     {
-      if(navLinks.style.display === "block") { navLinks.style.display = 'none'; }
-      else { navLinks.style.display = 'block'; }
+      navBar.className += " dropdown";
+      navBar.className += " isActive";
+      contacts.className += " isActive";
     }
-
-  });  
-
-  $(".ProjectCategoryLink").on("click", function(){
-    ChangeCategory($(this).attr("id").replace("Button", ""));
-  })
+  });
 });
 
 
-
-
-function ChangeHeader()
-{
-  if(window.innerWidth <= 980)
-  {
-    $(".FullHeader").addClass("HeaderHidden")
-    $(".CompressedHeader").removeClass("HeaderHidden");
-  }
-  else
-  {
-    $(".FullHeader").removeClass("HeaderHidden");
-    $(".CompressedHeader").addClass("HeaderHidden");
-  }
-}
-
-function ChangeCategory(category) {
-  $('.projectCard').hide();
-
-  if(category == "All" || category == "Games" || category == "Other") { $('.Spec').hide(); }
-
-  if(category == "All")
-  {
-    $('.projectCard').show();
-    $('.Spec').show();
-  } 
-  else 
-  {
-    $('.' + category).show();
-  }
-
-
-  $('.ProjectCategoryLink').removeClass('CategoryInactive').not('#' + category + 'Button').addClass('CategoryInactive');
-
-  sessionStorage.Category = category;
-}
-
-
-
 /* #region SlideShow */
-var slideIndex = 1;
+  var slideIndex = 0;
 
-// Next/previous controls
-function PlusSlides(n) {
-  ShowSlides(slideIndex += n);
-}
+  // Next/previous controls
+  function ChangeSlide(n) {
+    slideIndex += n;
+    UpdateSlide();
+  }
 
-// Thumbnail image controls
-function CurrentSlide(n) {
-  ShowSlides(slideIndex = n);
-}
+  // Thumbnail image controls
+  function CurrentSlide(n) {
+    slideIndex = n;
+    UpdateSlide();
+  }
 
-function ShowSlides(n) {
-  let i;
-  let slides = $('.Slide');
-  let demoImages = $('.Demo');
+  function UpdateSlide()
+  {
+    let slides = $('.slide');
+    let demoImages = $('.demoStripItem');
 
-  if (n > slides.length) 
-    slideIndex = 1;
+    for (let i = 0; i < demoImages.length; i++) 
+      demoImages[i].className = demoImages[i].className.replace(" demoItemActive", "");
+    
+    for (let i = 0; i < slides.length; i++) 
+    {
+      slides[i].style.display = "none";
+      slides[i].style.opacity = "0";
+    }
 
-  if (n < 1) 
-    slideIndex = slides.length;
+    if (slideIndex >= slides.length) 
+      slideIndex = 0;
 
-  for (i = 0; i < slides.length; i++)
-    slides[i].style.display = "none";
+    else if (slideIndex < 0) 
+      slideIndex = slides.length - 1;
 
-  for (i = 0; i < demoImages.length; i++) 
-    demoImages[i].className = demoImages[i].className.replace(" Active", "");
-
-  slides[slideIndex-1].style.display = "block";
-  demoImages[slideIndex-1].className += " Active";
-}
+    slides[slideIndex].style.display = "block";
+    slides[slideIndex].style.opacity = "1";
+    demoImages[slideIndex].className += " demoItemActive";
+  }
 /* #endregion */
 
 var sizeIndex = 0;

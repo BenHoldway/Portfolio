@@ -4,31 +4,7 @@
   to { bottom: 10%; opacity: 100%; }
 }
 
-@keyframes LoadHeader
-{
-  from { bottom: 65%; opacity: 0%; }
-  to { bottom: 70%; opacity: 100%; }
-}
-
-@keyframes LoadHeaderSub
-{
-  from { bottom: 60%; opacity: 0%; }
-  to { bottom: 65%; opacity: 100%; }
-}
-
-@keyframes LoadHeaderSeparator
-{
-  from { bottom: 55%; opacity: 0%; }
-  to { bottom: 60%; opacity: 100%; }
-}
-
-@keyframes LoadHeaderButtons
-{
-  from { bottom: 40%; opacity: 0%; }
-  to { bottom: 45%; opacity: 100%; }
-}
-
-@keyframes LoadHeaderInfo
+@keyframes LoadInfo
 {
   from { top: 1em; opacity: 0%; }
   to { top: 0em; opacity: 100%; }

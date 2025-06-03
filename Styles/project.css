@@ -32,13 +32,13 @@
     line-height: 1.44;
     width: 25%;
 }
-.projectCard.home { width: 33.33333%; }
+.projectCard.home { width: 30%; }
 .projectCard:hover { transform:scale(1); }
 .projectCard:hover .card { box-shadow: 0 0 10px rgb(48, 48, 48); }
 
 @media only screen and (max-width: 1700px)
 {
-    .projectCard { width: 33.33333%; }
+    .projectCard { width: 30%; }
 } 
 @media only screen and (max-width: 1450px)
 {
@@ -102,3 +102,164 @@
     color: rgb(75, 75, 75);
     pointer-events: none;
 }
+
+#ProjectAbout { flex-shrink: 2; }
+
+.projectTag
+{
+    position: relative;
+    z-index: 1;
+    margin: .4em .4em;
+    padding: 3px 6px;
+    font-size: 0.8em;
+    font-weight: 600;
+
+    border-radius: .5em;
+}
+.projectTag.left { margin-left: 0; }
+.projectTag.larger
+{
+    font-size: 1em;
+    margin: 8px 10px;
+    padding: 5px 8px;
+    border: 1.5px solid rgb(36, 36, 36);
+    border-radius: .75em;
+}
+@media only screen and (max-width: 1200px) 
+{
+  .projectTag.larger { font-size: 0.9em; margin: 6px 8px; }
+}
+
+.ue5
+{
+  background-color: #1b1a2c;
+}
+
+.unity
+{
+  background-color: #15161F;
+}
+
+.university
+{
+  background-color:rgb(61, 61, 61);
+}
+
+.personal
+{
+  background-color:rgb(99, 99, 99);
+}
+
+.c-sharp
+{
+  background-color:rgb(17, 15, 29);
+}
+
+.c-plus-plus
+{
+  background-color:rgb(34, 34, 34);
+}
+
+.blueprints
+{
+  background-color:rgb(31, 29, 39);
+}
+
+.solo
+{
+  background-color:rgb(13, 10, 24);
+}
+
+.group
+{
+  background-color:rgb(33, 30, 41);
+}
+
+/* #region Project Slideshow */
+    .projectSlideshow
+    {
+        position: relative;
+        display: inline-block;
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .slide
+    { 
+        background-color: black;
+        transition: all .25s;
+        display: none;
+        opacity: 0;
+    }
+    .slide.activeSlide { display: block; opacity: 1; }
+    .slide img { width: 100%; }
+    .slide iframe { width: 100%; aspect-ratio: 16/9; border-color: transparent; }
+
+    .changeSlideBtn
+    {
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+    .changeSlideBtn:hover
+    {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .changeSlideBtn.prev 
+    {  
+        left: 25px;
+        border-radius: 3px 0 0 3px;
+    }
+    .changeSlideBtn.next
+    {
+        right: 25px;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .slideDemoStrip
+    {
+        margin-top: 4px;
+        height: 5vw;
+        z-index: 40;
+        display: flex;
+        overflow: auto;
+        position: relative;
+    }
+
+    .demoStripItem
+    {
+        opacity: 0.6;
+        margin: .2em;
+        aspect-ratio: 16 / 9;
+    }
+    .demoItemActive
+    {
+        border-style: solid;
+        border-radius: 1px;
+        border-color: #d8d8d8;
+    }
+
+    .demoItemActive, .slideDemoStrip:hover 
+    {
+        opacity: 1;
+    }
+
+    @media only screen and (max-width: 1500px) 
+    { 
+        .projectSlideshow { width: 80%; margin: 30px 0; }
+        .slideDemoStrip { height: 7.5vw; }
+    } 
+    @media only screen and (max-width: 750px) 
+    { 
+        .slideDemoStrip { height: 10vw; }
+    }
+
+/* #endregion */
