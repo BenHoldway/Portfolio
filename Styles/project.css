@@ -254,7 +254,7 @@
 
     @media only screen and (max-width: 1500px) 
     { 
-        .projectSlideshow { width: 80%; margin: 30px 0; }
+        .projectSlideshow { width: 80%; margin: 30px auto; }
         .slideDemoStrip { height: 7.5vw; }
     } 
     @media only screen and (max-width: 750px) 
