@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="../../../styles.css">
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
         <script type = "text/javascript" src="../../../main.js"></script>
+        <script type = "text/javascript" src="../../../project.js"></script>
     </head>
     <body class="Home">
         <div class="navbar">
@@ -47,7 +48,7 @@
 
         <div class="headerVideo">
             <video autoplay="true" loop="true" muted="true" class="threeQuartersHeight">
-                <source src="../../../Resources/PortfolioVideoShowcase.mp4" type="video/mp4">
+                <source src="../../../Resources/ClosingUp/ClosingUpVidShowcase.mp4" type="video/mp4">
             </video>
             <div>
                 <p class="headerItem header">CLosing Up</p>
@@ -56,6 +57,11 @@
                     <a href="https://github.com/BenHoldway/Closing-Up" target="_blank" rel="noopener noreferrer">
                         <div class="btn hasBorder isRounded darkerBg buttons">
                             <p>Project Files →</p>
+                        </div>
+                    </a>
+                    <a href="#projectInfo">
+                        <div class="btn hasBorder isRounded darkerBg buttons">
+                            <p>Development →</p>
                         </div>
                     </a>
                 </div>
@@ -69,27 +75,35 @@
 
                 <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1; margin-bottom: 30px;">
                     <div class="projectTag left university larger" style="align-self: center;">University</div>
-                    <div class="projectTag university larger" style="align-self: center;">9 Weeks</div>
+                    <div class="projectTag university larger" style="align-self: center;">6 Weeks</div>
                     <div class="projectTag university larger" style="align-self: center;">1st Year</div>
                     <div class="projectTag unity larger" style="align-self: center;">Unity</div>
                     <div class="projectTag c-sharp larger" style="align-self: center;">C#</div>
                     <div class="projectTag solo larger" style="align-self: center;">Solo</div>
                 </div>
 
-                <p>
-                    Closing Up is a top down pixelated game which simulates a mundane job in a game environment. 
+                <p><em>You work a boring job as a cleaner for an office space, cleaning up messes and closing up the space. Find and complete the
+                    needed tasks during your shift, from cleaning up to turning electricals off. 
+                </em></p>
+                <p style="margin-bottom: 4em;"><em>Each task will reward you with money at the end of your shift, but make sure there are no remaining tasks at the end of your time. 
+                    Earn more money every day to support your family, otherwise their health may deteriorate.
+                </em></p>
+                <p>This project was created for my 1st year <strong>'Game Prototyping' Module</strong>, using Unity to create a small game with a prompt of <strong>"Simulating the Mundane"</strong>. 
                 </p>
-                <p>
-                    Your job is simply to clean and tidy up the office space after a work day. Complete tasks, from cleaning to turning electricals off, 
-                    to gain money. Use these funds to support your family and keep them healthy, you don't want them to fall ill.
+                <p>This was the 2nd part of this module, after creating <em>'Chasm'</em> in the 1st part, with a <strong>development time of 6 weeks</strong>. The intention of this was to use the 
+                    <strong>Agile Development Methodology</strong> to acurately plan and complete sprints with a larger project than the 3 week game previously created for this module.
                 </p>
             </div>
 
             <div class="container darkerBox hasTextCentered larger">
                 <div class="projectSlideshow">
                     
-                    <div class="slide" style="display: block; opacity: 1">
-                        <iframe src="https://www.youtube.com/embed/VB82OIlioR8?si=5hFqoFdt0fYLH5Og"></iframe>
+                    <div class="slide" style="display: flex; opacity: 1">
+                        <iframe src="https://www.youtube.com/embed/VB82OIlioR8" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="slide">
+                        <img src="../../../Resources/ClosingUp/ClosingUpGantt.png">
                     </div>
                     
                     <div class="slide">
@@ -112,46 +126,86 @@
                         <img src="../../../Resources/ClosingUp/ClosingUpSS5.png">
                     </div>
 
-                    <a class="changeSlideBtn prev btn" onclick="ChangeSlide(-1)">&#10094;</a>
-                    <a class="changeSlideBtn next btn" onclick="ChangeSlide(1)">&#10095;</a>
-
                     <div class="slideDemoStrip">
-                        <img class="demoStripItem btn demoItemActive" src="../../../Resources/ClosingUp/ClosingUpSS1.png" onclick="CurrentSlide(0)">
-                        <img class="demoStripItem btn" src="../../../Resources/ClosingUp/ClosingUpSS2.png" onclick="CurrentSlide(1)">
-                        <img class="demoStripItem btn" src="../../../Resources/ClosingUp/ClosingUpSS3.png" onclick="CurrentSlide(2)">
-                        <img class="demoStripItem btn" src="../../../Resources/ClosingUp/ClosingUpSS4.png" onclick="CurrentSlide(3)">
-                        <img class="demoStripItem btn" src="../../../Resources/ClosingUp/ClosingUpSS5.png" onclick="CurrentSlide(4)">
+                        <img class="demoStripItem btn demoItemActive" src="../../../Resources/ClosingUp/ClosingUpVid.png" onclick="CurrentSlide(0)">
+                        <img class="demoStripItem btn" src="../../../Resources/ClosingUp/ClosingUpGantt.png" onclick="CurrentSlide(1)">
+                        <img class="demoStripItem btn" src="../../../Resources/ClosingUp/ClosingUpSS1.png" onclick="CurrentSlide(2)">
+                        <img class="demoStripItem btn" src="../../../Resources/ClosingUp/ClosingUpSS2.png" onclick="CurrentSlide(3)">
+                        <img class="demoStripItem btn" src="../../../Resources/ClosingUp/ClosingUpSS3.png" onclick="CurrentSlide(4)">
+                        <img class="demoStripItem btn" src="../../../Resources/ClosingUp/ClosingUpSS4.png" onclick="CurrentSlide(5)">
+                        <img class="demoStripItem btn" src="../../../Resources/ClosingUp/ClosingUpSS5.png" onclick="CurrentSlide(6)">
+                    </div>
+                    <div class="demoSliderContainer">
+                        <a class="demoSliderItem changeSlideBtn btn hasTextCentered" onclick="ChangeSlide(-1)"><p class="sliderArrow prev"></p></a>
+                        <div id="demoSlider" class="demoSliderItem demoSlider">
+                            <div id="demoSliderHandle"class="demoSliderHandle sliderHandleWithTransition"></div>
+                        </div>
+                        <a class="demoSliderItem changeSlideBtn btn hasTextCentered" onclick="ChangeSlide(1)"><p class="sliderArrow next"></p></a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="sectionBox">
+        <div id="projectInfo" class="inPageLinkTarget"></div>
+
+        <div class="sectionBox doubled hasContentAtTop">
             <div class="container lighterBox">
+                <h1>Game Features</h1>
+                <div class="headerLine"></div>
+                <h2>General</h2>
+                <ul>
+                    <li>Usage of <strong>Agile Development Weekly Sprints</strong></li>
+                    <li>Full Project Planning and Maintaining</li>
+                    <li>Usage of <strong>documentation, planning and Gantt Charts</strong></li>
+                </ul>
+                <h2>Player</h2>
+                <ul>
+                    <li>Simple Movement</li>
+                    <li><strong>Press and Hold Interactions</strong> with Objects</li>
+                    <li>Slight <strong>camera movement around the player</strong> with mouse movement</li>
+                </ul>
+                <h2>Shift System</h2>
+                <ul>
+                    <li>Shift tracker to handle <strong>difficulty of shift tasks</strong></li>
+                    <li>A timer that ticks up to the end of the shift day</li>
+                    <li><strong>Task generation</strong> for the player to complete during the shift</li>
+                </ul>
+                <h2>Family and Money</h2>
+                <ul>
+                    <li>Stats for each family member</li>
+                    <li>Money value which increases from shift and decreases from purchases</li>
+                    <li><strong>Toggleable costs</strong> to let the player select what they want to pay</li>
+                    <li><strong>Costs which automatically enable/disable</strong> if they're needed</li>
+                </ul>
+            </div>
+            <div class="container lighterBox larger">
                 <h1>Project Development</h1>
                 <div class="headerLine"></div>
-
-                <p>
-                    This somewhat larger prototype was developed in a 6 week project sprint, created in the same module as "Chasm", 
-                    which we were tasked with simulating a mundane job and "gamify-ing" it.
+                <p>The development of this project allowed me to <strong>take what I had learnt in the 3 week project and apply it to a larger scaled version</strong>. Initially, I had 
+                    a lot of issues coming up with ideas which matched the prompt we were given. They wanted a dull job, but "game-ified", which I really struggled to grasp.
+                    After a lot of time, I was able to design the idea which I went with: a <strong>2D top-down cleaning job and money management simulator</strong>.
                 </p>
-                <p>
-                    I had a limited time to create this game, which meant that I had to limit the number of mechanics that I would work on. Many mechanics,
-                    like different events that would change how the player played, or that gave the player different things to do as the game progressed, was outside
-                    of the scope for what the game ended up being.
+                <p style="margin-bottom: 1em;">To properly follow a sprint plan for <strong>Agile Development</strong>, I went through the entire process of planning the project as a whole. I made a list of all of the 
+                    mechanics within the game, and the tasks I needed to complete. From creating a <strong>Gantt chart</strong> for the project timeline, as well as <strong>using a planning tool 
+                    to manage which stage tasks are in - To Do, In Progress and Completed</strong>.
                 </p>
-                <p>
-                    This module and game taught me a lot of good things, from effective project and time management, as well as good ways to structure 
-                    and track the development of the project. All these skills made the creation of this game a lot smoother and allowed for me to react
-                    when development got slightly behind more successfully.
+                <div class="headerLine half"></div>
+                <p>Through the development process, I made <strong>very good progress</strong> with the content I was working on. While there were some task movement between different
+                    sprints, I was able to <strong>keep up to date and manage each week's sprint accurately</strong> to manage the development progression as a whole. However, there was 
+                    too much content in the original plan.
                 </p>
-                <p>
-                    I did make some mistakes in this project while trying to improve my code efficiency, however, which I have since learnt from and expanded
-                    my knowledge on more efficient Unity C# paradigms. This project specifically helped me grow a lot as a programmer and really showed me what
+                <p style="margin-bottom: 1em;">Originally <strong>I had a lot more mechanics planned, like events</strong> - such as apartment change offers, or different extra costs that would need to be paid.
+                    However, due to the short time development, these were <strong>cut through the process to ensure that the final project was completed for submission</strong>.
+                </p>
+                <div class="headerLine half"></div>
+                <p>This module taught me a lot, from <strong>effective time management</strong>, as well as good ways to <strong>structure and track the development</strong> of the project. All these 
+                    skills made the <strong>creation of this game a lot smoother</strong> and allowed for me to react when development got slightly behind.
+                </p>
+                <p>I did make some mistakes in this project while trying to improve my code efficiency, however, which I have since learnt from and <strong>expanded
+                    my knowledge on more efficient Unity C# paradigms</strong>. This project specifically helped me <strong>grow a lot as a programmer</strong> and really showed me what
                     my strengths and weaknesses are.
                 </p>
             </div>
-
         </div>
     
         <div class="sectionBox footer">

@@ -1,158 +1,205 @@
 <!DOCTYPE html>
 
 <html lang="en-UK">
-    <head>
-        <title>Ben's Portfolio // Battle Of Talokov</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="../../../styles.css">
-        <link rel="stylesheet" href="../../../styles.css">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
-        <script type = "text/javascript" src="../../../main.js"></script>
-    </head>
-    <body class="Home">
-        <div class="navbar">
-            <div class="container">
-                <a class="navbarItem name" href="../../../"><strong>Ben Holdway</strong></a>
-                <div id="navbarMenu" class="navbarMenu">
-                    <a class="navbarItem" href="../../../">Home</a>
-                    <a class="navbarItem" href="../../../Projects/">Projects</a>
-                    <a class="navbarItem" href="../../../AboutMe/">About Me</a>
-                    <div class="navbarItem hasDropdown CustomButton">
-                        <a id="contactNavbarItem" class="navbarItem isNotInDropdown btn">Contact<i id="contactsDropdownArrow" class="arrow"></i></a>
-                        <div id="navbarDropdown" class="dropdown">
-                            <a class="navbarItem contactText" href="https://benholdway.github.io/Portfolio/BenHoldwayCV.pdf" target="_blank" rel="noopener noreferrer">
-                                <img src="../../../Resources/CVIcon.png" class="linkImage">
-                                CV
-                            </a>
-                            <a class="navbarItem contactText" href="https://www.linkedin.com/in/ben-holdway-708883214/" target="_blank" rel="noopener noreferrer">
-                                <img src="../../../Resources/LinkedInIcon.png" class="linkImage">
-                                LinkedIn
-                            </a>
-                            <a class="navbarItem contactText" href="https://github.com/BenHoldway" target="_blank" rel="noopener noreferrer">
-                                <img src="../../../Resources/GithubIcon.png" class="linkImage">
-                                GitHub
-                            </a>
-                            <a class="navbarItem contactText" href="mailto:benholdway03@gmail.com" target="_blank" rel="noopener noreferrer">
-                                <img src="../../../Resources/EmailIcon.png" class="linkImage">
-                                Email
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="navbarMenuCollapsed">
-                    <img class="navbarItem navbarCompressedIcon btn" src="../../../Resources/CompressedNavIcon.png">
-                </div>
-            </div>
-        </div>
+	<head>
+		<title>Ben's Portfolio // Battle Of Talokov</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../../styles.css">
+		<link rel="stylesheet" href="../../../styles.css">
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
+		<script type = "text/javascript" src="../../../main.js"></script>
+		<script type = "text/javascript" src="../../../project.js"></script>
+	</head>
+	<body class="Home">
+		<div class="navbar">
+			<div class="container">
+				<a class="navbarItem name" href="../../../"><strong>Ben Holdway</strong></a>
+				<div id="navbarMenu" class="navbarMenu">
+					<a class="navbarItem" href="../../../">Home</a>
+					<a class="navbarItem" href="../../../Projects/">Projects</a>
+					<a class="navbarItem" href="../../../AboutMe/">About Me</a>
+					<div class="navbarItem hasDropdown CustomButton">
+						<a id="contactNavbarItem" class="navbarItem isNotInDropdown btn">Contact<i id="contactsDropdownArrow" class="arrow"></i></a>
+						<div id="navbarDropdown" class="dropdown">
+							<a class="navbarItem contactText" href="https://benholdway.github.io/Portfolio/BenHoldwayCV.pdf" target="_blank" rel="noopener noreferrer">
+								<img src="../../../Resources/CVIcon.png" class="linkImage">
+								CV
+							</a>
+							<a class="navbarItem contactText" href="https://www.linkedin.com/in/ben-holdway-708883214/" target="_blank" rel="noopener noreferrer">
+								<img src="../../../Resources/LinkedInIcon.png" class="linkImage">
+								LinkedIn
+							</a>
+							<a class="navbarItem contactText" href="https://github.com/BenHoldway" target="_blank" rel="noopener noreferrer">
+								<img src="../../../Resources/GithubIcon.png" class="linkImage">
+								GitHub
+							</a>
+							<a class="navbarItem contactText" href="mailto:benholdway03@gmail.com" target="_blank" rel="noopener noreferrer">
+								<img src="../../../Resources/EmailIcon.png" class="linkImage">
+								Email
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="navbarMenuCollapsed">
+					<img class="navbarItem navbarCompressedIcon btn" src="../../../Resources/CompressedNavIcon.png">
+				</div>
+			</div>
+		</div>
 
-        <div class="headerVideo">
-            <video autoplay="true" loop="true" muted="true" class="threeQuartersHeight">
-                <source src="../../../Resources/PortfolioVideoShowcase.mp4" type="video/mp4">
-            </video>
-            <div>
-                <p class="headerItem header">Battle Of Talokov</p>
-                <p class="headerItem headerSub">(March 2024)</p>
-                <div class="headerItem isRow buttons">
-                    <a href="hhttps://github.com/BenHoldway/Mechanics-Prototyping" target="_blank" rel="noopener noreferrer">
+		<div class="headerVideo">
+			<video autoplay="true" loop="true" muted="true" class="threeQuartersHeight">
+				<source src="../../../Resources/BattleOfTalokov/BattleOfTalokovVidShowcase.mp4" type="video/mp4">
+			</video>
+			<div>
+				<p class="headerItem header">Battle Of Talokov</p>
+				<p class="headerItem headerSub">(March 2024)</p>
+				<div class="headerItem isRow buttons">
+					<a href="hhttps://github.com/BenHoldway/Mechanics-Prototyping" target="_blank" rel="noopener noreferrer">
+						<div class="btn hasBorder isRounded darkerBg buttons">
+							<p>Project Files →</p>
+						</div>
+					</a>
+					<a href="#projectInfo">
                         <div class="btn hasBorder isRounded darkerBg buttons">
-                            <p>Project Files →</p>
+                            <p>Development →</p>
                         </div>
                     </a>
-                </div>
-            </div>
-        </div>
+				</div>
+			</div>
+		</div>
 
-        <div class="sectionBox doubled reversed">
-            <div class="container darkerBox">
-            <h1>About</h1>
-            <div class="headerLine"></div>
+		<div class="sectionBox doubled reversed">
+			<div class="container darkerBox">
+				<h1>About</h1>
+				<div class="headerLine"></div>
 
-            <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1; margin-bottom: 30px;">
-                <div class="projectTag left university larger" style="align-self: center;">University</div>
-                <div class="projectTag university larger" style="align-self: center;">9 Weeks</div>
-                <div class="projectTag university larger" style="align-self: center;">1st Year</div>
-                <div class="projectTag ue5 larger" style="align-self: center;">UE5</div>
-                <div class="projectTag blueprints larger" style="align-self: center;">Blueprints</div>
-                <div class="projectTag solo larger" style="align-self: center;">Solo</div>
-            </div>
+				<div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1; margin-bottom: 30px;">
+					<div class="projectTag left university larger" style="align-self: center;">University</div>
+					<div class="projectTag university larger" style="align-self: center;">9 Weeks</div>
+					<div class="projectTag university larger" style="align-self: center;">1st Year</div>
+					<div class="projectTag ue5 larger" style="align-self: center;">UE5</div>
+					<div class="projectTag blueprints larger" style="align-self: center;">Blueprints</div>
+					<div class="projectTag solo larger" style="align-self: center;">Solo</div>
+				</div>
 
-            <p>
-                Battle Of Talokov is an angled top down tank based game, where the player must fight through groups 
-                of enemies to complete an objective.
-            </p>
-            <p>
-                The game is based in a scifi apocalyptic game, where the company of security for humanity is at war with 
-                a secret organisation, of which little is known about them. 
-            </p>
-            <p>
-                The player is tasked with infiltrating one of the organisation's bases, fight through any enemy unit they come 
-                across, and find the main power core. Once destroyed, the player will return to where they started and be extracted, 
-                finishing the level, and the game.
-            </p>
-            </div>
+				<p><em>Battle Of Talokov is an angled top down tank based game, where the player must fight through groups 
+					of enemies to complete an objective.
+				</p>
+				<p>The game is based in a scifi apocalyptic game, where the company of security for humanity is at war with 
+					a secret organisation, of which little is known about them. 
+				</p>
+				<p style="margin-bottom: 4em;">The player is tasked with infiltrating one of the organisation's bases, fight through any enemy unit they come 
+					across, and find the main power core. Once destroyed, the player will return to where they started and be extracted, 
+					finishing the level, and the game.
+				</em></p>
+				<p>Battle Of Talokov is a short level of a game, developed in UE5.1, in my first university year. The game started
+					from a template project which had all of the assets I needed. The purpose of this project was <strong>learning about
+					Game Mechanics, and efficient ways of implementing them</strong>.
+				</p>
+			</div>
 
-            <div class="container darkerBox hasTextCentered larger">
-                <div class="projectSlideshow">
+			<div class="container darkerBox hasTextCentered larger">
+				<div class="projectSlideshow">
 
-                    <!-- Full-width images with number text -->
-                    <div class="slide" style="display: block; opacity: 1">
-                        <iframe src="https://www.youtube.com/embed/f7RFjaxGp88?si=czm_johHLykJawfC"></iframe>
+					<!-- Full-width images with number text -->
+					<div class="slide" style="display: flex; opacity: 1">
+						<iframe src="https://www.youtube.com/embed/f7RFjaxGp88?si=czm_johHLykJawfC" allowfullscreen></iframe>
+					</div>
+
+					<div class="slide">
+						<img src="../../../Resources/BattleOfTalokov/BattleOfTalokov3.png" style="width:100%">
+					</div>
+				
+					<div class="slide">
+						<img src="../../../Resources/BattleOfTalokov/BattleOfTalokov2.png" style="width:100%">
+					</div>
+				
+					<div class="slide">
+						<img src="../../../Resources/BattleOfTalokov/BattleOfTalokov1.png" style="width:100%">
+					</div>
+				
+					<!-- Thumbnail images -->
+					<div class="slideDemoStrip">
+						<img class="demoStripItem btn demoItemActive" src="../../../Resources/BattleOfTalokov/BattleOfTalokovVid.png" onclick="CurrentSlide(0)">
+						<img class="demoStripItem btn" src="../../../Resources/BattleOfTalokov/BattleOfTalokov3.png" onclick="CurrentSlide(1)">
+						<img class="demoStripItem btn" src="../../../Resources/BattleOfTalokov/BattleOfTalokov2.png" onclick="CurrentSlide(2)">
+						<img class="demoStripItem btn" src="../../../Resources/BattleOfTalokov/BattleOfTalokov1.png" onclick="CurrentSlide(3)">
+					</div>
+					<div class="demoSliderContainer">
+                        <a class="demoSliderItem changeSlideBtn btn hasTextCentered" onclick="ChangeSlide(-1)"><p class="sliderArrow prev"></p></a>
+                        <div id="demoSlider" class="demoSliderItem demoSlider">
+                            <div id="demoSliderHandle"class="demoSliderHandle sliderHandleWithTransition"></div>
+                        </div>
+                        <a class="demoSliderItem changeSlideBtn btn hasTextCentered" onclick="ChangeSlide(1)"><p class="sliderArrow next"></p></a>
                     </div>
+				</div>
+			</div>
+		</div>
 
-                    <div class="slide">
-                    <img src="../../../Resources/BattleOfTalokov/BattleOfTalokov3.png" style="width:100%">
-                    </div>
-                
-                    <div class="slide">
-                    <img src="../../../Resources/BattleOfTalokov/BattleOfTalokov2.png" style="width:100%">
-                    </div>
-                
-                    <div class="slide">
-                    <img src="../../../Resources/BattleOfTalokov/BattleOfTalokov1.png" style="width:100%">
-                    </div>
-                
-                    <a class="changeSlideBtn prev btn" onclick="ChangeSlide(-1)">&#10094;</a>
-                    <a class="changeSlideBtn next btn" onclick="ChangeSlide(1)">&#10095;</a>
-                
-                    <!-- Thumbnail images -->
-                    <div class="slideDemoStrip">
-                    <img class="demoStripItem btn demoItemActive" src="../../../Resources/BattleOfTalokov/BattleOfTalokov3.png" onclick="CurrentSlide(0)">
-                    <img class="demoStripItem btn" src="../../../Resources/BattleOfTalokov/BattleOfTalokov3.png" onclick="CurrentSlide(1)">
-                    <img class="demoStripItem btn" src="../../../Resources/BattleOfTalokov/BattleOfTalokov2.png" onclick="CurrentSlide(2)">
-                    <img class="demoStripItem btn" src="../../../Resources/BattleOfTalokov/BattleOfTalokov1.png" onclick="CurrentSlide(3)">
-                    </div>
-                </div>
-            </div>
-        </div>
+		<div id="projectInfo" class="inPageLinkTarget"></div>
 
-        <div class="sectionBox">
-            <div class="container lighterBox">
-            <h1>Project Development</h1>
-            <div class="headerLine"></div>
+		<div class="sectionBox doubled">
+			<div class="container lighterBox">
+				<h1>Game Features</h1>
+                <div class="headerLine"></div>
+                <h2>General</h2>
+				<ul>
+					<li>Usage of <strong>Blueprints</strong></li>
+					<li>Fully <strong>decorated map and backstory</strong></li>
+					<li>Implemented <strong>Settings</strong> Options</li>
+					<li>Audio and Niagara VFX</li>
+					<li>Story and level progression with objectives</li>
+				</ul>
+				<h2>Player</h2>
+				<ul>
+					<li>Simple Movement and Shooting</li>
+					<li>Availability for <strong>different weapons to pick up</strong> and equip</li>
+					<li></strong>Camera with adaptive arm length</strong> to keep player in frame</li>
+				</ul>
+				<h2>Enemy AI</h2>
+				<ul>
+					<li>Range of <strong>Moving and Stationary</strong> Enemies</li>
+					<li>Enemy <strong>Spawning</strong></li>
+					<li><strong>Boss Fight</strong> with different attacks and stages</li>
+				</ul>
+			</div>
+			<div class="container lighterBox larger">
+				<h1>Project Development</h1>
+				<div class="headerLine"></div>
 
-            <p>Battle Of Talokov is a short level of a game, developed in Unreal Engine 5.1, in my first university year. The game started
-                from a template project which had all of the assets I needed. The purpose of this project was learning about
-                Game Mechanics, and efficient ways of implementing them.
-            </p>
-            <p>The module had me develop a level of a 3D top down tank game. I decided to build a level which had 
-                a story behind it; with the player infiltrating an enemy base to destroy the core power of the facility.
-                Along the level, the player had a range of unique weapons at their disposal to find and use, to fight a bunch 
-                of different enemies.
-            </p>
-            <p>While I had some experience with using Unreal Engine beforehand, this was the first real project I worked on 
-                in the engine. I was able to effectively build base classes for different enemies and weapons, and create child classes of these 
-                to build unique utilities and objects throughout the game. With these bases, the game could be further developed and 
-                expanded on.
-            </p>
-            </div>
-        </div>
-    
-        <div class="sectionBox footer">
-            <div class="container hasTextCentered">
-                <span>Copyright <img src="../../../CopyrightIcon.png" class="footerImage">
-                2025 - Ben Holdway // Page created by using HTML, CSS and JS</span>
-            </div>
-        </div>
-    </body>
+				<p>The module had me develop a level of a <strong>3D top down tank game</strong>. I decided to build a level which had 
+					a story behind it; with the player <strong>infiltrating an enemy base to destroy the core power of the facility</strong>.
+					Along the level, the player had a range of unique weapons at their disposal to find and use, to fight a bunch 
+					of different enemies.
+				</p>
+				<p style="margin-bottom: 1em;">Most of the project's development was spent <strong>learning how to use UE and the usage of Blueprints to create functionality</strong>. We had the 
+					basics of the project setup and player movement in the template that we were given, and was led through improving that and implementing more classes in. The 
+					module went through <strong>player functionality like shooting and projectiles</strong>, as well as adding more <strong>enemy types</strong> and then VFX and lighting effects to add in later on.
+				</p>
+				<div class="headerLine half"></div>
+				<p>The main process of development was adding the <strong>extra weapon functionality</strong> and ability to hold 2 different weapon types at once, 
+					switching the held one out when a new type was picked up. As well as this, <strong>developing the level and setting up the progressing</strong> for the player to advance
+					through until completion.
+				</p>
+				<p style="margin-bottom: 1em;">The biggest obstacle that I was able to tackle was the <strong>boss fight</strong> that I had designed. It had <strong>3 different phases</strong>, all with different 
+					attacks and a barrier, which the player has to deactivate, between each phase. These phases were <strong>handled with a tracker</strong>, which allowed for <strong>different attacks to 
+					be selected</strong>. During this fight, a range of enemies continuously spawn for the player to fight.
+				</p>
+				<div class="headerLine half"></div>
+				<p>While I had some experience with using Unreal Engine beforehand, this was the <strong>first real project I worked on 
+					in the engine</strong>. I was able to <strong>effectively build base classes</strong> for different enemies and weapons, and create child classes of these 
+					to build unique utilities and objects throughout the game. With these bases, the <strong>game could be further developed</strong> and 
+					expanded on later.
+				</p>
+			</div>
+		</div>
+	
+		<div class="sectionBox footer">
+			<div class="container hasTextCentered">
+				<span>Copyright <img src="../../../CopyrightIcon.png" class="footerImage">
+				2025 - Ben Holdway // Page created by using HTML, CSS and JS</span>
+			</div>
+		</div>
+	</body>
 </html>

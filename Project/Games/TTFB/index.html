@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="../../../styles.css">
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
         <script type = "text/javascript" src="../../../main.js"></script>
+        <script type = "text/javascript" src="../../../project.js"></script>
     </head>
     <body class="Home">
         <div class="navbar">
@@ -47,7 +48,7 @@
 
         <div class="headerVideo">
             <video autoplay="true" loop="true" muted="true" class="threeQuartersHeight">
-                <source src="../../../Resources/PortfolioVideoShowcase.mp4" type="video/mp4">
+                <source src="../../../Resources/TTFB/TTFBVidShowcase.mp4" type="video/mp4">
             </video>
             <div>
                 <p class="headerItem header">Those Things From Below</p>
@@ -56,6 +57,11 @@
                     <a href="https://evinikuyama.itch.io/those-things-from-below" target="_blank" rel="noopener noreferrer">
                         <div class="btn hasBorder isRounded darkerBg buttons">
                             <p>Get Game →</p>
+                        </div>
+                    </a>
+                    <a href="#projectInfo">
+                        <div class="btn hasBorder isRounded darkerBg buttons">
+                            <p>Development →</p>
                         </div>
                     </a>
                 </div>
@@ -76,20 +82,22 @@
                     <div class="projectTag group larger" style="align-self: center;">Group</div>
                 </div>
 
-                <p>
-                    Those Things From Below is a hoard-shooter survival first-person shooter, where you must activate and 
+                <p><em>Those Things From Below is a hoard-shooter survival first-person shooter, where you must activate and 
                     use the factory that you found yourself within to aid your fight against hoards of creatures.
                 </p>
-                <p>
-                    From making use of different steam powered weapons and traps, you need to power up generators to get 
+                <p style="margin-bottom: 4em;">From making use of different steam powered weapons and traps, you need to power up generators to get 
                     power to the factory. Use this power to progress through the game and escape from the hoard.
+                </em></p>
+                <p>This was the <strong>1st part of a 2 year module</strong>, in which I worked within a group at an industry level development module. Once the project 
+                    was designed, which I had a part in, and had been pitched to the lecturers by the Senior team, I was tasked with <strong>creating and maintaining 
+                    the Player Systems. </strong>
                 </p>
             </div>
 
             <div class="container darkerBox hasTextCentered larger">
                 <div class="projectSlideshow">
                     
-                    <div class="slide" style="display: block; opacity: 1">
+                    <div class="slide" style="display: flex; opacity: 1">
                         <img src="../../../Resources/TTFB/TTFBMainSS.png">
                     </div>
                     
@@ -133,9 +141,6 @@
                         <img src="../../../Resources/TTFB/TTFBBossSS.png">
                     </div>
 
-                    <a class="changeSlideBtn prev btn" onclick="ChangeSlide(-1)">&#10094;</a>
-                    <a class="changeSlideBtn next btn" onclick="ChangeSlide(1)">&#10095;</a>
-
                     <div class="slideDemoStrip">
                         <img class="demoStripItem btn demoItemActive" src="../../../Resources/TTFB/TTFBMainSS.png" onclick="CurrentSlide(0)">
                         <img class="demoStripItem btn" src="../../../Resources/TTFB/TTFBSS1.png" onclick="CurrentSlide(1)">
@@ -149,16 +154,78 @@
                         <img class="demoStripItem btn" src="../../../Resources/TTFB/TTFBGenSS.png" onclick="CurrentSlide(9)">
                         <img class="demoStripItem btn" src="../../../Resources/TTFB/TTFBBossSS.png" onclick="CurrentSlide(10)">
                     </div>
+                    <div class="demoSliderContainer">
+                        <a class="demoSliderItem changeSlideBtn btn hasTextCentered" onclick="ChangeSlide(-1)"><p class="sliderArrow prev"></p></a>
+                        <div id="demoSlider" class="demoSliderItem demoSlider">
+                            <div id="demoSliderHandle"class="demoSliderHandle sliderHandleWithTransition"></div>
+                        </div>
+                        <a class="demoSliderItem changeSlideBtn btn hasTextCentered" onclick="ChangeSlide(1)"><p class="sliderArrow next"></p></a>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- <div class="sectionBox">
+        <div id="projectInfo" class="inPageLinkTarget"></div>
+
+        <div class="sectionBox doubled hasContentAtTop">
             <div class="container lighterBox">
-
+                <h1>Individual Contributions</h1>
+                <div class="headerLine"></div>
+                <h2>Player Systems</h2>
+                <ul>
+                    <li>Implementation of <strong>Player Controls and Basic Movement</strong></li>
+                    <ul>
+                        <li>Walking and Camera Movement</li>
+                        <li>Sprinting and Stamina Control</li>
+                        <li>Crouching and Stand Ability Checks</li>
+                        <li>Knee Slide Movement</li>
+                    </ul>
+                    <li><strong>Player Interactions</strong> with a wide range of actors</li>
+                    <li><strong>Player Ability Effect</strong> implementation and functionality</li>
+                    <li>VFX and Camera Effects</li>
+                    <li>Created and Implemented <strong>Player SFX using MetaSounds</strong></li>
+                </ul>
+                <h2>UI Implementation</h2>
+                <ul>
+                    <li>Creation and Functionality of <strong>Draft UI</strong></li>
+                    <li>Functionality of <strong>Settings</strong></li>
+                    <li>Linkage of <strong>Tutorial to detection of Player Inputs</strong></li>
+                </ul>
+                <h2>Team Work</h2>
+                <ul>
+                    <li><strong>Collaboration with the design team</strong> to make ideas</li>
+                    <li><strong>Communicating With Others</strong> who used my systems</li>
+                    <li>Regular <strong>Meetings and Updates with Seniors</strong></li>
+                    <li>Performed Continual <strong>Updates to Documentation</strong></li>
+                    <li><strong>Worked in Other Systems</strong> to bring the Project Together</li>
+                </ul>
             </div>
-
-        </div> -->
+            <div class="container lighterBox larger">
+                <h1>Project Development</h1>
+                <div class="headerLine"></div>
+                <p style="margin-bottom: 1em;">To get the player into the level and working, I created a very simple system which <strong>automatically creates an owning hierarchy from the 
+                    Player Controller and Player Pawn</strong>, which are both instantiated by the Game Mode Actor. Once this was created, and a simple First Person 
+                    Pawn Blueprint was added to the project, I informed the team that they would be able to use this to test their systems as well.
+                </p>
+                <div class="headerLine half"></div>
+                <p>With the basic Player implemented, I was able to create further systems like <strong>sprinting, crouching, interacting and a 
+                    somewhat complex knee slide</strong>.
+                </p>
+                <p style="margin-bottom: 1em;">Through the rest of development, I worked within the Player Pawn Blueprint, as well as the <strong>Player Component Blueprints (like the Stamina and 
+                    Powerup Timer Handler Components)</strong>. I worked very closely with others who were developing systems close to the player, like the <strong>UI and pickup
+                    items</strong>. This was so that I was able to properly and efficiently set up communication to these systems from the player.
+                </p>
+                <div class="headerLine half"></div>
+                <p>This project was <strong>my first full group development project</strong> that I had worked in and was able to learn a lot from it. While 
+                    I know that <strong>I was fully engaged</strong> with this project and <strong>actively worked with others to get tasks done</strong>, which was backed by the feedback I received,
+                    there was a lot of improvements I was able to recognise.
+                </p>
+                <p>One such thing that <strong>I learnt was how important communication is</strong>. The development process as a whole was a mess, with teams not understanding others
+                    and information being lost. This caused a lot of re-imaginings with design and changes happening within the very short development cycle. With <strong>better
+                    communication across the team, and with myself, the development process would have been a lot smoother</strong>.
+                </p>
+            </div>
+        </div>
     
         <div class="sectionBox footer">
             <div class="container hasTextCentered">

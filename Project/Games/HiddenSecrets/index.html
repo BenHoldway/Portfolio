@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="../../../styles.css">
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
         <script type = "text/javascript" src="../../../main.js"></script>
+        <script type = "text/javascript" src="../../../project.js"></script>
     </head>
     <body class="Home">
         <div class="navbar">
@@ -47,7 +48,7 @@
 
         <div class="headerVideo">
             <video autoplay="true" loop="true" muted="true" class="threeQuartersHeight">
-                <source src="../../../Resources/PortfolioVideoShowcase.mp4" type="video/mp4">
+                <source src="../../../Resources/HiddenSecrets/HiddenSecretsVidShowcase.mp4" type="video/mp4">
             </video>
             <div>
                 <p class="headerItem header">Hidden Secrets</p>
@@ -56,6 +57,11 @@
                     <a href="https://github.com/BenHoldway/CForEngines" target="_blank" rel="noopener noreferrer">
                         <div class="btn hasBorder isRounded darkerBg buttons">
                             <p>Project Files →</p>
+                        </div>
+                    </a>
+                    <a href="#projectInfo">
+                        <div class="btn hasBorder isRounded darkerBg buttons">
+                            <p>Development →</p>
                         </div>
                     </a>
                 </div>
@@ -76,24 +82,24 @@
                     <div class="projectTag solo larger" style="align-self: center;">Solo</div>
                 </div>
 
-                <p>
-                    Hidden Secrets is a horror survival game, which the player must survive from an AI robot stalking them down. 
+                <p><em>Hidden Secrets is a horror survival game, which the player must survive from an AI robot stalking them down. 
                     If they are caught and killed, a life will be taken away from a total of 3 lives.
                 </p>
-                <p>
-                    While avoiding the enemy AI robot, the player must keep systems active to stay alive. Oxygen is the most important, leading 
-                    to a failed run if left unchecked. Power however simply controls the lights, and will make the game a lot darker if left. To
-                    restore or save these systems, the player must venture out into the map to search for the boxes in which control these systems.
-                </p>
-                <p>
-                    Survive the full 6 hours, keep the systems alive and don't let the robot see you!
+                <p style="margin-bottom: 4em;">Be aware of the building's power and oxygen going offline, otherwise you may have 
+                    problems that you have to deal with. Venture out from the starting room to find the generators to turn them on, but
+                    be careful of anything that may be looking for you.
+                </em></p>
+                <p>This is the <strong>first project which I used C++ with UE5</strong> to develop a game, so a lot of the process was learning the best ways to 
+                    link code up to the engine. From learning about how to set up <strong>player and inputs, as well as components, UI and communication 
+                    between classes and actors</strong>, we were taught the basics before working on our own design.
                 </p>
             </div>
 
             <div class="container darkerBox hasTextCentered larger">
                 <div class="projectSlideshow">
-                    <div class="slide" style="display: block; opacity: 1">
-                        <iframe src="https://www.youtube.com/embed/bXhI2j_VcmU?si=7b2PfjovSPMkflHk"></iframe>
+
+                    <div class="slide" style="display: flex; opacity: 1 ;">
+                        <iframe src="https://www.youtube.com/embed/bXhI2j_VcmU" allowfullscreen></iframe>
                     </div>
 
                     <div class="slide">
@@ -115,23 +121,87 @@
                     <div class="slide">
                         <img src="../../../Resources/HiddenSecrets/HiddenSecretsSS5.png">
                     </div>
-                    
-                    <!-- Next and previous buttons -->
-                    <a class="changeSlideBtn prev btn" onclick="ChangeSlide(-1)">&#10094;</a>
-                    <a class="changeSlideBtn next btn" onclick="ChangeSlide(1)">&#10095;</a>
 
                     <div class="slideDemoStrip">
-                        <img class="demoStripItem btn demoItemActive" src="../../../Resources/HiddenSecrets/HiddenSecretsSS1.png" onclick="CurrentSlide(0)">
+                        <img class="demoStripItem btn demoItemActive" src="../../../Resources/HiddenSecrets/HiddenSecretsVid.png" onclick="CurrentSlide(0)">
                         <img class="demoStripItem btn" src="../../../Resources/HiddenSecrets/HiddenSecretsSS1.png" onclick="CurrentSlide(1)">
                         <img class="demoStripItem btn" src="../../../Resources/HiddenSecrets/HiddenSecretsSS2.png" onclick="CurrentSlide(2)">
                         <img class="demoStripItem btn" src="../../../Resources/HiddenSecrets/HiddenSecretsSS3.png" onclick="CurrentSlide(3)">
                         <img class="demoStripItem btn" src="../../../Resources/HiddenSecrets/HiddenSecretsSS4.png" onclick="CurrentSlide(4)">
                         <img class="demoStripItem btn" src="../../../Resources/HiddenSecrets/HiddenSecretsSS5.png" onclick="CurrentSlide(5)">
                     </div>
+                    <div class="demoSliderContainer">
+                        <a class="demoSliderItem changeSlideBtn btn hasTextCentered" onclick="ChangeSlide(-1)"><p class="sliderArrow prev"></p></a>
+                        <div id="demoSlider" class="demoSliderItem demoSlider">
+                            <div id="demoSliderHandle"class="demoSliderHandle sliderHandleWithTransition"></div>
+                        </div>
+                        <a class="demoSliderItem changeSlideBtn btn hasTextCentered" onclick="ChangeSlide(1)"><p class="sliderArrow next"></p></a>
+                    </div>
                 </div>
             </div>
         </div>
+        
+        <div id="projectInfo" class="inPageLinkTarget"></div>
 
+        <div class="sectionBox doubled ">
+            <div class="container lighterBox">
+                <h1>Game Features</h1>
+                <div class="headerLine"></div>
+                <h2>General</h2>
+                <ul>
+                    <li>Implementation of <strong>systems using C++</strong></li>
+                    <li>Linkage of <strong>C++ to Unreal Systems</strong></li>
+                </ul>
+                <h2>Player Systems</h2>
+                <ul>
+                    <li><strong>Simple Movement</strong> like Walking, Sprinting and Crouching</li>
+                    <li><strong>Interactions with objects</strong> to progress the game</li>
+                    <li>A toggleable flashlight</li>
+                    <li>A 3 life system</li>
+                </ul>
+                <h2>AI Systems</h2>
+                <ul>
+                    <li>Usage of Behaviour Trees, Custom Tasks, and EQS Systems</li>
+                    <li><strong>Random movement</strong> around the map</li>
+                    <li>Detection of the Player using <strong>Unreal's Sight Sense</strong></li>
+                    <li>Ability to attack and take a life from the player</li>
+                </ul>
+                <h2>In-Game System Tracker</h2>
+                <ul>
+                    <li><strong>Power and Oxygen</strong> value trackers</li>
+                    <li>Ability for these <strong>systems to "fail"</strong></li>
+                    <li><strong>Interactables to reset system</strong> generation when failing</li>
+                    <li>In-Game visible <strong>UI to display these values</strong></li>
+                </ul>
+            </div>
+            <div class="container lighterBox larger">
+                <h1>Project Development</h1>
+                <div class="headerLine"></div>
+                <p>Beginning the module, I had no knowledge of how to use C++ with UE5. Having some basic knowledge of the C++ base language helped the learning process. We began
+                    by setting up the GameMode and Player actors, <strong>creating basic Player Movement and Input detections</strong>.
+                </p>
+                <p style="margin-bottom: 1em;">Outside of the player, we worked on other systems to set up a simple project starting point. These systems included 
+                    a <strong>Game Manager systems to handle targets</strong> for the player to shoot, as well as an <strong>AI system</strong> to allow for an 
+                    entity to move around using UE5's EQS and Behaviour Tree.
+                </p>
+                <div class="headerLine half"></div>
+                <p style="margin-bottom: 2em;">Taking this basic project that we had built up, I was able to direct the game towards what I had designed. A <strong>stealth and timed based
+                    survival game</strong> where the player had to maintain in game systems to keep progressing. I was able to <strong>expand the Player and AI systems</strong> to add functionality, like 
+                    stamina for when the player sprints, interactions with their functionality, and a detection system for the AI to make the entity move towards the player when in sight.
+                </p>
+                <p style="margin-bottom: 1em;">On top of these expansions to already created systems, I also worked through the process of <strong>creating the in-game power and oxygen trackers</strong>. I was able to develop 
+                    this so it was linked into the core mechanics of the game, as well as to the <strong>interactables and in-game UI visuals</strong>. Further additions to this was a <strong>toggleable 
+                    flashlight</strong>, C++ implemented <strong>audio</strong> and <strong>dust particle VFX effects</strong>.
+                </p>
+                <div class="headerLine half"></div>
+                <p>Now having experience of working with C++ in game development, I got an <strong>insight to how using it would be within the industry</strong>. While I have used code a lot to develop in Unity, using 
+                    another language which I don't have much knowledge on gave me a <strong>fresh perspective on the development process</strong> in general.
+                </p>
+                <p>I took this project further than my other Unity projects, including being in a <strong>3D environment</strong>, as well as fully implemented <strong>AI which interacts with the environment and 
+                    player</strong>, as well as <strong>audio and VFX effects</strong> which is not something I know much of.
+                </p>
+            </div>
+        </div>
         
 
         <div class="sectionBox footer">

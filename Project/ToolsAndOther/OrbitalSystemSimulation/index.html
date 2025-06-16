@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="../../../styles.css">
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
         <script type = "text/javascript" src="../../../main.js"></script>
+        <script type = "text/javascript" src="../../../project.js"></script>
     </head>
     <body class="Home">
         <div class="navbar">
@@ -87,7 +88,7 @@
 
             <div class="container darkerBox hasTextCentered larger">
                 <div class="projectSlideshow">
-                    <div class="slide" style="display: block; opacity: 1">
+                    <div class="slide" style="display: flex; opacity: 1">
                         <iframe src="https://www.youtube.com/embed/KFYtSjY_9cA?si=Tqdm2YGhEbPuLoKM"></iframe>
                     </div>
 
@@ -102,16 +103,19 @@
                     <div class="slide">
                         <img src="../../../Resources/PlanetarySystem/OSS_SS3.png">
                     </div>
-                    
-                    <!-- Next and previous buttons -->
-                    <a class="changeSlideBtn prev btn" onclick="ChangeSlide(-1)">&#10094;</a>
-                    <a class="changeSlideBtn next btn" onclick="ChangeSlide(1)">&#10095;</a>
 
                     <div class="slideDemoStrip">
                         <img class="demoStripItem btn demoItemActive" src="../../../Resources/PlanetarySystem/OSS_SS1.png" onclick="CurrentSlide(0)">
                         <img class="demoStripItem btn" src="../../../Resources/PlanetarySystem/OSS_SS1.png" onclick="CurrentSlide(1)">
                         <img class="demoStripItem btn" src="../../../Resources/PlanetarySystem/OSS_SS2.png" onclick="CurrentSlide(2)">
                         <img class="demoStripItem btn" src="../../../Resources/PlanetarySystem/OSS_SS3.png" onclick="CurrentSlide(3)">
+                    </div>
+                    <div class="demoSliderContainer">
+                        <a class="demoSliderItem changeSlideBtn btn hasTextCentered" onclick="ChangeSlide(-1)"><p class="sliderArrow prev"></p></a>
+                        <div id="demoSlider" class="demoSliderItem demoSlider">
+                            <div id="demoSliderHandle"class="demoSliderHandle sliderHandleWithTransition"></div>
+                        </div>
+                        <a class="demoSliderItem changeSlideBtn btn hasTextCentered" onclick="ChangeSlide(1)"><p class="sliderArrow next"></p></a>
                     </div>
                 </div>
             </div>
