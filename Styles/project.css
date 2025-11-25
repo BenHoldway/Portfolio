@@ -122,7 +122,7 @@
     background-color: rgb(38, 38, 58); 
     max-width: 80%;
 }
-.cardHighlight > p { font-weight: bold; color:#bdbdbd; font-size: medium; }
+.cardHighlight > p { font-weight: bold; color:#bdbdbd; font-size: 13px; }
 .cardHighlight.small { transform: scale(0.8), translate(3px, 0); }
 
 #ProjectAbout { flex-shrink: 2; }
