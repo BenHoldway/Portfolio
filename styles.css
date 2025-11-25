@@ -98,7 +98,11 @@ ul
     max-width: 1700px;
     border-radius: 5px;
 }
+:not(.footer, .navbar) > .container { outline: #202020 dashed 2px; }
 .doubled > .container { padding: 2em; }
+.doubled > .container .larger60 { padding: 2em; width: 70%; }
+.doubled > .container .larger70 { padding: 2em; width: 70%; }
+.doubled > .container .larger80 { padding: 2em; width: 70%; }
 
 .container > *:first-child { margin-top: 0; }
 .reversed > .container > :not(*:first-child) { margin-top: 0; }
@@ -129,7 +133,11 @@ ul
     margin: 0.2em 0;
 }
 .container > h2 { color:#929292; }
-.container > h2.withMargin { color:#929292; margin: 0.75em 0; }
+.container > h2.withMargin 
+{ 
+    color:#929292; 
+    margin: 0.75em 0; 
+}
 .container :not(.btn, .navbarItem) > strong
 {
 	color:#908691;
