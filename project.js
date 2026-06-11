@@ -101,7 +101,7 @@ function CurrentSlide(n) {
 }
 
 function UpdateSlide()
-{
+{ 
 	for (let i = 0; i < demoImages.length; i++) 
 		demoImages[i].className = demoImages[i].className.replace(" demoItemActive", "");
 

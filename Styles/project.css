@@ -1,19 +1,4 @@
-
-
-:root
-{
-  --black: #0D090A;
-  --bgPrimaryColour: rgb(8, 7, 20);
-  --bgSecondaryColour: rgb(14, 12, 27);
-  --primaryColour: 9, 10, 16;
-  --secondaryColour: 13, 15, 25; 
-
-  --blackTranslucent: rgba(0, 0, 0, 0.95);
-  --primaryColourTranslucent: rgba(var(--primaryColour), 0.95);
-  --secondaryColourTranslucent: rgba(var(--secondaryColour), 0.95);
-}
-
-
+@import url("Styles/BaseStyle.css");
 
 .grid 
 {
@@ -49,7 +34,7 @@
     width: 20%;
 }
 .projectCard.home { width: 25%; }
-.projectCard:hover { transform:scale(1); }
+.projectCard:hover { transform:scale(1); transform: translateY(-1rem) ; }
 .projectCard:hover .card { box-shadow: 0 0 10px rgb(48, 48, 48); }
 
 @media only screen and (max-width: 1750px)

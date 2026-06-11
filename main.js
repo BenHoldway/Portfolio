@@ -16,6 +16,8 @@ $(document).ready(function(){
       contacts.classList = "dropdown";
       navBar.className = navBar.className.replace(" dropdown", "");
       navBar.className = navBar.className.replace(" isActive", "");
+  
+      contactBtn.transform = "scale(3)";
     }
   });
 

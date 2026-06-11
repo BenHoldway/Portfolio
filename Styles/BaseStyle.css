@@ -1,0 +1,27 @@
+:root
+{
+  --bgPrimaryColour: rgba(14, 13, 22, 0.95);
+  --bgSecondaryColour: rgba(29, 27, 38, 0.95);
+  --primaryColour: rgb(9, 10, 16);
+  --secondaryColour: rgb(13, 15, 25); 
+
+  --primaryTextColour: rgb(162, 162, 162);
+  --headerTextColour: rgb(85, 88, 100);
+  --subTextColour: rgb(126, 150, 172);
+
+  --blackTranslucent: rgba(0, 0, 0, 0.95);
+  --primaryColourTranslucent: rgba(var(--primaryColour), 0.95);
+  --secondaryColourTranslucent: rgba(var(--secondaryColour), 0.95);
+}
+
+@keyframes LoadDownArrow
+{
+  from { bottom: 5%; opacity: 0%; }
+  to { bottom: 10%; opacity: 100%; }
+}
+
+@keyframes LoadInfo
+{
+  from { top: 1em; opacity: 0%; }
+  to { top: 0em; opacity: 100%; }
+}
