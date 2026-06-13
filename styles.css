@@ -1,6 +1,6 @@
-@import url("Styles/BaseStyle.css");
-@import url("Styles/Header.css");
-@import url("Styles/Project.css");
+@import url("Styles/base-style.css");
+@import url("Styles/header.css");
+@import url("Styles/project.css");
 @import url("https://fonts.googleapis.com/css?family=Merriweather|Open+Sans");
 @import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap");
