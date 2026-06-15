@@ -60,3 +60,8 @@ function match(override)
     $('#ProjectAbout').addClass('isFullSectionTop');
   }
 }
+
+function scrollTop()
+{
+  window.scrollTo(0, 0);
+}

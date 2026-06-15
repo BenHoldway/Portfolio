@@ -35,7 +35,7 @@
 }
 .projectCard.home { width: 25%; }
 .projectCard:hover { transform:scale(1); transform: translateY(-1rem) ; }
-.projectCard:hover .card { box-shadow: 0 0 10px rgb(48, 48, 48); }
+.projectCard:hover .card { box-shadow: 0 0 10px rgb(133, 101, 156); }
 
 @media only screen and (max-width: 1750px)
 {
@@ -74,6 +74,7 @@
     margin: 0;
 }
 
+
 .cardContent
 {
     display: flex;
@@ -83,17 +84,27 @@
     background-color: rgb(0, 0, 0, 1);
 }
 
+.cardContent h3 
+{ 
+    font-family: "Alegreya SC", serif; 
+    font-size: 1.4em;
+    margin: 0;
+}
+
 .cardDateText
 {
-    font-size: 12px;
+    position: absolute;
+    font-family: "Alegreya SC", serif; 
+    font-size: 1em;
     color: rgb(131, 131, 131);
-    margin: 0 0 10px;
+    margin: 20px 0;
+    bottom: 0;
 }
 
 .cardDesc
 {
-    font-size: 1em; 
-    margin: 10px 5px 0 0;
+    font-size: .9em; 
+    margin: 10px 0 30px;
 }
 
 .cardHighlight
@@ -110,76 +121,80 @@
 .cardHighlight > p { font-weight: bold; color:#bdbdbd; font-size: 13px; }
 .cardHighlight.small { transform: scale(0.8), translate(3px, 0); }
 
+.unavailable
+{
+    filter: brightness(10%);
+    -webkit-filter: brightness(10%);
+    color: rgb(75, 75, 75);
+    pointer-events: none;
+
+    user-select: none; /* Standard syntax */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+}
+
 #ProjectAbout { flex-shrink: 2; }
 
-.projectTag
+.tagBoxDiv
 {
-    position: relative;
-    z-index: 1;
-    margin: .4em .4em;
-    padding: 3px 6px;
-    font-size: 0.9em;
+    display: flex; 
+    flex-wrap: wrap; 
+    position: relative; 
+    z-index: 1; 
+    margin-bottom: .75em;
+}
+
+.tagBox
+{
+    font-family: "Alegreya SC", serif;
+    font-size: .9em;
     font-weight: 600;
 
-    border-radius: .5em;
+    position: relative;
+    z-index: 1;
+    padding: .3em .4em;
+    margin: .4em .4em 0 0;
+    
+    border: .2em solid;
+    border-radius: .75em;
+
+    background-color: var(--blackTranslucent);
 }
-.projectTag.left { margin-left: 0; }
-.projectTag.larger
+.tagBox.larger
 {
     font-size: 1em;
-    margin: 8px 10px;
-    padding: 5px 8px;
-    border: 1.5px solid rgb(36, 36, 36);
-    border-radius: .75em;
+    gap: .3em .5em;
+    padding: .3em .6em;
+    margin: .6em .5em 0 0;
+    border: .25em solid;
 }
 @media only screen and (max-width: 1200px) 
 {
-  .projectTag.larger { font-size: 0.9em; margin: 6px 8px; }
+  .tagBox.larger { font-size: 0.9em; margin: 6px 8px; }
 }
 
-.ue5
+.type
 {
-  background-color: #1b1a2c;
+  border-color:#815896;
+  color: #815896;
 }
 
-.unity
+.engine
 {
-  background-color: #15161F;
+  border-color: #586496;
+  color: #586496;
 }
 
-.university
+.software
 {
-  background-color:rgb(61, 61, 61);
+  border-color: #8e5467;
+  color: #8e5467;
 }
 
-.personal
+.language
 {
-  background-color:rgb(99, 99, 99);
-}
-
-.c-sharp
-{
-  background-color:rgb(17, 15, 29);
-}
-
-.c-plus-plus
-{
-  background-color:rgb(34, 34, 34);
-}
-
-.blueprints
-{
-  background-color:rgb(31, 29, 39);
-}
-
-.solo
-{
-  background-color:rgb(13, 10, 24);
-}
-
-.group
-{
-  background-color:rgb(33, 30, 41);
+  border-color:#548e79;
+  color: #548e79;
 }
 
 /* #region Project Slideshow */
