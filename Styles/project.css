@@ -1,5 +1,11 @@
 @import url("Styles/BaseStyle.css");
 
+.material-symbols-outlined
+{
+    font-size: 1em;
+    color:#929292;
+}
+
 .grid 
 {
     display: flex;
@@ -25,13 +31,25 @@
 .Section.isFullSectionTop { margin: 0 0 2em; width: 100%; }
 .Section.isFullSectionBottom { margin: 0; width: 100%; }
 
+
+.divFixed
+{
+    position: fixed !important;
+    height: auto;
+    z-index: 10000;
+}
+
+
 .projectCard {
+    position: relative;
+    
     transform: scale(0.95);
     transition: all .25s ease-in-out;
     margin-bottom: 10px;
     padding: 15px;
     line-height: 1.44;
     width: 20%;
+    overflow: hidden;
 }
 .projectCard.home { width: 25%; }
 .projectCard:hover { transform:scale(1); transform: translateY(-1rem) ; }
@@ -143,6 +161,9 @@
     z-index: 1; 
     margin-bottom: .75em;
 }
+.tagBoxDiv.project { margin: -1em 0 2em; }
+
+.tagBoxDiv.genre { margin-top: auto; }
 
 .tagBox
 {
@@ -168,6 +189,13 @@
     margin: .6em .5em 0 0;
     border: .25em solid;
 }
+.tagBox.smaller
+{
+    gap: .3em .5em;
+    padding: .15em .6em;
+    margin: .6em .5em 0 0;
+    border: .25em solid;
+}
 @media only screen and (max-width: 1200px) 
 {
   .tagBox.larger { font-size: 0.9em; margin: 6px 8px; }
@@ -175,45 +203,68 @@
 
 .type
 {
-  border-color:#815896;
-  color: #815896;
+    border-color:#815896;
+    color: #815896;
 }
 
 .engine
 {
-  border-color: #586496;
-  color: #586496;
+    border-color: #586496;
+    color: #586496;
 }
 
 .software
 {
-  border-color: #8e5467;
-  color: #8e5467;
+    border-color: #8e5467;
+    color: #8e5467;
 }
 
 .language
 {
-  border-color:#548e79;
-  color: #548e79;
+    border-color:#548e79;
+    color: #548e79;
+}
+
+.genre
+{
+    border-color:#644f88;
+    color: #644f88;
+}
+
+
+
+
+.projectOutline
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.projectOutline .projectSlideshow
+{
+    height: fit-content;
+    width: 50%;
+    margin: 0 4em 0 0;
+}
+.projectOutline .about 
+{ 
+    display: flex;
+    flex-direction: column;
+    width: auto; 
+    height: 100%;
+    padding-left: 1em;
+    border-left: 2px solid var(--headerTextColour);
 }
 
 /* #region Project Slideshow */
-    .projectSlideshow
-    {
-        position: relative;
-        display: inline-block;
-        width: 90%;
-        margin: 10px auto;
-    }
-
     .slide
     { 
-        transition: all .25s;
         display: none;
-        opacity: 0;
         aspect-ratio: 16/9;
         overflow: hidden;
+        transition: all .25s;
     }
+    .slide.active { display: block; }
     .slide img { width: 100%; }
     .slide iframe { width: 100%; aspect-ratio: 16/9; border-color: transparent; }
 
@@ -221,7 +272,7 @@
     {
         display: flex;
         margin-top: .3em;
-        height: 4.95vw;
+        height: 5em;
         z-index: 40;
         overflow: hidden;
         background-color: rgb(var(--secondaryColour));

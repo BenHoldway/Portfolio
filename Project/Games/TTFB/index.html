@@ -1,242 +1,225 @@
 <!DOCTYPE html>
 
 <html lang="en-UK">
-    <head>
-        <title>Ben's Portfolio // Those Things From Below</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<head>
+		<title>Ben's Portfolio // Those Things From Below</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <link rel="stylesheet" href="../../../styles.css">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
-        <script type = "text/javascript" src="../../../main.js"></script>
-    </head>
-    <body class="Home">
-        
-        <div class="navbar">
-            <div class="container">
-                <a class="navbarItem name" href="./"><strong>Ben Holdway</strong></a>
-                <div id="navbarMenu" class="navbarMenu">
-                    <a class="navbarItem" href="./">Home</a>
-                    <a class="navbarItem" href="../../../#projects">Project Highlights</a>
-                    <a class="navbarItem" href="../../../#projects">Projects</a>
-                    <a class="navbarItem" href="../../../#aboutMe">About Me</a>
-                    <div class="navbarItem hasDropdown CustomButton">
-                        <a id="contactNavbarItem" class="navbarItem isNotInDropdown btn">Contact<i id="contactsDropdownArrow" class="arrow"></i></a>
-                        <div id="navbarDropdown" class="dropdown">
-                            <a class="navbarItem contactText" href="https://benholdway.github.io/Portfolio/BenHoldwayCV.pdf" target="_blank" rel="noopener noreferrer">
-                                <img src="../../../Resources/CVIcon.png" class="linkImage">
-                                CV
-                            </a>
-                            <a class="navbarItem contactText" href="https://www.linkedin.com/in/ben-holdway-708883214/" target="_blank" rel="noopener noreferrer">
-                                <img src="../../../Resources/LinkedInIcon.png" class="linkImage">
-                                LinkedIn
-                            </a>
-                            <a class="navbarItem contactText" href="https://github.com/BenHoldway" target="_blank" rel="noopener noreferrer">
-                                <img src="../../../Resources/GithubIcon.png" class="linkImage">
-                                GitHub
-                            </a>
-                            <a class="navbarItem contactText" href="mailto:benholdway03@gmail.com" target="_blank" rel="noopener noreferrer">
-                                <img src="../../../Resources/EmailIcon.png" class="linkImage">
-                                Email
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="navbarMenuCollapsed">
-                    <img class="navbarItem navbarCompressedIcon btn" src="../../../Resources/CompressedNavIcon.png">
-                </div>
-            </div>
-        </div>
+		<base href="../../../">
 
-        <div class="headerVideo">
-            <video autoplay="true" loop="true" muted="true" class="threeQuartersHeight">
-                <source src="../../../Resources/TTFB/TTFBVidShowcase.mp4" type="video/mp4">
-            </video>
-            <div class="headerContainer">
-                <div class="headerLine full thin"></div>
+		<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_upward,description,mail" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin />
 
-                <p class="headerItem header">Those Things From Below</p>
-                <p class="headerItem headerSub" style="margin-top: -.75em;">(May 2025)</p>
-                <div class="headerItem isRow buttons">
-                    <a href="https://evinikuyama.itch.io/those-things-from-below" target="_blank" rel="noopener noreferrer">
-                        <div class="btn hasBorder isRounded darkerBg buttons">
-                            <p>Game Link →</p>
-                        </div>
-                    </a>
-                    <a href="#projectInfo">
-                        <div class="btn hasBorder isRounded darkerBg buttons">
-                            <p>Development →</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="headerLine full thin"></div>
-            </div>
-        </div>
+		<link rel="stylesheet" href="styles.css">
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
+		<script type = "text/javascript" src="main.js"></script>
+		<script type = "text/javascript" src="project.js"></script>
+	</head>
+	<body class="Home">
+		
+		<div class="navbar"></div>
 
-        <div class="sectionBox doubled reversed">
-            <div class="container darkerBox">
-                <h1>About</h1>
-                <div class="headerLine"></div>
+		<div class="headerVideo">
+			<video controls loading="lazy" preload="none" autoplay="true" loop="true" muted="true" class="threeQuartersHeight">
+				<source src="Resources/TTFB/TTFBVidShowcase.mp4" type="video/mp4">
+			</video>
+			<div class="headerContainer">
 
-                <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1; margin-bottom: 30px;">
-                    <div class="projectTag left university larger" style="align-self: center;">University</div>
-                    <div class="projectTag university larger" style="align-self: center;">8 Weeks</div>
-                    <div class="projectTag university larger" style="align-self: center;">2nd Year</div>
-                    <div class="projectTag ue5 larger" style="align-self: center;">UE5</div>
-                    <div class="projectTag blueprints larger" style="align-self: center;">Blueprints</div>
-                    <div class="projectTag group larger" style="align-self: center;">Group</div>
-                </div>
+				<!--<div class="tagBoxDiv" style="align-self: center;">
+                    <div class="tagBox type larger">University</div>
+                    <div class="tagBox type larger">8 Weeks</div>
+                    <div class="tagBox type larger">2nd Year</div>
+                    <div class="tagBox type larger">Group</div>
+                    <div class="tagBox engine larger">Unreal Engine 5</div>
+                    <div class="tagBox language larger">Blueprints</div>
+                </div>-->
 
-                <p><em>Those Things From Below is a hoard-shooter survival first-person shooter, where you must activate and 
-                    use the factory that you found yourself within to aid your fight against hoards of creatures.
-                </p>
-                <p style="margin-bottom: 4em;">From making use of different steam powered weapons and traps, you need to power up generators to get 
-                    power to the factory. Use this power to progress through the game and escape from the hoard.
-                </em></p>
-                <p>This was the <strong>1st part of a 2 year module</strong>, in which I worked within a group at an industry level development module. Once the project 
-                    was designed, which I had a part in, and had been pitched to the lecturers by the Senior team, I was tasked with <strong>creating and maintaining 
-                    the Player Systems. </strong>
-                </p>
-            </div>
+				<div class="headerLine full thin"></div>
 
-            <div class="container darkerBox hasTextCentered larger">
-                <div class="projectSlideshow">
-                    
-                    <div class="slide" style="display: flex; opacity: 1">
-                        <img src="../../../Resources/TTFB/TTFBMainSS.png">
-                    </div>
-                    
-                    <div class="slide">
-                        <img src="../../../Resources/TTFB/TTFBSS1.png">
-                    </div>
-                    
-                    <div class="slide">
-                        <img src="../../../Resources/TTFB/TTFBSS2.png">
-                    </div>
+				<p class="headerItem header">Those Things From Below</p>
+				<p class="headerItem headerSub" style="margin-top: -.75em;">(May 2025)</p>
+				<p class="headerItem subText headerTextEnd" style="font-family: 'Alegreya SC', serif; font-size: 1.5em; font-weight: 600;">Junior Collaborative UE5 Project - Apocolyptic First-Person Horde Shooter</p>
+				
+				<div class="headerItem isRow buttons">
+					<a href="https://evinikuyama.itch.io/those-things-from-below" target="_blank" rel="noopener noreferrer">
+						<div class="btn hasBorder isRounded darkerBg buttons">
+							<p>Game Link →</p>
+						</div>
+					</a>
+					<a href="#dev">
+						<div class="btn hasBorder isRounded darkerBg buttons">
+							<p>Development →</p>
+						</div>
+					</a>
+				</div>
+				<div class="headerLine full thin"></div>
+				
+			</div>
+		</div>
 
-                    <div class="slide">
-                        <img src="../../../Resources/TTFB/TTFBSS3.png">
-                    </div>
-                    
-                    <div class="slide">
-                        <img src="../../../Resources/TTFB/TTFBSS4.png">
-                    </div>
+		<div class="sectionBox">
+			<div class="container darkerBox">
+				<div class="projectOutline">
+					<div class="projectSlideshow">
+						
+						<div class="slide">
+							<img src="Resources/TTFB/TTFBMainSS.png">
+						</div>
+						
+						<div class="slide">
+							<img src="Resources/TTFB/TTFBSS1.png">
+						</div>
+						
+						<div class="slide">
+							<img src="Resources/TTFB/TTFBSS2.png">
+						</div>
 
-                    <div class="slide">
-                        <img src="../../../Resources/TTFB/TTFBSS5.png">
-                    </div>
+						<div class="slide">
+							<img src="Resources/TTFB/TTFBSS3.png">
+						</div>
+						
+						<div class="slide">
+							<img src="Resources/TTFB/TTFBSS4.png">
+						</div>
 
-                    <div class="slide">
-                        <img src="../../../Resources/TTFB/TTFBSS6.png">
-                    </div>
+						<div class="slide">
+							<img src="Resources/TTFB/TTFBSS5.png">
+						</div>
 
-                    <div class="slide">
-                        <img src="../../../Resources/TTFB/TTFBSS7.png">
-                    </div>
+						<div class="slide">
+							<img src="Resources/TTFB/TTFBSS6.png">
+						</div>
 
-                    <div class="slide">
-                        <img src="../../../Resources/TTFB/TTFBTutSS.png">
-                    </div>
+						<div class="slide">
+							<img src="Resources/TTFB/TTFBSS7.png">
+						</div>
 
-                    <div class="slide">
-                        <img src="../../../Resources/TTFB/TTFBGenSS.png">
-                    </div>
+						<div class="slide">
+							<img src="Resources/TTFB/TTFBTutSS.png">
+						</div>
 
-                    <div class="slide">
-                        <img src="../../../Resources/TTFB/TTFBBossSS.png">
-                    </div>
+						<div class="slide">
+							<img src="Resources/TTFB/TTFBGenSS.png">
+						</div>
 
-                    <div class="slideDemoStrip">
-                        <img class="demoStripItem btn demoItemActive" src="../../../Resources/TTFB/TTFBMainSS.png" onclick="CurrentSlide(0)">
-                        <img class="demoStripItem btn" src="../../../Resources/TTFB/TTFBSS1.png" onclick="CurrentSlide(1)">
-                        <img class="demoStripItem btn" src="../../../Resources/TTFB/TTFBSS2.png" onclick="CurrentSlide(2)">
-                        <img class="demoStripItem btn" src="../../../Resources/TTFB/TTFBSS3.png" onclick="CurrentSlide(3)">
-                        <img class="demoStripItem btn" src="../../../Resources/TTFB/TTFBSS4.png" onclick="CurrentSlide(4)">
-                        <img class="demoStripItem btn" src="../../../Resources/TTFB/TTFBSS5.png" onclick="CurrentSlide(5)">
-                        <img class="demoStripItem btn" src="../../../Resources/TTFB/TTFBSS6.png" onclick="CurrentSlide(6)">
-                        <img class="demoStripItem btn" src="../../../Resources/TTFB/TTFBSS7.png" onclick="CurrentSlide(7)">
-                        <img class="demoStripItem btn" src="../../../Resources/TTFB/TTFBTutSS.png" onclick="CurrentSlide(8)">
-                        <img class="demoStripItem btn" src="../../../Resources/TTFB/TTFBGenSS.png" onclick="CurrentSlide(9)">
-                        <img class="demoStripItem btn" src="../../../Resources/TTFB/TTFBBossSS.png" onclick="CurrentSlide(10)">
-                    </div>
-                    <div class="demoSliderContainer">
-                        <a class="demoSliderItem changeSlideBtn btn hasTextCentered" onclick="ChangeSlide(-1)"><p class="sliderArrow prev"></p></a>
-                        <div id="demoSlider" class="demoSliderItem demoSlider">
-                            <div id="demoSliderHandle"class="demoSliderHandle sliderHandleWithTransition"></div>
-                        </div>
-                        <a class="demoSliderItem changeSlideBtn btn hasTextCentered" onclick="ChangeSlide(1)"><p class="sliderArrow next"></p></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+						<div class="slide">
+							<img src="Resources/TTFB/TTFBBossSS.png">
+						</div>
 
-        <div id="projectInfo" class="inPageLinkTarget"></div>
+						<div class="slideDemoStrip">
+							<img class="demoStripItem btn demoItemActive" src="Resources/TTFB/TTFBMainSS.png" onclick="CurrentSlide(0)">
+							<img class="demoStripItem btn" src="Resources/TTFB/TTFBSS1.png" onclick="CurrentSlide(1)">
+							<img class="demoStripItem btn" src="Resources/TTFB/TTFBSS2.png" onclick="CurrentSlide(2)">
+							<img class="demoStripItem btn" src="Resources/TTFB/TTFBSS3.png" onclick="CurrentSlide(3)">
+							<img class="demoStripItem btn" src="Resources/TTFB/TTFBSS4.png" onclick="CurrentSlide(4)">
+							<img class="demoStripItem btn" src="Resources/TTFB/TTFBSS5.png" onclick="CurrentSlide(5)">
+							<img class="demoStripItem btn" src="Resources/TTFB/TTFBSS6.png" onclick="CurrentSlide(6)">
+							<img class="demoStripItem btn" src="Resources/TTFB/TTFBSS7.png" onclick="CurrentSlide(7)">
+							<img class="demoStripItem btn" src="Resources/TTFB/TTFBTutSS.png" onclick="CurrentSlide(8)">
+							<img class="demoStripItem btn" src="Resources/TTFB/TTFBGenSS.png" onclick="CurrentSlide(9)">
+							<img class="demoStripItem btn" src="Resources/TTFB/TTFBBossSS.png" onclick="CurrentSlide(10)">
+						</div>
+						<div class="demoSliderContainer">
+							<a class="demoSliderItem changeSlideBtn btn hasTextCentered" onclick="ChangeSlide(-1)"><p class="sliderArrow prev"></p></a>
+							<div id="demoSlider" class="demoSliderItem demoSlider">
+								<div id="demoSliderHandle"class="demoSliderHandle sliderHandleWithTransition"></div>
+							</div>
+							<a class="demoSliderItem changeSlideBtn btn hasTextCentered" onclick="ChangeSlide(1)"><p class="sliderArrow next"></p></a>
+						</div>
+					</div>
 
-        <div class="sectionBox doubled hasContentAtTop">
-            <div class="container lighterBox">
-                <h1>Individual Contributions</h1>
-                <div class="headerLine"></div>
-                <h2>Player Systems</h2>
-                <ul>
-                    <li>Implementation of <strong>Player Controls and Basic Movement</strong></li>
-                    <ul>
-                        <li>Walking and Camera Movement</li>
-                        <li>Sprinting and Stamina Control</li>
-                        <li>Crouching and Stand Ability Checks</li>
-                        <li>Knee Slide Movement</li>
-                    </ul>
-                    <li><strong>Player Interactions</strong> with a wide range of actors</li>
-                    <li><strong>Player Ability Effect</strong> implementation and functionality</li>
-                    <li>VFX and Camera Effects</li>
-                    <li>Created and Implemented <strong>Player SFX using MetaSounds</strong></li>
-                </ul>
-                <h2>UI Implementation</h2>
-                <ul>
-                    <li>Creation and Functionality of <strong>Draft UI</strong></li>
-                    <li>Functionality of <strong>Settings</strong></li>
-                    <li>Linkage of <strong>Tutorial to detection of Player Inputs</strong></li>
-                </ul>
-                <h2>Team Work</h2>
-                <ul>
-                    <li><strong>Collaboration with the design team</strong> to make ideas</li>
-                    <li><strong>Communicating With Others</strong> who used my systems</li>
-                    <li>Regular <strong>Meetings and Updates with Seniors</strong></li>
-                    <li>Performed Continual <strong>Updates to Documentation</strong></li>
-                    <li><strong>Worked in Other Systems</strong> to bring the Project Together</li>
-                </ul>
-            </div>
-            <div class="container lighterBox larger">
-                <h1>Project Development</h1>
-                <div class="headerLine"></div>
-                <p style="margin-bottom: 1em;">To get the player into the level and working, I created a very simple system which <strong>automatically creates an owning hierarchy from the 
-                    Player Controller and Player Pawn</strong>, which are both instantiated by the Game Mode Actor. Once this was created, and a simple First Person 
-                    Pawn Blueprint was added to the project, I informed the team that they would be able to use this to test their systems as well.
-                </p>
-                <div class="headerLine half"></div>
-                <p>With the basic Player implemented, I was able to create further systems like <strong>sprinting, crouching, interacting and a 
-                    somewhat complex knee slide</strong>.
-                </p>
-                <p style="margin-bottom: 1em;">Through the rest of development, I worked within the Player Pawn Blueprint, as well as the <strong>Player Component Blueprints (like the Stamina and 
-                    Powerup Timer Handler Components)</strong>. I worked very closely with others who were developing systems close to the player, like the <strong>UI and pickup
-                    items</strong>. This was so that I was able to properly and efficiently set up communication to these systems from the player.
-                </p>
-                <div class="headerLine half"></div>
-                <p>This project was <strong>my first full group development project</strong> that I had worked in and was able to learn a lot from it. While 
-                    I know that <strong>I was fully engaged</strong> with this project and <strong>actively worked with others to get tasks done</strong>, which was backed by the feedback I received,
-                    there was a lot of improvements I was able to recognise.
-                </p>
-                <p>One such thing that <strong>I learnt was how important communication is</strong>. The development process as a whole was a mess, with teams not understanding others
-                    and information being lost. This caused a lot of re-imaginings with design and changes happening within the very short development cycle. With <strong>better
-                    communication across the team, and with myself, the development process would have been a lot smoother</strong>.
-                </p>
-            </div>
-        </div>
-    
-        <div class="sectionBox footer">
-            <div class="container hasTextCentered">
-                <span>Copyright <img src="../../../CopyrightIcon.png" class="footerImage">
-                2025 - Ben Holdway // Page created by using HTML, CSS and JS</span>
-            </div>
-        </div>
-    </body>
+					<div class="about">
+						<h1>About</h1>
+						
+						<div class="tagBoxDiv project">
+							<div class="tagBox type">University</div>
+							<div class="tagBox type">8 Weeks</div>
+							<div class="tagBox type">Group</div>
+							<div class="tagBox engine">Unreal Engine 5</div>
+							<div class="tagBox language">Blueprints</div>
+						</div>
+						<p style="margin-bottom: 4em;"><em>"Those Things from Below is a first-person horde shooter where you utilise the power of the factory itself to survive and rid the infestation! Guide our worker as they progress through the hordes within this long abandoned factory, after having entered, becoming trapped and have to repair the factory to escape before the infestation takes over. With steam powered weapons and traps at your side, use your quick wit to escape and most importantly... survive."
+						</em></p>
+						<p>This was the <strong>1st part of a 2 year module</strong>, in which I worked within a group at an industry level development module. Once the project 
+							was designed, which I had a part in, and had been pitched to the lecturers by the Senior team, I was tasked with <strong>creating and maintaining 
+								the Player Systems. </strong>
+						</p>
+
+						<!-- <div class="tagBoxDiv genre">
+							<div class="tagBox smaller genre">First-Person Shooter</div>
+							<div class="tagBox smaller genre">Singleplayer</div>
+							<div class="tagBox smaller genre">Horror</div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+			
+		<div id="dev" class="inPageLinkTarget"></div>
+
+		<div class="sectionBox doubled hasContentAtTop">
+			<div class="container lighterBox" id="indiv">
+				<h1>Individual Contributions</h1>
+				
+				<h2>Player Systems</h2>
+				<ul>
+					<li>Implementation of <strong>Player Controls and Basic Movement</strong></li>
+					<ul>
+						<li>Walking and Camera Movement</li>
+						<li>Sprinting and Stamina Control</li>
+						<li>Crouching and Stand Ability Checks</li>
+						<li>Knee Slide Movement</li>
+					</ul>
+					<li><strong>Player Interactions</strong> with a wide range of actors</li>
+					<li><strong>Player Ability Effect</strong> implementation and functionality</li>
+					<li>VFX and Camera Effects</li>
+					<li>Created and Implemented <strong>Player SFX using MetaSounds</strong></li>
+				</ul>
+				<h2>UI Implementation</h2>
+				<ul>
+					<li>Creation and Functionality of <strong>Draft UI</strong></li>
+					<li>Functionality of <strong>Settings</strong></li>
+					<li>Linkage of <strong>Tutorial to detection of Player Inputs</strong></li>
+				</ul>
+				<h2>Team Work</h2>
+				<ul>
+					<li><strong>Collaboration with the design team</strong> to make ideas</li>
+					<li><strong>Communicating With Others</strong> who used my systems</li>
+					<li>Regular <strong>Meetings and Updates with Seniors</strong></li>
+					<li>Performed Continual <strong>Updates to Documentation</strong></li>
+					<li><strong>Worked in Other Systems</strong> to bring the Project Together</li>
+				</ul>
+			</div>
+			<div class="container lighterBox larger">
+				<h1>Project Development</h1>
+				
+				<p style="margin-bottom: 1em;">To get the player into the level and working, I created a very simple system which <strong>automatically creates an owning hierarchy from the 
+					Player Controller and Player Pawn</strong>, which are both instantiated by the Game Mode Actor. Once this was created, and a simple First Person 
+					Pawn Blueprint was added to the project, I informed the team that they would be able to use this to test their systems as well.
+				</p>
+				<div class="headerLine full thin"></div>
+				<p>With the basic Player implemented, I was able to create further systems like <strong>sprinting, crouching, interacting and a 
+					somewhat complex knee slide</strong>.
+				</p>
+				<p style="margin-bottom: 1em;">Through the rest of development, I worked within the Player Pawn Blueprint, as well as the <strong>Player Component Blueprints (like the Stamina and 
+					Powerup Timer Handler Components)</strong>. I worked very closely with others who were developing systems close to the player, like the <strong>UI and pickup
+					items</strong>. This was so that I was able to properly and efficiently set up communication to these systems from the player.
+				</p>
+				<div class="headerLine full thin"></div>
+				<p>This project was <strong>my first full group development project</strong> that I had worked in and was able to learn a lot from it. While 
+					I know that <strong>I was fully engaged</strong> with this project and <strong>actively worked with others to get tasks done</strong>, which was backed by the feedback I received,
+					there was a lot of improvements I was able to recognise.
+				</p>
+				<p>One such thing that <strong>I learnt was how important communication is</strong>. The development process as a whole was a mess, with teams not understanding others
+					and information being lost. This caused a lot of re-imaginings with design and changes happening within the very short development cycle. With <strong>better
+					communication across the team, and with myself, the development process would have been a lot smoother</strong>.
+				</p>
+			</div>
+		</div>
+	
+		<div class="footer">
+		</div>
+	</body>
 </html>

@@ -3,62 +3,44 @@
 <html lang="en-UK">
     <head>
         <title>Ben's Portfolio // Projects</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../styles.css">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
-        <script type = "text/javascript" src="../main.js"></script>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <base href="../">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_upward,description,mail" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin />
+
+		<link rel="stylesheet" href="styles.css">
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
+		<script type = "text/javascript" src="main.js"></script>
+		<script type = "text/javascript" src="project.js"></script>
     </head>
     <body>
-        <div class="navbar">
-            <div class="container">
-                <a class="navbarItem name" href="../"><strong>Ben Holdway</strong></a>
-                <div id="navbarMenu" class="navbarMenu">
-                    <a class="navbarItem" href="../">Home</a>
-                    <a class="navbarItem" href="../#aboutMe">About Me</a>
-                    <a class="navbarItem" href="../Projects/">Projects</a>
-                    <div class="navbarItem hasDropdown CustomButton">
-                        <a id="contactNavbarItem" class="navbarItem isNotInDropdown btn">Contact<i id="contactsDropdownArrow" class="arrow"></i></a>
-                        <div id="navbarDropdown" class="dropdown">
-                            <a class="navbarItem contactText" href="https://benholdway.github.io/Portfolio/BenHoldwayCV.pdf" target="_blank" rel="noopener noreferrer">
-                                <img src="../Resources/CVIcon.png" class="linkImage">
-                                CV
-                            </a>
-                            <a class="navbarItem contactText" href="https://www.linkedin.com/in/ben-holdway-708883214/" target="_blank" rel="noopener noreferrer">
-                                <img src="../Resources/LinkedInIcon.png" class="linkImage">
-                                LinkedIn
-                            </a>
-                            <a class="navbarItem contactText" href="https://github.com/BenHoldway" target="_blank" rel="noopener noreferrer">
-                                <img src="../Resources/GithubIcon.png" class="linkImage">
-                                GitHub
-                            </a>
-                            <a class="navbarItem contactText" href="mailto:benholdway03@gmail.com" target="_blank" rel="noopener noreferrer">
-                                <img src="../Resources/EmailIcon.png" class="linkImage">
-                                Email
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="navbarMenuCollapsed">
-                    <img class="navbarItem navbarCompressedIcon btn" src="../Resources/CompressedNavIcon.png">
-                </div>
-            </div>
-        </div>
+        <div class="navbar"></div>
 
         <div class="headerVideo">
-            <video autoplay="true" loop="true" muted="true" class="threeQuartersHeight">
-                <source src="../Resources/PortfolioVideoShowcase.mp4" type="video/mp4">
+            <video autoplay="true" loop="true" muted="true">
+                <source src="Resources/PortfolioVideoShowcase.mp4" type="video/mp4">
             </video>
-            <div>
+            <div class="headerContainer">
+                <div class="headerLine full thin"></div>
+
                 <p class="headerItem header">Project Showcase</p>
+
                 <div class="headerItem isRow buttons">
-                    <div class="btn hasBorder isRounded darkerBg buttons">
-                        <a href="#uni">UNIVERSITY PROJECTS</a>
-                    </div>
-                    <div class="btn hasBorder isRounded darkerBg buttons">
-                        <a href="#personal">PERSONAL PROJECTS</a>
-                    </div>
+                    <a href="#uni">
+                        <div class="btn hasBorder isRounded darkerBg buttons">
+                            <p class="headerSub">University Projects →</p>
+                        </div>
+                    </a>
+                    <a href="#personal">
+                        <div class="btn hasBorder isRounded darkerBg buttons">
+                            <p class="headerSub">Personal Projects →</p>
+                        </div>
+                    </a>
                 </div>
+                <div class="headerLine full thin"></div>
             </div>
         </div>
 
@@ -67,202 +49,223 @@
         <div class="sectionBox">
             <div class="container darkerBox">
                 <h1>University Projects</h1>
-                <div class="headerLine"></div>
 
                 <div class="grid">
+                    
+                    <div class="headerLine full"></div>
 
-                    <div class="projectCard"><a href="../Project/Games/TTFB/" style="position: relative;"  target="_blank" rel="noopener noreferrer">
+                    <div class="projectCard"><a href="Project/Games/TTFB/" style="position: relative;"  target="_blank" rel="noopener noreferrer">
                         <div class="card">
-                            <figure class="cardImage" style="background-image: url(../Resources/TTFB/TTFBGenSS.png);"></figure>
+                            <div class="cardHighlight">
+                                <p>Industry-Style Group Collab</p>
+                            </div>
+                            <figure class="cardImage" style="background-image: url(Resources/TTFB/TTFBGenSS.png);"></figure>
                             <div class="cardContent">
-                                <div><h3 style="margin: 0;">Those Things From Below</h3></div>
-                                <div><p class="cardDateText">May 2025</p></div>
-                                <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1; margin: 5px 0;">
-                                    <div class="projectTag left ue5">UE5</div>
-                                    <div class="projectTag blueprints">Blueprints</div>
-                                    <div class="projectTag group">Group</div>
+                                <div class="tagBoxDiv">
+                                    <div class="tagBox left type">University</div>
+                                    <div class="tagBox type">Group</div>
+                                    <div class="tagBox left engine">Unreal Engine 5</div>
+                                    <div class="tagBox language">Blueprints</div>
                                 </div>
-                                <div><p class="cardDesc">Hoard Shooter Survival FPS created in UE5 for my Junior Collab Module</p></div>
+                                <h3>Those Things From Below</h3>
+                                <p class="cardDesc">Hoard Shooter Survival FPS created in UE5 for my Junior Collab Module</p>
+                                <p class="cardDateText">May 2025</p>
                             </div>
                         </div>
                     </a></div>
 
-                    <div class="projectCard unavailable"><a href="../Project/Games/" style="position: relative;"  target="_blank" rel="noopener noreferrer">
+                    <div class="projectCard unavailable"><a href="Project/Games/Audio/" style="position: relative;"  target="_blank" rel="noopener noreferrer">
                         <div class="card">
-                            <figure class="cardImage" style="background-image: url();"></figure>
+                            <div class="cardHighlight">
+                                <p>Audio Based AI</p>
+                            </div>
+                            <figure class="cardImage" style="background-image: url(Resources/Audio/.png);"></figure>
                             <div class="cardContent">
-                                <div><h3 style="margin: 0;">Audio Mechanic Project</h3></div>
-                                <div><p class="cardDateText">May 2025</p></div>
-                                <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1; margin: 5px 0;">
-                                    <div class="projectTag left ue5">UE5</div>
-                                    <div class="projectTag blueprints">Blueprints</div>
-                                    <div class="projectTag solo">Solo</div>
+                                <div class="tagBoxDiv">
+                                    <div class="tagBox left type">University</div>
+                                    <div class="tagBox type">Solo</div>
+                                    <div class="tagBox left engine">Unreal Engine 5</div>
+                                    <div class="tagBox language">Blueprints</div>
                                 </div>
-                                <div><p class="cardDesc">A horro game audio mechanic that revolves around the player making sound</p></div>
+                                <h3>Audio Mechanic Project</h3>
+                                <p class="cardDesc">A Stealth Horror Game Audio Mechanic where the AI can hear any sound the player makes.</p>
+                                <p class="cardDateText">May 2025</p>
                             </div>
                         </div>
                     </a></div>
 
                     <!-- First C++ Project in Unreal -->
-                    <div class="projectCard"><a href="../Project/Games/HiddenSecrets/" style="position: relative;"  target="_blank" rel="noopener noreferrer">
+                    <div class="projectCard"><a href="Project/Games/HiddenSecrets/" style="position: relative;" target="_blank" rel="noopener noreferrer">
                         <div class="card">
-                            <figure class="cardImage" style="background-image: url(../Resources/HiddenSecrets/HiddenSecretsIcon.png);"></figure>
+                            <figure class="cardImage" style="background-image: url(Resources/HiddenSecrets/HiddenSecretsIcon.png);"></figure>
+                            <div class="cardHighlight">
+                                <p>C++ Developed Game</p>
+                            </div>
                             <div class="cardContent">
-                                <div><h3 style="margin: 0;">Hidden Secrets</h3></div>
-                                <div><p class="cardDateText">November 2024</p></div>
-                                <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1; margin: 5px 0;">
-                                    <div class="projectTag left ue5">UE5</div>
-                                    <div class="projectTag c-plus-plus">C++</div>
-                                    <div class="projectTag solo">Solo</div>
+                                <div class="tagBoxDiv">
+                                    <div class="tagBox left type">University</div>
+                                    <div class="tagBox type">Solo</div>
+                                    <div class="tagBox engine">Unreal Engine 5</div>
+                                    <div class="tagBox language">C++</div>
                                 </div>
+                                <div><h3 style="margin: 0;">Hidden Secrets</h3></div>
                                 <div><p class="cardDesc">A small horror game made in Unreal Engine 5, while learning C++</p></div>
+                                <div><p class="cardDateText">November 2024</p></div>
                             </div>
                         </div>
                     </a></div>
 
                     <!-- First Unreal Project -->
-                    <div class="projectCard"><a href="../Project/Games/BattleOfTalokov/" style="position: relative;" target="_blank" rel="noopener noreferrer">
+                    <div class="projectCard"><a href="Project/Games/BattleOfTalokov/" style="position: relative;" target="_blank" rel="noopener noreferrer">
                         <div class="card">
-                            <figure class="cardImage" style="background-image: url(../Resources/BattleOfTalokov/BattleOfTalokovIcon.png)"></figure>
+                            <figure class="cardImage" style="background-image: url(Resources/BattleOfTalokov/BattleOfTalokovIcon.png)"></figure>
+                            <div class="cardHighlight">
+                                <p>Blueprint Developed Game</p>
+                            </div>
                             <div class="cardContent">
+                                <div class="tagBoxDiv">
+                                    <div class="tagBox left type">University</div>
+                                    <div class="tagBox type">Solo</div>
+                                    <div class="tagBox engine">Unreal Engine 5</div>
+                                    <div class="tagBox language">Blueprints</div>
+                                </div>
                                 <div><h3 style="margin: 0;">Battle Of Talokov</h3></div>
+                                <div><p class="cardDesc">A 3D tank shooter that was made in Unreal Engine 5 for a solo university project</p></div>
                                 <div><p class="cardDateText">March 2024</p></div>
-                                <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1; margin: 5px 0;">
-                                    <div class="projectTag left ue5">UE5</div>
-                                    <div class="projectTag blueprints">Blueprints</div>
-                                    <div class="projectTag solo">Solo</div>
-                                </div>
-                                <div><p class="cardDesc">A 3D tank shooter created in my first Unreal Engine university module</p></div>
                             </div>
                         </div>
                     </a></div>
 
                     <!---->
-                    <div class="projectCard"><a href="../Project/Games/ClosingUp/" style="position: relative;" target="_blank" rel="noopener noreferrer">
+                    <div class="projectCard"><a href="Project/Games/ClosingUp/" style="position: relative;" target="_blank" rel="noopener noreferrer">
                         <div class="card">
-                            <figure class="cardImage" style="background-image: url(../Resources/ClosingUp/ClosingUpIcon.png)"></figure>
+                            <figure class="cardImage" style="background-image: url(Resources/ClosingUp/ClosingUpIcon.png)"></figure>
+                            <div class="cardHighlight">
+                                <p>Agile Methodology Management</p>
+                            </div>
                             <div class="cardContent">
+                                <div class="tagBoxDiv">
+                                    <div class="tagBox type">University</div>
+                                    <div class="tagBox type">Solo</div>
+                                    <div class="tagBox engine">Unity</div>
+                                    <div class="tagBox language">C#</div>
+                                </div>
                                 <div><h3 style="margin: 0;">Closing Up</h3></div>
-                                <div><p class="cardDateText">May 2024</p></div>
-                                <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1; margin: 5px 0;">
-                                    <div class="projectTag left unity">Unity</div>
-                                    <div class="projectTag c-sharp">C#</div>
-                                    <div class="projectTag solo">Solo</div>
-                                </div>
                                 <div><p class="cardDesc">A 6 week project created in Unity, following a "Simulating the Mundane" theme</p></div>
+                                <div><p class="cardDateText">May 2024</p></div>
                             </div>
                         </div>
                     </a></div>
 
-                    <div class="projectCard"><a href="../Project/Games/Chasm/" style="position: relative;" target="_blank" rel="noopener noreferrer">
+                    <div class="projectCard"><a href="Project/Games/Chasm/" style="position: relative;" target="_blank" rel="noopener noreferrer">
                         <div class="card">
-                            <figure class="cardImage" style="background-image: url(../Resources/Chasm/ChasmIcon.png)"></figure>
+                            <figure class="cardImage" style="background-image: url(Resources/Chasm/ChasmIcon.png)"></figure>
+                            <div class="cardHighlight">
+                                <p>Agile Methodology Management</p>
+                            </div>
                             <div class="cardContent">
-                                <div><h3 style="margin: 0;">Chasm</h3></div>
-                                <div><p class="cardDateText">April 2024</p></div>
-                                <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1; margin: 5px 0;">
-                                    <div class="projectTag left unity">Unity</div>
-                                    <div class="projectTag c-sharp">C#</div>
-                                    <div class="projectTag solo">Solo</div>
+                                <div class="tagBoxDiv">
+                                    <div class="tagBox type">University</div>
+                                    <div class="tagBox type">Solo</div>
+                                    <div class="tagBox engine">Unity</div>
+                                    <div class="tagBox language">C#</div>
                                 </div>
+                                <div><h3 style="margin: 0;">Chasm</h3></div>
                                 <div><p class="cardDesc">A 3 week project created in Unity, following "1 joystick, 1 input, multiple mechanics"</p></div>
+                                <div><p class="cardDateText">April 2024</p></div>
                             </div>
                         </div>
                     </a></div>
 
                     <!---->
-                    <div class="projectCard"><a href="../Project/ToolsAndOther/OrbitalSystemSimulation/" style="position: relative;" target="_blank" rel="noopener noreferrer">
+                    <div class="projectCard"><a href="Project/Games/PlanetarySystem" style="position: relative;" target="_blank" rel="noopener noreferrer">
                         <div class="card">
-                            <figure class="cardImage" style="background-image: url(../Resources/PlanetarySystem/OrbitalSystemSimulationIcon.png)"></figure>
+                            <figure class="cardImage" style="background-image: url(Resources/PlanetarySystem/OrbitalSystemSimulationIcon.png)"></figure>
+                            <div class="cardHighlight">
+                                <p>DirectX 11 Simulation</p>
+                            </div>
                             <div class="cardContent">
-                                <div><h3 style="margin: 0;">Orbital System Simulation</h3></div>
-                                <div><p class="cardDateText">May 2024</p></div>
-                                <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1; margin: 5px 0;">
-                                    <div class="projectTag left c-plus-plus">C++</div>
-                                    <div class="projectTag solo">Solo</div>
+                                <div class="tagBoxDiv">
+                                    <div class="tagBox type">University</div>
+                                    <div class="tagBox type">Solo</div>
+                                    <div class="tagBox language">C++</div>
                                 </div>
-                                <div><p class="cardDesc">A planetary orbital simulation created in C++ and DirectX</p></div>
+                                <div><h3 style="margin: 0;">Planetary System</h3></div>
+                                <div><p class="cardDesc">A Planetary Orbital Simulation System created purely with C++ and DirectX 11</p></div>
+                                <div><p class="cardDateText">May 2024</p></div>
                             </div>
                         </div>
                     </a></div>
+                    
+                    <div class="headerLine full" style="margin-top: 0;"></div>
+
                 </div>
             </div>
         </div>
 
         <div id="personal" class="inPageLinkTarget"></div>
-
+        
         <div class="sectionBox">
             <div class="container lighterBox">
                 <h1>Personal Projects</h1>
-                <div class="headerLine"></div>
+                
+                <div class="headerLine full"></div>
 
                 <div class="grid">
-
                     <div class="projectCard unavailable">
                         <div class="card">
                             <figure class="cardImage" style="background-image: url()"></figure>
                             <div class="cardContent">
+                                <div class="tagBoxDiv">
+                                    <div class="tagBox type">Personal</div>
+                                    <div class="tagBox type">Solo</div>
+                                    <div class="tagBox engine">Unity</div>
+                                    <div class="tagBox language">C#</div>
+                                </div>
                                 <div><h3 style="margin: 0;">Unnamed Card Game</h3></div>
+                                <div><p class="cardDesc">A card game simulating an Argentinian game</p></div>
                                 <div><p class="cardDateText">2025 - Present</p></div>
-                                <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1; margin: 5px 0;">
-                                    <div class="projectTag left unity">Unity</div>
-                                    <div class="projectTag c-sharp">C#</div>
-                                    <div class="projectTag solo">Solo</div>
-                                </div>
-                                <div><p class="cardDesc">A card game simulating a Portuguese game</p></div>
                             </div>
                         </div>
-                    </div>
-                    
+                    </a></div>
+
                     <div class="projectCard unavailable">
                         <div class="card">
                             <figure class="cardImage" style="background-image: url()"></figure>
+                            <div class="cardHighlight">
+                                <p>Unreal Synth Tool</p>
+                            </div>
                             <div class="cardContent">
+                                <div class="tagBoxDiv">
+                                    <div class="tagBox type">Personal</div>
+                                    <div class="tagBox type">Solo</div>
+                                    <div class="tagBox engine">UE5</div>
+                                    <div class="tagBox language">Blueprints</div>
+                                </div>
                                 <div><h3 style="margin: 0;">Unreal Synthesiser</h3></div>
-                                <div><p class="cardDateText">2025 - Present</p></div>
-                                <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1; margin: 5px 0;">
-                                    <div class="projectTag left ue5">UE5</div>
-                                    <div class="projectTag blueprints">Blueprints</div>
-                                    <div class="projectTag solo">Solo</div>
-                                </div>
                                 <div><p class="cardDesc">A synthesiser tool which allows the user to play notes from multiple oscillators</p></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!---->
-                    <div class="projectCard unavailable">
-                        <div class="card">
-                            <figure class="cardImage" style="background-image: url()"></figure>
-                            <div class="cardContent">
-                                <div><h3 style="margin: 0;">Blockz Dodge</h3></div>
                                 <div><p class="cardDateText">2025 - Present</p></div>
-                                <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1; margin: 5px 0;">
-                                    <div class="projectTag left unity">Unity</div>
-                                    <div class="projectTag c-sharp">C#</div>
-                                    <div class="projectTag solo">Solo</div>
-                                </div>
-                                <div><p class="cardDesc"></p></div>
                             </div>
                         </div>
-                    </div>
+                    </a></div>
 
                     <div class="projectCard unavailable">
                         <div class="card">
                             <figure class="cardImage" style="background-image: url()"></figure>
                             <div class="cardContent">
+                                <div class="tagBoxDiv">
+                                    <div class="tagBox type">Personal</div>
+                                    <div class="tagBox type">Solo</div>
+                                    <div class="tagBox engine">Unity</div>
+                                    <div class="tagBox language">C#</div>
+                                </div>
                                 <div><h3 style="margin: 0;">Dice of Spatium</h3></div>
-                                <div><p class="cardDateText">2025 - Present</p></div>
-                                <div style="display: flex; flex-wrap: wrap; position: relative; z-index: 1; margin: 5px 0;">
-                                    <div class="projectTag left unity">Unity</div>
-                                    <div class="projectTag c-sharp">C#</div>
-                                    <div class="projectTag solo">Solo</div>
-                                </div>
                                 <div><p class="cardDesc"></p></div>
+                                <div><p class="cardDateText"></p></div>
                             </div>
                         </div>
-                    </div>
-
+                    </a></div>
+                    
                     <!-- <div class="projectCard unavailable">
                         <div class="card">
                             <figure class="cardImage" style="background-image: url(../Resources/DialogueNodeGraph/DialogueNodeGraphIcon.png)"></figure>
@@ -278,8 +281,8 @@
                             </div>
                         </div>
                     </div> -->
+                    <div class="headerLine full" style="margin-top: 0;"></div>
                 </div>
-                
             </div>
         </div>
 

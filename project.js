@@ -1,6 +1,6 @@
 let demoStrip;
 let demoStripWidth;
-let slides;
+let slides = [];
 let demoImages;
 let demoImageWidth;
 let slideIndex;
@@ -13,9 +13,28 @@ var maxHandleVal;
 
 $(document).ready(function()
 {
+	// window.addEventListener('scroll', function() {
+	// 	let indiv = document.querySelector('#indiv');
+	// 	let elem = document.querySelector('#dev');
+	// 	let elemBottomPos = elem.getBoundingClientRect().bottom	;
+
+	// 	if(elemBottomPos < 0)
+	// 	{
+	// 		indiv.classList.add('divFixed'); 
+	// 	}
+	// 	else if (indiv.style.position == "fixed")
+	// 	{
+	// 		indiv.classList.remove('divFixed'); 
+	// 	}
+	// });
+
+
 	demoStrip = $('.slideDemoStrip');
 	demoStrip[0].scrollLeft = 0;
+
 	slides = $('.slide');
+	slides[0].classList.add("active");
+
 	demoImages = document.getElementsByClassName('demoStripItem');
 	activeDemoImage = document.getElementsByClassName('demoItemActive');
 	slideIndex = 0;
@@ -84,6 +103,7 @@ $(document).ready(function()
 	UpdateSliderHandle();
 });
 
+
 /* #region SlideShow */
 
 // Next/previous controls
@@ -107,8 +127,7 @@ function UpdateSlide()
 
 	for (let i = 0; i < slides.length; i++) 
 	{
-		slides[i].style.display = "none";
-		slides[i].style.opacity = "0";
+		slides[i].classList.remove("active");
 	}
 
 	if (slideIndex >= slides.length) {
@@ -119,8 +138,7 @@ function UpdateSlide()
 		slideIndex = slides.length - 1;
 	}
 
-	slides[slideIndex].style.display = "flex";
-	slides[slideIndex].style.opacity = "1";
+	slides[slideIndex].classList.add("active");
 	demoImages[slideIndex].className += " demoItemActive";
 }
 /* #endregion */

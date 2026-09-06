@@ -63,12 +63,14 @@
     position: relative;
     align-items: center;
     transition: all .25s ease-in-out;
-    
 }
-.navbarItem:hover { background-color: #353535; transform:scale(1.05); }
+.navbarItem:hover:not(.isNotInDropdown) { background-color: #353535; transform:scale(1.05); }
 .navbarItem:hover > .navbarItem { transform:scale(1.05); }
 .navbarItem.selected { background-color:#929292; }
 .navbarItem.hasDropdown { padding: 0; }
+
+#contactNavbarItem { padding: 0 20px; }
+
 .arrow
 {
     border: solid rgb(255, 255, 255);
@@ -142,13 +144,6 @@
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
     }
-}
-
-.linkImage
-{
-    width: 1.25em;
-    height: translateX();
-    margin-right: 1em;
 }
 
 .contactText { font-size: 15px; padding: 5px 20px; transition: all .15s ease-in-out; }
@@ -286,6 +281,7 @@
 
 .headerContainer
 {
+    padding: 1em 2em;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     overflow:visible;
@@ -346,7 +342,7 @@
 .headerItem.scrollArrow:hover { transform: translate(0, 0.5em); }
 .headerItemBtn { transition: transform 0.2s; }
 .headerItemBtn:hover { transform: translate(0, -20px) }
-.headerItem.isRow { display: flex; justify-content: center; z-index: 2; }
+.headerItem.isRow { display: flex; flex-direction: row; justify-content: center; z-index: 2; }
 .isRow > * { margin: .5em; }
 
 @media only screen and (max-height: 850px) 
