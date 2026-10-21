@@ -256,6 +256,12 @@
     border-left: 2px solid var(--headerTextColour);
 }
 
+@media only screen and (max-width: 1300px)
+{
+    .projectOutline {flex-direction: column; }
+    .projectOutline .projectSlideshow { width: 100%; margin-bottom: 2em; }
+}
+
 /* #region Project Slideshow */
     .slide
     { 
@@ -303,7 +309,6 @@
 
     @media only screen and (max-width: 1300px) 
     { 
-        .projectSlideshow { width: 80%; margin: 0px auto !important; }
         .slideDemoStrip { height: 6vw; }
     } 
     @media only screen and (max-width: 1000px) 

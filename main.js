@@ -97,9 +97,9 @@ function createNavbar(thisElem)
 	let featuredProjsLink = customCreateElement("a", ["navbarItem"], navbarMenu);
 	featuredProjsLink.href = "./#projects";
 	featuredProjsLink.textContent = "Featured Projects";
-	let ProjsLink = customCreateElement("a", ["navbarItem"], navbarMenu);
-	ProjsLink.href = "./Projects/";
-	ProjsLink.textContent = "Project Showcase";	
+	// let ProjsLink = customCreateElement("a", ["navbarItem"], navbarMenu);
+	// ProjsLink.href = "./Projects/";
+	// ProjsLink.textContent = "Project Showcase";	
 	let aboutLink = customCreateElement("a", ["navbarItem"], navbarMenu);
 	aboutLink.href = "./#projects";
 	aboutLink.textContent = "About Me";
